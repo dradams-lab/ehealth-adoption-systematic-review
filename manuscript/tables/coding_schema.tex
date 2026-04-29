@@ -1,23 +1,42 @@
-\section{Coding Schema}
-
-The coding schema operationalizes the adoption model:
-
-\begin{equation}
-Adoption = f(U, T, I, O)
-\end{equation}
+% =========================
+% tables/coding_schema.tex
+% =========================
 
 \begin{table}[H]
+\caption{U--T--I--O Coding Schema: Domain Constructs and Example Codes}
+\label{tab:coding-schema}
 \centering
-\begin{tabular}{p{2.2cm}p{4.5cm}p{6.5cm}}
+\small
+\renewcommand{\arraystretch}{1.4}
+\setlength{\tabcolsep}{8pt}
+\begin{tabular}{>{\bfseries}p{1.5cm} p{3.2cm} p{8.5cm}}
 \toprule
-Domain & Construct & Example Codes \\
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Domain}} &
+\textcolor{white}{\textbf{Construct}} &
+\textcolor{white}{\textbf{Example Codes}} \\
 \midrule
-U & User Readiness & usability, satisfaction, workflow fit, training, trust, perceived usefulness, clinician burden \\
-T & Technical Interoperability & system quality, information quality, semantic interoperability, syntactic interoperability, interface reliability, data completeness \\
-I & Institutional Alignment & regulation, policy incentives, HITECH, Cures Act, HIPAA, information governance, national digital health strategy \\
-O & Organizational Execution & leadership, implementation strategy, change management, stakeholder engagement, vendor governance, resource capacity \\
+
+\rowcolor{rowgray}
+U &
+User Readiness &
+Usability; workflow fit; trust; perceived usefulness; training adequacy; user satisfaction; clinician burden reduction; patient portal engagement \\
+
+T &
+Technical Interoperability &
+System quality; information quality; semantic interoperability; syntactic interoperability; interface reliability; data completeness; API compliance; EHR-to-EHR exchange \\
+
+\rowcolor{rowgray}
+I &
+Institutional Alignment &
+Regulatory incentives; HITECH Act compliance; 21st Century Cures Act mandates; HIPAA de-identification; information blocking rules; national digital health strategy; interoperability mandates; information governance \\
+
+O &
+Organizational Execution &
+Leadership commitment; implementation planning; change management; stakeholder engagement; vendor governance; resource capacity; project management maturity; inter-agency coordination \\
+
 \bottomrule
 \end{tabular}
-\caption{U--T--I--O Coding Schema}
-\label{tab:coding-schema}
+\vspace{4pt}
+{\footnotesize \textit{U = User Readiness; T = Technical Interoperability; I = Institutional Alignment; O = Organizational Execution.}}
 \end{table}

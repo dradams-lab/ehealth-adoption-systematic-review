@@ -7,25 +7,64 @@ The systematic review retained 17 sources for evidence extraction and thematic s
 \subsection{Systematic Review Findings}
 Across all 17 retained sources, adoption determinants consistently cluster into four domains corresponding to the U-T-I-O Model. No single technical or organizational variable emerged as independently determinative of adoption outcomes; rather, determinants across domains consistently co-occur and interact in shaping implementation success or failure.
 
-User readiness determinants include usability, workflow fit, trust, training, perceived usefulness, and user satisfaction. Technical determinants include information quality, system quality, semantic and syntactic interoperability, reliability, interface integration, and data completeness. Institutional determinants include regulatory incentives, national digital health strategy, privacy law, interoperability mandates, and information governance. Organizational determinants include leadership, implementation planning, stakeholder engagement, change management, vendor governance, and resource capacity.
+User readiness determinants—including usability, workflow fit, trust, training, perceived usefulness, and user satisfaction—are reported across multiple systematic reviews~\cite{kruse2016adoption,fennelly2020national,aguirre2020ehr} and are consistently linked to adoption success in qualitative case evidence~\cite{adams2020strategies}. Technical determinants—including system quality, information quality, semantic and syntactic interoperability, interface reliability, and data completeness—are identified as necessary infrastructure conditions~\cite{bitar2023interoperability,holmes2016barriers}. Institutional determinants—regulatory incentives, national digital health strategy, privacy law compliance, and interoperability mandates—emerge as especially prominent in policy-intensive healthcare environments~\cite{adler2023policyhie,fennelly2020national,onc2025reports}. Organizational determinants—leadership, implementation planning, stakeholder engagement, change management, vendor governance, and resource capacity—are cited as execution-level differentiators between otherwise comparable implementations~\cite{fennelly2020national,gao2025vaehr,gao2024dodehr}.
 
 \subsection{Multi-Case Findings}
 Four public cases were selected to compare determinant patterns across different implementation environments: ONC-supported U.S. health information exchange programs, NHS Shared Care Records, Estonia's national eHealth system, and VA/DoD federal EHR modernization.
 
 \begin{table}[H]
+\caption{Comparative Case Analysis of U--T--I--O Adoption Determinants Across Four National Implementations}
+\label{tab:case-comparison}
 \centering
-\begin{tabular}{lccccp{5.2cm}}
+\small
+\renewcommand{\arraystretch}{1.45}
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{p{3.0cm} >{\centering\arraybackslash}p{1.4cm} >{\centering\arraybackslash}p{1.4cm} >{\centering\arraybackslash}p{1.4cm} >{\centering\arraybackslash}p{1.8cm} p{4.8cm}}
 \toprule
-Case & U & T & I & O & Interpretation \\
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Case}} &
+\textcolor{white}{\textbf{U}} &
+\textcolor{white}{\textbf{T}} &
+\textcolor{white}{\textbf{I}} &
+\textcolor{white}{\textbf{O}} &
+\textcolor{white}{\textbf{Interpretation}} \\
 \midrule
-ONC HIE & Medium & High & High & Medium & Strong policy and interoperability infrastructure; variable organizational uptake. \\
-NHS Shared Care Records & Medium & High & High & Medium & Strong national interoperability vision; local implementation and information governance remain central. \\
-Estonia eHealth & High & High & High & High & Mature national architecture with legal mandate and broad provider participation. \\
-VA/DoD EHR & Medium & Medium & High & Low--Medium & Institutional mandate is strong, but configuration, usability, and execution risks persist. \\
+
+\rowcolor{rowgray}
+ONC HIE~\cite{onc2025reports} &
+  \cellcolor{medamber}\textcolor{medambertext}{\textbf{Medium}} &
+  \cellcolor{highgreen}\textcolor{highgreentext}{\textbf{High}} &
+  \cellcolor{highgreen}\textcolor{highgreentext}{\textbf{High}} &
+  \cellcolor{medamber}\textcolor{medambertext}{\textbf{Medium}} &
+  Strong policy and interoperability infrastructure; variable organizational uptake across participating entities. \\
+
+NHS Shared Care Records~\cite{nhs2025sharedcare} &
+  \cellcolor{medamber}\textcolor{medambertext}{\textbf{Medium}} &
+  \cellcolor{highgreen}\textcolor{highgreentext}{\textbf{High}} &
+  \cellcolor{highgreen}\textcolor{highgreentext}{\textbf{High}} &
+  \cellcolor{medamber}\textcolor{medambertext}{\textbf{Medium}} &
+  Strong national interoperability vision; local information governance and workflow integration remain central challenges. \\
+
+\rowcolor{rowgray}
+Estonia eHealth~\cite{estonia2026ehealth} &
+  \cellcolor{highgreen}\textcolor{highgreentext}{\textbf{High}} &
+  \cellcolor{highgreen}\textcolor{highgreentext}{\textbf{High}} &
+  \cellcolor{highgreen}\textcolor{highgreentext}{\textbf{High}} &
+  \cellcolor{highgreen}\textcolor{highgreentext}{\textbf{High}} &
+  Mature national architecture with legal mandate, X-Road data layer, and broad provider participation; highest multi-domain alignment. \\
+
+VA/DoD EHR~\cite{gao2025vaehr,gao2024dodehr} &
+  \cellcolor{medamber}\textcolor{medambertext}{\textbf{Medium}} &
+  \cellcolor{medamber}\textcolor{medambertext}{\textbf{Medium}} &
+  \cellcolor{highgreen}\textcolor{highgreentext}{\textbf{High}} &
+  \cellcolor{lowred}\textcolor{lowredtext}{\textbf{Low--Med}} &
+  Strong institutional mandate; persistent usability deficits, configuration challenges, and execution risks constrain realised adoption value. \\
+
 \bottomrule
 \end{tabular}
-\caption{Comparative Case Analysis of Adoption Determinants}
-\label{tab:case-comparison}
+\vspace{4pt}
+{\footnotesize \textit{Domain ratings reflect the preponderance of evidence in primary source documentation. U = User Readiness; T = Technical Interoperability; I = Institutional Alignment; O = Organizational Execution.
+\colorbox{highgreen}{\textcolor{highgreentext}{High}}\ = strong domain alignment; \colorbox{medamber}{\textcolor{medambertext}{Medium}}\ = partial alignment; \colorbox{lowred}{\textcolor{lowredtext}{Low}}\ = significant gaps identified.}}
 \end{table}
 
 \subsection{Synthesis}

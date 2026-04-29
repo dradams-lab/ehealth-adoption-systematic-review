@@ -1,72 +1,140 @@
-\section{Evidence Extraction Matrix}
+% =========================
+% tables/evidence_extraction_table.tex
+% =========================
 
 \small
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{0.95}
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.25}
 
-\begin{longtable}{p{2.5cm}p{0.8cm}p{2.0cm}p{2.3cm}p{2.3cm}p{2.5cm}p{3.5cm}}
-\caption{Evidence Extraction Matrix for eHealth Adoption Determinants}
-\label{tab:evidence-extraction}\\
+\begin{longtable}{p{2.6cm} >{\centering\arraybackslash}p{0.7cm} p{2.0cm} p{2.1cm} p{1.8cm} >{\centering\arraybackslash}p{1.8cm} p{3.8cm}}
 
+\caption{Evidence Extraction Matrix: Included Sources and U--T--I--O Domain Coding}
+\label{tab:evidence}\\
+
+% ---- First-page header ----
 \toprule
-Source & Year & Study Type & Focus & Context & U--T--I--O Domains & Relevant Finding \\
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Source}} &
+\textcolor{white}{\textbf{Year}} &
+\textcolor{white}{\textbf{Study Type}} &
+\textcolor{white}{\textbf{Focus}} &
+\textcolor{white}{\textbf{Context}} &
+\textcolor{white}{\textbf{Domains}} &
+\textcolor{white}{\textbf{Key Finding}} \\
 \midrule
 \endfirsthead
 
+% ---- Continuation header ----
+\caption[]{Evidence Extraction Matrix (continued)}\\
 \toprule
-Source & Year & Study Type & Focus & Context & U--T--I--O Domains & Relevant Finding \\
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Source}} &
+\textcolor{white}{\textbf{Year}} &
+\textcolor{white}{\textbf{Study Type}} &
+\textcolor{white}{\textbf{Focus}} &
+\textcolor{white}{\textbf{Context}} &
+\textcolor{white}{\textbf{Domains}} &
+\textcolor{white}{\textbf{Key Finding}} \\
 \midrule
 \endhead
 
-Adler-Milstein et al. & 2023 & Policy review & HIE policy & U.S./Global & I, T, O & HIE depends on policy alignment, governance, and technical interoperability \\
-\midrule
-
-Holmes et al. & 2016 & Systematic review & HIE adoption & HIE orgs & U, T, O, I & Barriers span workflow, technical, financial, and policy layers \\
-\midrule
-
-Kruse et al. & 2016 & Systematic review & EHR adoption & Healthcare orgs & U, T, O & Adoption depends on usability, training, and organizational readiness \\
-\midrule
-
-Fennelly et al. & 2020 & Umbrella review & National EHR & National systems & U, T, O, I & Success requires leadership, governance, and coordinated implementation \\
-\midrule
-
-Aguirre et al. & 2020 & Scoping review & EHR barriers & EHR systems & U, T, O & Benefits depend on managing workflow disruption and usability issues \\
-\midrule
-
-Bitar et al. & 2023 & Systematic review & Interoperability & HIS systems & T, I & Interoperability requires layered standards and integration approaches \\
-\midrule
-
-Adams & 2020 & Qualitative study & eHealth adoption & IT leaders & U, T, I, O & Six themes support a multidimensional adoption model \\
-\midrule
-
-ONC Reports & 2025 & Gov report & Health IT adoption & U.S. ecosystem & I, T & National progress depends on interoperability and data exchange maturity \\
-\midrule
-
-NHS Shared Care & 2025 & Guidance & Shared records & UK system & I, T, O & Cross-org records require governance and workflow integration \\
-\midrule
-
-Estonia eHealth & 2026 & Case study & National EHR & Estonia & U, T, I & Nationwide integration enables continuity of care and access \\
-\midrule
-
-EU Estonia Law & 2016 & Policy review & EHR law & Estonia & I, T & Legal mandates support full national EHR adoption \\
-\midrule
-
-GAO VA EHR & 2025 & Audit report & VA system & U.S. VA & U, T, O, I & Misalignment across domains leads to adoption risk \\
-\midrule
-
-GAO DoD EHR & 2024 & Audit report & DoD system & Federal & U, T, O & User satisfaction and issue management are critical \\
-\midrule
-
-NIST 800-37 & 2018 & Framework & Risk mgmt & Systems & I, O & Structured governance supports system trust and adoption \\
-\midrule
-
-NIST 800-53 & 2020 & Controls & Security & Systems & I, T, O & Control baselines support privacy and system integrity \\
-\midrule
-
-HIPAA Guidance & 2024 & Regulation & De-identification & U.S. health & I & Proper de-identification enables safe secondary data use \\
-\midrule
+% ---- Footer ----
+\bottomrule
+\multicolumn{7}{r}{\footnotesize\textit{Continued on next page\ldots}}\\
+\endfoot
 
 \bottomrule
+\multicolumn{7}{l}{\footnotesize\textit{U = User Readiness; T = Technical Interoperability; I = Institutional Alignment; O = Organizational Execution.}}\\
+\endlastfoot
+
+% ---- Row 1 ----
+\rowcolor{rowgray}
+Adler-Milstein et al.~\cite{adler2023policyhie} & 2023 & Policy review &
+HIE policy landscape & U.S./Global & I, T, O &
+Policy alignment and exchange governance are primary drivers of HIE interoperability adoption. \\
+
+% ---- Row 2 ----
+Holmes et al.~\cite{holmes2016barriers} & 2016 & Systematic review &
+HIE adoption barriers & HIE orgs & U, T, O, I &
+Adoption barriers span workflow, technical, financial, and policy layers; no single-domain explanation is sufficient. \\
+
+% ---- Row 3 ----
+\rowcolor{rowgray}
+Kruse et al.~\cite{kruse2016adoption} & 2016 & Systematic review &
+EHR adoption factors & Healthcare orgs & U, T, O &
+Perceived usefulness, usability, training adequacy, and organisational readiness are key adoption determinants. \\
+
+% ---- Row 4 ----
+Fennelly et al.~\cite{fennelly2020national} & 2020 & Umbrella review &
+National EHR implementation & National systems & U, T, O, I &
+Successful national EHR programmes require coordinated leadership, governance, and stakeholder engagement. \\
+
+% ---- Row 5 ----
+\rowcolor{rowgray}
+Aguirre et al.~\cite{aguirre2020ehr} & 2020 & Scoping review &
+EHR barriers and effects & EHR systems & U, T, O &
+Benefits are moderated by workflow disruption, usability barriers, and unintended implementation consequences. \\
+
+% ---- Row 6 ----
+Bitar et al.~\cite{bitar2023interoperability} & 2023 & Systematic review &
+HIS interoperability & Heterogeneous HIS & T, I &
+Interoperability requires layered semantic, syntactic, and technical standards alignment across systems. \\
+
+% ---- Row 7 ----
+\rowcolor{rowgray}
+Adams~\cite{adams2020strategies} & 2020 & Qualitative case study &
+eHealth adoption strategies & IT leaders & U, T, I, O &
+Six adoption themes from senior IT leader interviews support a multidimensional adoption model. \\
+
+% ---- Row 8 ----
+ONC Reports to Congress~\cite{onc2025reports} & 2025 & Government report &
+U.S. health IT adoption & U.S. ecosystem & I, T &
+National EHR progress depends on policy-driven interoperability mandates and exchange infrastructure maturity. \\
+
+% ---- Row 9 ----
+\rowcolor{rowgray}
+NHS Shared Care Records~\cite{nhs2025sharedcare} & 2025 & Official guidance &
+Shared care records & England NHS & I, T, O &
+Cross-organisational records require information governance frameworks and clinical workflow integration. \\
+
+% ---- Row 10 ----
+Estonia eHealth System~\cite{estonia2026ehealth} & 2026 & National case &
+National EHR & Estonia & U, T, I &
+Estonia's national system — operational since 2008 — achieves broad provider participation through legal mandate and X-Road architecture. \\
+
+% ---- Row 11 ----
+\rowcolor{rowgray}
+EU / Estonia EHR Law~\cite{europeancommission2016estoniaehr} & 2016 & Policy review &
+EHR legal framework & Estonia & I, T &
+Mandatory provider upload obligations and national governance underpin comprehensive EHR coverage. \\
+
+% ---- Row 12 ----
+GAO / VA EHR Modernisation~\cite{gao2025vaehr} & 2025 & Government audit &
+VA EHR modernisation & U.S. VA & U, T, O, I &
+Misalignment across user, technical, and organisational domains produces significant adoption risk despite strong institutional mandate. \\
+
+% ---- Row 13 ----
+\rowcolor{rowgray}
+GAO / DoD EHR Deployment~\cite{gao2024dodehr} & 2024 & Government audit &
+Federal EHR deployment & DoD/VA & U, T, O &
+User satisfaction deficits and systematic issue management failures undermine federal EHR adoption outcomes. \\
+
+% ---- Row 14 ----
+NIST SP 800-37~\cite{nist80037r2} & 2018 & Risk mgmt framework &
+Security risk governance & Systems & I, O &
+Structured risk management frameworks support system trust and organisational security governance. \\
+
+% ---- Row 15 ----
+\rowcolor{rowgray}
+NIST SP 800-53~\cite{nist80053r5} & 2020 & Security controls catalog &
+Security \& privacy controls & Systems & I, T, O &
+Control baselines support privacy engineering, system integrity, and governance compliance. \\
+
+% ---- Row 16 ----
+HIPAA De-identification Guidance~\cite{hhs2024deidentification} & 2024 & Regulatory guidance &
+PHI de-identification & U.S. health data & I &
+Safe Harbour and expert determination standards enable lawful secondary use of de-identified health data. \\
+
 \end{longtable}
 
 \normalsize

@@ -16,7 +16,25 @@
 \usepackage{subcaption}
 \usepackage{tikz}
 \usetikzlibrary{positioning}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+\usepackage{makecell}
 \setstretch{1.2}
+
+% ---- Table colour palette ----
+\definecolor{headerblue}{HTML}{1F3864}
+\definecolor{headerteal}{HTML}{2E75B6}
+\definecolor{rowgray}{HTML}{F2F2F2}
+\definecolor{highgreen}{HTML}{C6EFCE}
+\definecolor{highgreentext}{HTML}{276221}
+\definecolor{medamber}{HTML}{FFEB9C}
+\definecolor{medambertext}{HTML}{9C6500}
+\definecolor{lowred}{HTML}{FFC7CE}
+\definecolor{lowredtext}{HTML}{9C0006}
+
+% ---- Caption setup: bold label, table captions above ----
+\captionsetup[table]{position=above, labelfont=bf, textfont=normalfont, skip=6pt}
+\captionsetup[figure]{position=below, labelfont=bf, textfont=normalfont, skip=6pt}
 
 % ---- Metadata ----
 \title{Determinants of eHealth Systems Adoption: A Systematic Review and Multi-Case Analysis}

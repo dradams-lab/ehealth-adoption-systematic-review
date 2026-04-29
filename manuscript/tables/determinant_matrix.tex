@@ -1,49 +1,99 @@
-\section{Determinant Matrix}
+% =========================
+% tables/determinant_matrix.tex
+% =========================
 
 \begin{table}[H]
+\caption{Mapping of Evidence Sources to U--T--I--O Adoption Domains}
 \label{tab:determinant-matrix}
-\caption{Mapping of Evidence Sources to Adoption Determinants (U--T--I--O Model)}
 \centering
 \small
-\setlength{\tabcolsep}{5pt}
-\renewcommand{\arraystretch}{1.1}
-
-\begin{tabular}{p{3.2cm}ccccp{5.5cm}}
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{p{4.0cm} >{\centering\arraybackslash}p{0.7cm} >{\centering\arraybackslash}p{0.7cm} >{\centering\arraybackslash}p{0.7cm} >{\centering\arraybackslash}p{0.7cm} p{5.8cm}}
 \toprule
-\textbf{Evidence Source} & \textbf{U} & \textbf{T} & \textbf{I} & \textbf{O} & \textbf{Key Insight} \\
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Evidence Source}} &
+\textcolor{white}{\textbf{U}} &
+\textcolor{white}{\textbf{T}} &
+\textcolor{white}{\textbf{I}} &
+\textcolor{white}{\textbf{O}} &
+\textcolor{white}{\textbf{Key Insight}} \\
 \midrule
 
-HIE policy landscape &  & $\checkmark$ & $\checkmark$ & $\checkmark$ 
-& Policy and governance structures are primary drivers of interoperability adoption. \\
+\rowcolor{rowgray}
+Adler-Milstein et al.~\cite{adler2023policyhie} &
+  & \checkmark & \checkmark & \checkmark &
+Policy and governance structures are primary drivers of interoperability adoption. \\
 
-HIE barriers/facilitators review & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ 
-& Adoption barriers span workflow, trust, cost, and policy constraints. \\
+Holmes et al.~\cite{holmes2016barriers} &
+\checkmark & \checkmark & \checkmark & \checkmark &
+Adoption barriers span workflow, trust, cost, and policy constraints across all four domains. \\
 
-EHR adoption systematic review & $\checkmark$ & $\checkmark$ &  & $\checkmark$ 
-& Usability, training, and organizational readiness are key adoption drivers. \\
+\rowcolor{rowgray}
+Kruse et al.~\cite{kruse2016adoption} &
+\checkmark & \checkmark &   & \checkmark &
+Perceived usefulness, usability, training, and organizational readiness are key adoption drivers. \\
 
-National EHR umbrella review & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ 
-& Successful national systems require coordinated leadership and governance. \\
+Fennelly et al.~\cite{fennelly2020national} &
+\checkmark & \checkmark & \checkmark & \checkmark &
+Successful national systems require coordinated leadership, governance, and stakeholder engagement. \\
 
-Heterogeneous HIS interoperability review &  & $\checkmark$ & $\checkmark$ &  
-& Interoperability depends on layered technical and standards alignment. \\
+\rowcolor{rowgray}
+Aguirre et al.~\cite{aguirre2020ehr} &
+\checkmark & \checkmark &   & \checkmark &
+EHR benefits are moderated by workflow disruption and usability barriers at point of care. \\
 
-ONC HIE case &  & $\checkmark$ & $\checkmark$ & $\checkmark$ 
-& National policy initiatives enable large-scale data exchange maturity. \\
+Bitar et al.~\cite{bitar2023interoperability} &
+  & \checkmark & \checkmark &   &
+Interoperability requires layered technical standards and semantic/syntactic alignment. \\
 
-NHS Shared Care Records case & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ 
-& Cross-organizational care requires governance and workflow integration. \\
+\rowcolor{rowgray}
+Adams~\cite{adams2020strategies} &
+\checkmark & \checkmark & \checkmark & \checkmark &
+Six adoption themes from qualitative case study support a multidimensional adoption model. \\
 
-Estonia eHealth case & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ 
-& Centralized architecture and legal mandate enable full interoperability. \\
+ONC Reports to Congress~\cite{onc2025reports} &
+  & \checkmark & \checkmark &   &
+National progress depends on exchange maturity and policy-driven interoperability mandates. \\
 
-VA/DoD EHR case & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ 
-& Misalignment across domains introduces significant adoption risk. \\
+\rowcolor{rowgray}
+NHS Shared Care Records~\cite{nhs2025sharedcare} &
+\checkmark & \checkmark & \checkmark & \checkmark &
+Cross-organisational records require governance frameworks and workflow integration. \\
+
+Estonia eHealth System~\cite{estonia2026ehealth} &
+\checkmark & \checkmark & \checkmark &   &
+Nationwide integration enables continuity of care through legally mandated data exchange. \\
+
+\rowcolor{rowgray}
+EU Estonia EHR Law~\cite{europeancommission2016estoniaehr} &
+  & \checkmark & \checkmark &   &
+Legal mandates and national governance underpin comprehensive national EHR coverage. \\
+
+GAO VA EHR~\cite{gao2025vaehr} &
+\checkmark & \checkmark & \checkmark & \checkmark &
+Adoption risk emerges when user, technical, and organisational dimensions are misaligned. \\
+
+\rowcolor{rowgray}
+GAO DoD EHR~\cite{gao2024dodehr} &
+\checkmark & \checkmark &   & \checkmark &
+User satisfaction and systematic issue management are critical for federal EHR deployment. \\
+
+NIST SP 800-37~\cite{nist80037r2} &
+  &   & \checkmark & \checkmark &
+Structured risk management governance supports system trust and organisational adoption readiness. \\
+
+\rowcolor{rowgray}
+NIST SP 800-53~\cite{nist80053r5} &
+  & \checkmark & \checkmark & \checkmark &
+Security and privacy control baselines support governance and system integrity. \\
+
+HIPAA De-id. Guidance~\cite{hhs2024deidentification} &
+  &   & \checkmark &   &
+De-identification standards enable safe secondary use of health data for research purposes. \\
 
 \bottomrule
 \end{tabular}
+\vspace{4pt}
+{\footnotesize \textit{Checkmarks (\checkmark) indicate that the source addresses determinants within that U--T--I--O domain. U = User Readiness; T = Technical Interoperability; I = Institutional Alignment; O = Organizational Execution.}}
 \end{table}
-\vspace{0.5em}
-\footnotesize
-\textit{U = User, T = Technical, I = Institutional, O = Organizational.}
-\normalsize
