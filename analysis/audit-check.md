@@ -58,6 +58,8 @@ Fill in the **Blind** columns first; only after both records are blind-re-coded 
 
 ### S01 — Holmgren et al. (2023)
 
+> *Health Information Exchange: Understanding the Policy Landscape and Future of Data Interoperability* — HIE policy across five countries (US, UK, Germany, Israel, Portugal). Yearbook of Medical Informatics 32(1):184–194. Open access: https://pmc.ncbi.nlm.nih.gov/articles/PMC10751121/
+
 | Domain | Blind re-code (Y / blank) | Original (from CSV) | Match? (Y / N) | Notes if disagree |
 |---|---|---|---|---|
 | U |   |   |   |   |
@@ -66,6 +68,8 @@ Fill in the **Blind** columns first; only after both records are blind-re-coded 
 | O |   |   |   |   |
 
 ### S14 — NIST SP 800-37 Rev. 2 (2018)
+
+> *Risk Management Framework for Information Systems and Organizations: A System Life Cycle Approach for Security and Privacy* — U.S. federal security/privacy risk-management framework (FISMA-aligned). doi:10.6028/NIST.SP.800-37r2. Open PDF: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-37r2.pdf
 
 | Domain | Blind re-code (Y / blank) | Original (from CSV) | Match? (Y / N) | Notes if disagree |
 |---|---|---|---|---|
