@@ -1,40 +1,46 @@
 \section{Methodology}
 
-\subsection{Systematic Review (PRISMA)}
-A systematic review was conducted across PubMed, IEEE Xplore, and Scopus, covering literature published between 2015 and 2026. The review followed PRISMA guidelines to ensure transparency and reproducibility.
+\subsection{Study Design}
 
-\subsection{Inclusion Criteria}
-\begin{itemize}
-\item Peer-reviewed studies
-\item Focus on eHealth, EHR, HIE, or interoperability
-\item Empirical, systematic review, or framework-based research
-\end{itemize}
+This study employs a mixed-methods design combining a PRISMA 2020-guided systematic review with a purposive multi-case analysis of publicly documented national eHealth implementations. The systematic review provides a broad, synthesized evidence base of adoption determinants from the peer-reviewed and grey literature. The multi-case analysis applies the U-T-I-O framework to real-world implementation contexts, enabling validation and comparative assessment of how determinants manifest across different national and organizational settings. No primary data involving human subjects were collected or analyzed.
 
-\subsection{Exclusion Criteria}
-\begin{itemize}
-\item Opinion-only studies
-\item Non-healthcare systems
-\item Studies involving identifiable human subject data
-\end{itemize}
+\subsection{Systematic Review Protocol}
+
+\subsubsection{Database Selection and Search Strategy}
+
+The systematic literature search was conducted across PubMed/MEDLINE, IEEE Xplore, and Scopus, covering publications from January 2015 to December 2026. These databases were selected to capture the interdisciplinary literature spanning biomedical informatics, computer science, and health policy. Each search combined terms for the technology domain (``electronic health record,'' ``EHR,'' ``health information exchange,'' ``eHealth,'' ``interoperability'') with adoption-related terms (``adoption,'' ``implementation,'' ``barriers,'' ``facilitators,'' ``determinants,'' ``success factors''), with database-specific field tags, MeSH terms, and document-type filters applied. Full Boolean query strings for each database are provided in Supplementary File~S1.
+
+\subsubsection{Inclusion and Exclusion Criteria}
+
+Records were included if they: (1) were published in peer-reviewed journals or as institutional/government reports; (2) focused on eHealth, EHR, EMR, HIE, health information technology, or clinical interoperability; (3) addressed adoption, implementation, barriers, facilitators, or determinants of system uptake; and (4) employed empirical, systematic review, scoping review, or framework-based research designs. Records were excluded if they: (1) were opinion editorials, letters, or conference abstracts without full methodology; (2) addressed non-healthcare IT systems without healthcare application; or (3) were published in languages other than English. Studies involving the primary collection of identifiable human subject data were also excluded.
+
+\subsubsection{Screening and Data Extraction}
+
+Retrieved records were deduplicated using reference management software. Title and abstract screening was applied to all retained records using the inclusion and exclusion criteria. Full-text review was conducted for records passing the initial screen. Data extraction was conducted using the U-T-I-O coding framework, applying thematic codes corresponding to each of the four adoption domains across all included sources. The final evidence base is documented in the evidence extraction matrix (see supplementary materials).
 
 \subsection{Multi-Case Analysis}
-The study incorporates a comparative analysis of four publicly documented implementations:
+
+\subsubsection{Case Selection}
+
+Four national eHealth implementations were selected for comparative analysis using purposive sampling~\cite{adams2020strategies}. Cases were selected to maximize variation in national context, governance structure, and adoption maturity, while ensuring that sufficient publicly available documentation existed for systematic analysis. Selected cases include:
+
 \begin{itemize}
-\item U.S. ONC Health Information Exchange (HIE) programs
-\item UK National Health Service (NHS) Digital Health initiatives
-\item Estonia national eHealth system
-\item U.S. VA/DoD interoperability programs
+    \item \textbf{U.S. ONC Health Information Exchange Programs} — representing the dominant federated, market-based model of HIE development, supported by HITECH Act incentives~\cite{onc2025reports}
+    \item \textbf{NHS Shared Care Records (UK)} — representing a centrally coordinated national interoperability program within a single-payer health system~\cite{nhs2025sharedcare}
+    \item \textbf{Estonia National eHealth System} — representing a comprehensive, legally mandated national digital health infrastructure built on the X-Road data exchange platform~\cite{estonia2026ehealth}
+    \item \textbf{U.S. VA/DoD Federal EHR Modernization} — representing a large-scale federal EHR replacement program with significant procurement and implementation challenges~\cite{gao2025vaehr,gao2024dodehr}
 \end{itemize}
 
+\subsubsection{Case Analysis Protocol}
+
+Each case was analyzed using the U-T-I-O framework as the organizing construct. Primary sources—including official government reports, national agency publications, legislative documents, and independent audit findings—were reviewed and coded according to the four domains. Domain-level ratings (High / Medium / Low) were assigned based on the preponderance of evidence across available documentation.
+
 \subsection{Analytical Model}
+
+The U-T-I-O Model operationalizes eHealth adoption as a function of four interdependent domains:
+
 \begin{equation}
 Adoption = f(U, T, I, O)
 \end{equation}
 
-Where:
-\begin{itemize}
-\item U = User Readiness
-\item T = Technical Interoperability
-\item I = Institutional Alignment
-\item O = Organizational Execution
-\end{itemize}
+where U denotes User Readiness, T denotes Technical Interoperability, I denotes Institutional Alignment, and O denotes Organizational Execution. The model posits that sustained adoption is most likely when all four domains achieve sufficient alignment, and that weakness in any single domain can constrain the adoption value realized even when other domains are strong.
