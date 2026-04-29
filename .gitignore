@@ -17,3 +17,10 @@
 *.swp
 *.tmp
 ~$*
+
+# Reference-review work artifacts (input bundles, downloaded PDFs)
+# The manifest CSV, notes, and download script ARE tracked; only the
+# bulky/copyrighted bits are ignored.
+notes/ehealth_reference_review_start.zip
+notes/ehealth_reference_review/articles/
+notes/ehealth_reference_review/reports/
