@@ -9,13 +9,13 @@
 
 | Source | Type | Platform | Date Range | Date Searched |
 |---|---|---|---|---|
-| PubMed / MEDLINE | Primary database | NLM | 2015-01-01 to 2026-12-31 | Seed set; formal TBD |
-| IEEE Xplore | Primary database | IEEE | 2015 to 2026 | Seed set; formal TBD |
-| Scopus | Primary database | Elsevier | 2015 to 2026 | Seed set; formal TBD |
-| Web of Science | Supplementary database | Clarivate | 2015 to 2026 | Seed set; formal TBD |
-| CINAHL | Supplementary database | EBSCO | 2015 to 2026 | Seed set; formal TBD |
-| Google Scholar | Supplementary | Google | 2015 to 2026 | Seed set; first 5 pages by relevance |
-| Hand-search of reference lists | Supplementary | — | 2015 to 2026 | Seed set; ongoing |
+| PubMed / MEDLINE | Primary database | NLM | 2015-01-01 onwards | Seed set; formal TBD |
+| IEEE Xplore | Primary database | IEEE | 2015 onwards | Seed set; formal TBD |
+| Scopus | Primary database | Elsevier | 2015 onwards | Seed set; formal TBD |
+| Web of Science | Supplementary database | Clarivate | 2015 onwards | Seed set; formal TBD |
+| CINAHL | Supplementary database | EBSCO | 2015 onwards | Seed set; formal TBD |
+| Google Scholar | Supplementary | Google | 2015 onwards | Seed set; first 5 pages by relevance |
+| Hand-search of reference lists | Supplementary | — | 2015 onwards | Seed set; ongoing |
 | Expert recommendations | Supplementary | — | — | Seed set; sources from domain advisors |
 
 The three primary databases capture interdisciplinary literature spanning biomedical informatics, computer science, and health policy. The five supplementary sources broaden coverage into nursing/allied health (CINAHL), high-impact cross-disciplinary outlets (Web of Science), grey literature (Google Scholar, hand-search), and expert-curated material (expert recommendations).
@@ -55,7 +55,7 @@ OR "digital health" OR "health information technology" OR "interoperability")
 AND
 ("Full Text & Metadata": "adoption" OR "implementation" OR "acceptance"
 OR "barriers" OR "facilitators" OR "determinants" OR "success factors" OR "uptake")
-AND (Publication Year: 2015 to 2026)
+AND (Publication Year: 2015 onwards)
 ```
 
 **Filter:** Journals and Conference Papers only
@@ -89,7 +89,7 @@ OR "eHealth" OR "digital health" OR "interoperability")
 AND TS=("adoption" OR "implementation" OR "barrier*" OR "facilitator*" OR "determinant*")
 ```
 
-**Filters:** Core Collection; 2015–2026; English; Article or Review
+**Filters:** Core Collection; 2015 onwards; English; Article or Review
 **Seed-set yield:** 84 records
 
 ---
@@ -101,7 +101,7 @@ AND TS=("adoption" OR "implementation" OR "barrier*" OR "facilitator*" OR "deter
 AND (TI adoption OR TI implementation OR TI barrier OR TI facilitator OR TI determinant)
 ```
 
-**Filters:** 2015–2026; English; Peer Reviewed
+**Filters:** 2015 onwards; English; Peer Reviewed
 **Seed-set yield:** 31 records
 
 ---
@@ -133,7 +133,7 @@ OR "health information exchange determinants" OR "digital health adoption framew
 - Government / institutional reports with empirical basis
 - Focus on eHealth, EHR, EMR, HIE, health information technology, or clinical interoperability
 - Addresses adoption, implementation, barriers, facilitators, or determinants
-- Published January 2015 – December 2026
+- Published January 2015 onwards
 - English language
 
 ### Exclusion

@@ -76,14 +76,47 @@ The internal organizational capabilities and leadership practices that determine
 
 ---
 
-## Application to the four cases (as reported in the manuscript)
+## Application to the four cases — evidence-anchored ratings
 
-| Case | U | T | I | O | Justification (one line per domain) |
-|---|---|---|---|---|---|
-| **U.S. ONC HIE** | M | H | H | M | U: variable clinician engagement; T: FHIR + Cures Act API mandates; I: HITECH + Cures Act statutory framework; O: variable organizational uptake across participating entities |
-| **NHS Shared Care Records (UK)** | M | H | H | M | U: variable local clinician engagement; T: national interoperability standards + shared care record platform; I: NHS Long Term Plan + national data opt-out + governance; O: local information-governance variability documented |
-| **Estonia eHealth** | H | H | H | H | U: high clinician acceptance + 99% patient adoption; T: X-Road backbone + enforced standards; I: 2008 Health Information System Act mandates participation; O: sustained ministry execution + evolving governance |
-| **U.S. VA/DoD EHR Modernization** | M | M | H | L–M | U: documented clinician dissatisfaction (GAO 2024, 2025); T: mature commercial EHR but legacy-integration burden; I: Congressional mandate + appropriations; O: GAO-flagged vendor governance, schedule, change-management gaps |
+For each case, ratings are anchored to specific sources from the bibliography (citation keys in parentheses). This is the audit trail a reviewer or replicator can use to challenge or reproduce any rating.
+
+### U.S. ONC HIE — U(M) T(H) I(H) O(M)
+
+| Domain | Rating | Evidence anchor |
+|---|---|---|
+| **U** | M | `onc2025reports` Reports to Congress portal documents variable clinician engagement and adoption-rate gaps across participating entities; `eden2016barriers` (IJMI 2016) identifies clinician trust and workflow concerns as persistent HIE barriers; `kruse2016adoption` (JMIR 2016) lists usability and training as adoption inhibitors |
+| **T** | H | `onc2025reports` references FHIR API mandates under the Cures Act; `holmgren2023policyhie` (Yearbook MI 2023) describes the U.S. as one of five mature HIE-policy nations; nationwide TEFCA infrastructure deployed |
+| **I** | H | HITECH Act incentive program drove U.S. EHR adoption from ~10% to >80% (`onc2025reports`); 21st Century Cures Act information-blocking rules now enforced (`holmgren2023policyhie`); strong statutory framework |
+| **O** | M | `onc2025reports` documents variable participation rates across HIEs; organizational uptake heterogeneity is the primary U-T-I-O O-domain weakness (`fennelly2020national` describes execution as the differentiator across national programs) |
+
+### NHS Shared Care Records (UK) — U(M) T(H) I(H) O(M)
+
+| Domain | Rating | Evidence anchor |
+|---|---|---|
+| **U** | M | `nhs2025sharedcare` (NHS England, 26 March 2025) acknowledges variable local clinician engagement; sustained training and workflow integration cited as central challenges |
+| **T** | H | `nhs2025sharedcare` describes national interoperability standards plus a shared-care-record platform; cross-organisational information sharing operational |
+| **I** | H | NHS Long Term Plan + national data opt-out + information governance frameworks documented in `nhs2025sharedcare`; central national strategy authority |
+| **O** | M | `nhs2025sharedcare` flags local information-governance variability and workflow integration as persistent execution challenges; `fennelly2020national` lists O-domain factors as decisive across national EHR rollouts |
+
+### Estonia eHealth — U(H) T(H) I(H) O(H)
+
+| Domain | Rating | Evidence anchor |
+|---|---|---|
+| **U** | H | `estonia2026ehealth` reports near-comprehensive coverage and high clinician engagement; 99% patient e-Health Record adoption widely cited |
+| **T** | H | `estonia2026ehealth` describes the X-Road secure data-exchange layer; `holmgren2023policyhie` cites Estonia as architectural reference; enforced national standards |
+| **I** | H | `europeancommission2016estoniaehr` documents the legal mandate for provider participation; 2008 Estonian Health Information System Act provides statutory backbone |
+| **O** | H | `estonia2026ehealth` describes sustained ministry-level governance and evolving operational frameworks; consistent execution across two decades of national infrastructure operation |
+
+### U.S. VA/DoD EHR Modernization — U(M) T(M) I(H) O(L--M)
+
+| Domain | Rating | Evidence anchor |
+|---|---|---|
+| **U** | M | `gao2025vaehr` (GAO-25-108091, Feb 2025) documents persistent clinician dissatisfaction at deployed VA sites; `gao2024dodehr` (GAO-24-106187, Apr 2024) cites user-satisfaction scores below targets at DoD sites |
+| **T** | M | `gao2025vaehr` describes mature commercial Oracle Health platform but substantial configuration burden integrating with legacy VistA and DoD clinical systems; T not High because integration debt remains material |
+| **I** | H | Congressional mandate via FY2018 NDAA; sustained appropriations; clear executive-branch authority — `gao2025vaehr`, `gao2024dodehr` both confirm institutional backing |
+| **O** | L--M | `gao2025vaehr` flags inadequate vendor governance and slow remediation; `gao2024dodehr` cites issue-management process inadequacies and schedule slips. Persistent execution gaps drive the lowest of any rating in the four-case set |
+
+> **How to reproduce:** A second rater should retrieve the cited source(s) for each cell, apply the rubric criteria above, and assign a rating. Rating disagreements between this rubric and a second rater should be reported as an inter-rater reliability outcome. Single-rater limitation acknowledged in manuscript Limitations.
 
 ---
 

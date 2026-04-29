@@ -5,7 +5,7 @@
 **Affiliation:** Independent Researcher; Enterprise Architecture & Cybersecurity Consultant
 **Date drafted:** April 29, 2026
 **Status:** Retrospective protocol — not pre-registered. The review was already in progress (purposive seed set established) when this protocol was formalized; this document is intended as a transparent, auditable description of the review's scope, methods, and decision rules so reviewers and replicators can assess the work.
-**Registration:** Not registered with PROSPERO or OSF. The author declares this transparently in the manuscript Methods section.
+**Registration:** Not registered with PROSPERO or OSF at the time of seed-set work. **Recommended retrospective registration step (see §13 below):** upload this protocol document to the Open Science Framework (osf.io) before journal submission to obtain a stable, time-stamped registration identifier. While retrospective registration does not equal pre-registration, it provides a publicly verifiable record of methods that strengthens the credibility-of-process claim.
 
 ---
 
@@ -30,7 +30,7 @@
 - Foundational frameworks and policy analyses relevant to health-IT adoption
 - Focus on eHealth, EHR, EMR, HIE, health information technology, or clinical interoperability
 - Addresses adoption, implementation, barriers, facilitators, or determinants
-- Published January 2015 – December 2026 (2003 baseline retained for foundational IS theory)
+- Published January 2015 onwards (2003 baseline retained for foundational IS theory; final search-execution date to be specified upon execution)
 - English language
 
 ### Exclusion
@@ -147,6 +147,33 @@ Funding: None. Competing interests: None declared.
 | U-T-I-O scoring rubric | Documented (`analysis/utio-scoring-rubric.md`) |
 | Manuscript draft | Complete; under IJMI Reviews limits |
 | Submission package | Pending formal-search refresh of PRISMA counts |
+
+---
+
+## 13. OSF Retrospective Registration (Pre-Submission Step)
+
+To strengthen credibility-of-process even though pre-registration was not feasible:
+
+1. Create an OSF project at osf.io (free, requires account).
+2. Upload this `protocol.md` (and optionally `notes/search-strategy.md`, `analysis/utio-scoring-rubric.md`) as project files.
+3. Register the project as "Open-Ended Registration" (or equivalent), which produces a stable, time-stamped DOI and read-only snapshot.
+4. Reference the OSF registration DOI in the manuscript Methods (Item 24a in the PRISMA 2020 checklist), replacing the current "not pre-registered" sentence with: "This review was not pre-registered. A retrospective protocol and supporting materials are deposited at OSF [DOI]."
+
+This is the fastest defensible alternative to PROSPERO pre-registration for a single-author, in-progress review.
+
+---
+
+## 14. Single-Reviewer Audit Check
+
+Independent dual-rating is the strongest mitigation for single-reviewer bias but requires recruiting a second rater. As an interim, lighter mitigation, perform a self-audit on a 10% random sample of retained sources before submission:
+
+1. Generate a 10% random sample of the 17 retained sources (and the 4 cases) using a documented seed (record seed in `analysis/synthesis.md`).
+2. Re-extract U-T-I-O domain coding for each sampled source from scratch, blind to original coding (cover the original extraction column).
+3. Compare blind re-extraction to the original extraction. Record matches, partial matches, and disagreements in `analysis/audit-check.md`.
+4. Report the result in the manuscript Limitations: "A 10% self-audit on retained sources yielded N/N (X%) exact matches on U-T-I-O domain coding; discrepancies are documented in the project repository (`analysis/audit-check.md`)."
+5. If a second rater becomes available later, the same sample can be used for an inter-rater reliability statistic (Cohen's kappa or percent agreement).
+
+This does not replace independent dual-rating but does provide a reproducible internal check that is documented and citable.
 
 ---
 
