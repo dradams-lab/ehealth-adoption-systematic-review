@@ -2,7 +2,7 @@
 \centering
 
 \begin{tikzpicture}[
-  node distance=1.6cm,
+  node distance=1.5cm,
   box/.style={
     draw,
     rounded corners,
@@ -26,45 +26,47 @@
 \node[box] (id) {
 \textbf{Identification}\\
 Records identified from databases\\
-(PubMed, IEEE Xplore, Scopus)\\
-$n = 8{,}000$
+(PubMed, IEEE Xplore, Scopus) and\\
+supplementary sources (WoS, CINAHL,\\
+Google Scholar, hand search, expert recs.)\\
+$n = 424$
 };
 
 \node[box, below=of id] (dup) {
 Records after duplicates removed\\
-$n = 4{,}500$
+$n = 394$
 };
 
 \node[box, below=of dup] (screen) {
 Records screened (title/abstract)\\
-$n = 4{,}500$
+$n = 394$
 };
 
 \node[box, below=of screen] (full) {
 Full-text articles assessed for eligibility\\
-$n = 400$
+$n = 41$ \;\textit{(43 sought; 2 not retrievable)}
 };
 
 \node[box, below=of full] (inc) {
-Studies included in synthesis\\
-$n = 120$
+\textbf{Studies included in synthesis}\\
+$n = 17$
 };
 
 \node[box, below=of inc] (case) {
-Public case studies included\\
+Public implementation cases included\\
 $n = 4$
 };
 
 % --- SIDE (EXCLUSIONS) ---
-\node[side, right=2.5cm of screen] (exclude) {
+\node[side, right=2.0cm of screen] (exclude) {
 Records excluded (title/abstract)\\
-$n = 4{,}100$
+$n = 351$
 };
 
 \node[side, right=1.5cm of full] (fullx) {
-Full-text articles excluded\\
-\textit{Reasons: not adoption-focused, technical-only, duplicates}\\
-$n = 280$
+Full-text articles excluded ($n = 24$)\\
+\textit{Reasons: wrong focus, wrong outcome,}\\
+\textit{wrong setting, narrative-only, duplicates}
 };
 
 % --- ARROWS ---
@@ -79,7 +81,7 @@ $n = 280$
 
 \end{tikzpicture}
 
-\caption{PRISMA 2020 Flow Diagram for Study Selection}
+\caption[PRISMA 2020 Flow Diagram for Study Selection]{PRISMA 2020 Flow Diagram for Study Selection. \textit{Counts shown are seed-set estimates pending formal database-search execution; values will be updated following systematic search.}}
 \label{fig:prisma-flow}
 
 \end{figure}
