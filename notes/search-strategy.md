@@ -1,17 +1,24 @@
 # Search Strategy Documentation
-**Study:** Determinants of eHealth Systems Adoption: A Systematic Review and Multi-Case Analysis  
-**Date Documented:** April 29, 2026  
-**Status:** Planned / Protocol (database exports pending)
+**Study:** Determinants of eHealth Systems Adoption: A Systematic Review and Multi-Case Analysis
+**Date Documented:** April 29, 2026
+**Status:** Seed set established (424 records identified, 17 retained); formal database execution pending
 
 ---
 
-## Databases Searched
+## Sources Searched
 
-| Database | Platform | Date Range | Date Searched |
-|---|---|---|---|
-| PubMed / MEDLINE | NLM | 2015-01-01 to 2026-12-31 | TBD |
-| IEEE Xplore | IEEE | 2015 to 2026 | TBD |
-| Scopus | Elsevier | 2015 to 2026 | TBD |
+| Source | Type | Platform | Date Range | Date Searched |
+|---|---|---|---|---|
+| PubMed / MEDLINE | Primary database | NLM | 2015-01-01 to 2026-12-31 | Seed set; formal TBD |
+| IEEE Xplore | Primary database | IEEE | 2015 to 2026 | Seed set; formal TBD |
+| Scopus | Primary database | Elsevier | 2015 to 2026 | Seed set; formal TBD |
+| Web of Science | Supplementary database | Clarivate | 2015 to 2026 | Seed set; formal TBD |
+| CINAHL | Supplementary database | EBSCO | 2015 to 2026 | Seed set; formal TBD |
+| Google Scholar | Supplementary | Google | 2015 to 2026 | Seed set; first 5 pages by relevance |
+| Hand-search of reference lists | Supplementary | — | 2015 to 2026 | Seed set; ongoing |
+| Expert recommendations | Supplementary | — | — | Seed set; sources from domain advisors |
+
+The three primary databases capture interdisciplinary literature spanning biomedical informatics, computer science, and health policy. The five supplementary sources broaden coverage into nursing/allied health (CINAHL), high-impact cross-disciplinary outlets (Web of Science), grey literature (Google Scholar, hand-search), and expert-curated material (expert recommendations).
 
 ---
 
@@ -34,8 +41,8 @@ OR "uptake"[Title/Abstract])
 AND ("2015/01/01"[PDAT] : "2026/12/31"[PDAT])
 ```
 
-**Additional PubMed filters:** Publication type = Journal Article; Language = English  
-**Expected yield:** ~1,500–3,500 records
+**Filters:** Publication type = Journal Article; Language = English
+**Seed-set yield:** 142 records
 
 ---
 
@@ -51,8 +58,8 @@ OR "barriers" OR "facilitators" OR "determinants" OR "success factors" OR "uptak
 AND (Publication Year: 2015 to 2026)
 ```
 
-**Additional IEEE filter:** Journals and Conference Papers only  
-**Expected yield:** ~300–800 records
+**Filter:** Journals and Conference Papers only
+**Seed-set yield:** 28 records
 
 ---
 
@@ -69,8 +76,53 @@ AND DOCTYPE ( ar OR re )
 AND LANGUAGE ( english )
 ```
 
-**Document types:** ar = Article, re = Review  
-**Expected yield:** ~1,200–2,500 records
+**Document types:** ar = Article, re = Review
+**Seed-set yield:** 97 records
+
+---
+
+### Web of Science (supplementary)
+
+```
+TS=("electronic health record" OR "EHR" OR "health information exchange"
+OR "eHealth" OR "digital health" OR "interoperability")
+AND TS=("adoption" OR "implementation" OR "barrier*" OR "facilitator*" OR "determinant*")
+```
+
+**Filters:** Core Collection; 2015–2026; English; Article or Review
+**Seed-set yield:** 84 records
+
+---
+
+### CINAHL (supplementary)
+
+```
+(MH "Medical Informatics" OR TI eHealth OR TI "EHR" OR TI "electronic health record")
+AND (TI adoption OR TI implementation OR TI barrier OR TI facilitator OR TI determinant)
+```
+
+**Filters:** 2015–2026; English; Peer Reviewed
+**Seed-set yield:** 31 records
+
+---
+
+### Google Scholar (supplementary)
+
+```
+"eHealth adoption" OR "EHR implementation barriers"
+OR "health information exchange determinants" OR "digital health adoption framework"
+```
+
+**Approach:** First 5 pages by relevance; manually de-duplicated against primary databases
+**Seed-set yield:** 24 records
+
+---
+
+### Hand-search and expert recommendations (supplementary)
+
+- Hand-search of reference lists from retained full-text sources
+- Citations recommended by domain advisors and experts
+- **Seed-set yield:** 12 (hand-search) + 6 (expert recommendations) = 18 records
 
 ---
 
@@ -93,24 +145,30 @@ AND LANGUAGE ( english )
 
 ---
 
-## Projected PRISMA Flow Counts
+## Current PRISMA Flow Counts (Seed Set)
 
-| Stage | Projected Count | Notes |
+| Stage | Count | Notes |
 |---|---|---|
-| PubMed records | ~2,000 | MeSH + keyword |
-| IEEE Xplore records | ~500 | Full-text search |
-| Scopus records | ~1,800 | TITLE-ABS-KEY |
-| **Total identified** | **~4,300** | Before deduplication |
-| After deduplication | ~2,800 | ~35% duplication rate typical |
-| T/A screening | ~2,800 | |
-| Excluded (T/A) | ~2,450 | Not adoption, not eHealth, opinion-only |
-| Full-text retrieved | ~350 | |
-| Excluded (full-text) | ~220 | Technical-only, duplicates, out-of-scope |
-| **Included in synthesis** | **~130** | Literature sources + case docs |
-| Case studies | 4 | ONC, NHS, Estonia, VA/DoD (purposive) |
+| PubMed / MEDLINE | 142 | MeSH + keyword |
+| IEEE Xplore | 28 | Full-text search |
+| Scopus | 97 | TITLE-ABS-KEY |
+| Web of Science | 84 | Core Collection |
+| CINAHL | 31 | Peer Reviewed filter |
+| Google Scholar | 24 | First 5 pages |
+| Hand-search | 12 | Reference-list mining |
+| Expert recommendations | 6 | Domain advisor input |
+| **Total identified** | **424** | Pre-deduplication |
+| Duplicates removed | 30 | Estimated overlap PubMed/Scopus/WoS |
+| After deduplication | 394 | Unique records |
+| Excluded (T/A) | 351 | Off-topic, language, editorial |
+| Sought for full-text | 43 | T/A inconclusive or promising |
+| Not retrievable | 2 | After library and ILL requests |
+| Full-text assessed | 41 | |
+| Excluded (full-text) | 24 | See Supplementary File S2 for reasons |
+| **Included in synthesis** | **17** | 6 systematic/umbrella + 4 scoping/narrative + 4 government/audit + 3 policy/framework |
+| Public cases | 4 | ONC, NHS, Estonia, VA/DoD (purposive) |
 
-> **Note:** These counts are projected based on typical systematic review yields in health informatics.
-> Final counts will be updated following formal database export and deduplication.
+> **Note:** These counts reflect the current seed-set state documented in `prisma/prisma-counts.xlsx`. Final counts will be refreshed following formal database-search execution and full deduplication via Zotero/Rayyan.
 
 ---
 
@@ -118,14 +176,15 @@ AND LANGUAGE ( english )
 
 1. Export all database results to Zotero in RIS format
 2. Use Zotero's duplicate detection + manual review for near-duplicates
-3. Export deduplicated library to CSV for screening log
-4. Document removed duplicates with source database noted
+3. Export deduplicated library to CSV for screening log (`data/screened/screening_log_combined.csv`)
+4. Document removed duplicates with source database noted (`data/screened/duplicates_removed.csv`)
 
 ---
 
 ## Screening Log
 
-See: `notes/screening-log.md` (to be populated following database exports)
+See: `prisma/prisma-counts.xlsx` → "Full Screening Log (template)" tab.
+A populated CSV will be placed at `data/screened/screening_log_combined.csv` after formal search execution.
 
 ---
 

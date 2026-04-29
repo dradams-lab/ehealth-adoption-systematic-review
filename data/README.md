@@ -20,15 +20,16 @@ data/
 
 When formal searches are executed, place raw export files here — one file per database:
 
-| File (expected)            | Database          | Format |
-|----------------------------|-------------------|--------|
-| `pubmed_export.csv`        | PubMed / MEDLINE  | CSV    |
-| `scopus_export.csv`        | Scopus            | CSV    |
-| `wos_export.txt`           | Web of Science    | TXT    |
-| `cinahl_export.csv`        | CINAHL            | CSV    |
-| `ieee_export.csv`          | IEEE Xplore       | CSV    |
-| `scholar_export.csv`       | Google Scholar    | CSV    |
-| `handsearch_refs.csv`      | Hand search       | CSV    |
+| File (expected)            | Source                  | Format |
+|----------------------------|-------------------------|--------|
+| `pubmed_export.csv`        | PubMed / MEDLINE        | CSV    |
+| `scopus_export.csv`        | Scopus                  | CSV    |
+| `ieee_export.csv`          | IEEE Xplore             | CSV    |
+| `wos_export.txt`           | Web of Science          | TXT    |
+| `cinahl_export.csv`        | CINAHL                  | CSV    |
+| `scholar_export.csv`       | Google Scholar          | CSV    |
+| `handsearch_refs.csv`      | Hand search             | CSV    |
+| `expert_recs.csv`          | Expert recommendations  | CSV    |
 
 Search strings are documented in: `prisma/prisma-counts.xlsx` → "Search Strings" tab
 (and in Supplementary File S1 referenced in the manuscript methods section)
