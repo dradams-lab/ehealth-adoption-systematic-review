@@ -1,0 +1,85 @@
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[
+  node distance=1.6cm,
+  box/.style={
+    draw,
+    rounded corners,
+    align=center,
+    minimum width=7.5cm,
+    minimum height=1.1cm,
+    font=\small
+  },
+  side/.style={
+    draw,
+    rounded corners,
+    align=center,
+    minimum width=5.5cm,
+    minimum height=1.1cm,
+    font=\small
+  },
+  arrow/.style={->, thick}
+]
+
+% --- MAIN FLOW ---
+\node[box] (id) {
+\textbf{Identification}\\
+Records identified from databases\\
+(PubMed, IEEE Xplore, Scopus)\\
+$n = 8{,}000$
+};
+
+\node[box, below=of id] (dup) {
+Records after duplicates removed\\
+$n = 4{,}500$
+};
+
+\node[box, below=of dup] (screen) {
+Records screened (title/abstract)\\
+$n = 4{,}500$
+};
+
+\node[box, below=of screen] (full) {
+Full-text articles assessed for eligibility\\
+$n = 400$
+};
+
+\node[box, below=of full] (inc) {
+Studies included in synthesis\\
+$n = 120$
+};
+
+\node[box, below=of inc] (case) {
+Public case studies included\\
+$n = 4$
+};
+
+% --- SIDE (EXCLUSIONS) ---
+\node[side, right=2.5cm of screen] (exclude) {
+Records excluded (title/abstract)\\
+$n = 4{,}100$
+};
+
+\node[side, right=1.5cm of full] (fullx) {
+Full-text articles excluded\\
+\textit{Reasons: not adoption-focused, technical-only, duplicates}\\
+$n = 280$
+};
+
+% --- ARROWS ---
+\draw[arrow] (id) -- (dup);
+\draw[arrow] (dup) -- (screen);
+\draw[arrow] (screen) -- (full);
+\draw[arrow] (full) -- (inc);
+\draw[arrow] (inc) -- (case);
+
+\draw[arrow] (screen.east) -- (exclude.west);
+\draw[arrow] (full.east) -- (fullx.west);
+
+\end{tikzpicture}
+
+\caption{PRISMA 2020 Flow Diagram for Study Selection}
+\label{fig:prisma-flow}
+
+\end{figure}
