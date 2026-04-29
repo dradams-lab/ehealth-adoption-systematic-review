@@ -4,20 +4,38 @@ The PRISMA 2020 flow structure was used to document the identification, screenin
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lp{8cm}r}
-\toprule
-Phase & Description & Count \\
-\midrule
-Identification & Records identified from PubMed, IEEE Xplore, Scopus, and supplementary sources & TBD \\
-Deduplication & Duplicate records removed & TBD \\
-Screening & Titles and abstracts screened & TBD \\
-Exclusion & Records excluded during title/abstract screening & TBD \\
-Eligibility & Full-text articles assessed for eligibility & TBD \\
-Full-text Exclusion & Full-text articles excluded with reasons & TBD \\
-Included & Studies included in synthesis & TBD \\
-Case Sources & Public implementation cases included in multi-case analysis & 4 \\
-\bottomrule
-\end{tabular}
-\caption{PRISMA 2020 Flow Summary Template}
+\small % Professional tables often use a slightly smaller font size for density
+\caption{PRISMA 2020 Flow Summary Template} % CAPTION ON TOP
 \label{tab:prisma-flow-summary}
+
+% Apply subtle zebra striping to help the eye track across long rows
+\rowcolors{2}{white}{lightgray} 
+
+% @{} removes unnecessary white space at the left and right edges of the table
+\begin{tabularx}{\textwidth}{@{} l L r @{}} 
+\toprule
+\textbf{Phase} & \textbf{Description} & \textbf{Count} \\
+\midrule
+
+% --- GROUP 1: IDENTIFICATION ---
+\multicolumn{3}{l}{\textit{\textbf{Identification Stage}}} \\
+Identification    & Records identified from PubMed, IEEE Xplore, Scopus, and supplementary sources & TBD \\
+Deduplication     & Duplicate records removed & TBD \\
+
+% --- GROUP 2: SCREENING & ELIGIBILITY ---
+\multicolumn{3}{l}{\textit{\textbf{Screening \& Eligibility Stage}}} \\
+Screening         & Titles and abstracts screened & TBD \\
+Exclusion         & Records excluded during title/abstract screening & TBD \\
+Eligibility       & Full-text articles assessed for eligibility & TBD \\
+Full-text Exclusion & Full-text articles excluded with specific reasons & TBD \\
+
+% --- GROUP 3: INCLUSION ---
+\multicolumn{3}{l}{\textit{\textbf{Inclusion Stage}}} \\
+Included          & Studies included in qualitative synthesis & TBD \\
+Case Sources      & Public implementation cases included in multi-case analysis & 4 \\
+
+\bottomrule
+\end{tabularx}
 \end{table}
+
+\end{document}

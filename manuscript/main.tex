@@ -2,24 +2,53 @@
 % main.tex (root file)
 % =========================
 \documentclass[12pt]{article}
+
+% --- 1. Encoding & Language ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc} % Better font encoding for special characters
+
+% --- 2. Page Layout & Geometry ---
 \usepackage[margin=1in]{geometry}
-\usepackage{amsmath, amssymb}
-\usepackage{booktabs}
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{natbib}
 \usepackage{setspace}
-\usepackage{longtable}
-\usepackage{array}
-\usepackage{float}
-\usepackage{caption}
-\usepackage{subcaption}
+\setstretch{1.2} % Global line spacing
+
+% --- 3. Mathematics ---
+\usepackage{amsmath, amssymb, amsthm}
+
+% --- 4. Graphics & Diagrams ---
+\usepackage{graphicx}
 \usepackage{tikz}
 \usetikzlibrary{positioning}
-\usepackage[table]{xcolor}
-\usepackage{colortbl}
-\usepackage{makecell}
-\setstretch{1.2}
+
+% --- 5. Tables & Data Presentation ---
+\usepackage{booktabs}      % Professional lines (\toprule, etc.)
+\usepackage{array}         % Advanced column formatting
+\usepackage{tabularx}      % Auto-adjusting table widths
+\usepackage{longtable}     % For tables spanning multiple pages
+\usepackage{makecell}      % Easy cell line breaks/formatting
+\usepackage{ragged2e}      % Better text alignment (RaggedRight)
+\usepackage{caption}       % Customizing captions
+\usepackage{subcaption}    % Sub-figures and sub-tables
+\usepackage{float}         % For [H] placement of figures/tables
+
+% --- 6. Colors & Zebra Striping ---
+% Note: [table] option must be passed to xcolor to allow colored rows
+\usepackage[table]{xcolor} 
+\definecolor{lightgray}{gray}{0.96} % Subtle color for tables
+
+% --- 7. Bibliography & References ---
+\usepackage{natbib}
+\usepackage{hyperref}      % ALWAYS load hyperref LAST to avoid conflicts
+
+% ============================================================
+% USER-DEFINED SETTINGS (Custom Column Types)
+% ============================================================
+
+% This is the "L" column type we used for your professional table.
+% It provides a fixed-width, left-aligned, text-wrapping column.
+\newcolumntype{L}{>{\RaggedRight\arraybackslash}p{9cm}}
+
+% ============================================================
 
 % ---- Table colour palette ----
 \definecolor{headerblue}{HTML}{1F3864}
