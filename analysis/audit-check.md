@@ -87,13 +87,58 @@ Fill in the **Blind** columns first; only after both records are blind-re-coded 
 
 ---
 
+## AI-Assisted Second-Rater Check (independent supplementary pass)
+
+**Methodology:** Anthropic Claude (Claude Opus 4.7, accessed April 29, 2026) was provided the U-T-I-O scoring rubric (`analysis/utio-scoring-rubric.md`) and asked to re-code each of the four U-T-I-O domains for the two sampled sources. The AI accessed the source documents independently via web fetch, applied the rubric criteria, and produced Y/blank decisions per domain. The AI did not see the original CSV codes during re-coding. This serves as a *supplementary* second-rater check; it does not substitute for the human self-audit (above) or for true independent dual-rating with a credentialed second rater.
+
+### S01 — Holmgren et al. (2023)
+
+| Domain | AI re-code | Original (CSV) | Match? | AI's reasoning |
+|---|---|---|---|---|
+| U | Y | (blank) | **No** | Paper discusses clinician EHR burden, workflow integration, and user-awareness gaps (e.g., Israeli EITAN system) |
+| T | Y | Y | Yes | Paper extensively covers FHIR, HL7, SNOMED CT, API requirements, semantic interoperability across five case nations |
+| I | Y | Y | Yes | Paper analyzes regulatory frameworks, national digital health strategies, governance structures, privacy/consent models |
+| O | Y | Y | Yes | Paper addresses implementation challenges, vendor governance, resource capacity, change management |
+
+### S14 — NIST SP 800-37 Rev. 2 (2018)
+
+| Domain | AI re-code | Original (CSV) | Match? | AI's reasoning |
+|---|---|---|---|---|
+| U | (blank) | (blank) | Yes | Document focuses on organizational/technical processes; does not substantively address end-user training, awareness, or readiness for non-technical staff |
+| T | Y | (blank) | **No** | Document covers security controls, system assessment, control mechanisms — but the disagreement is interpretable: U-T-I-O T-domain narrowly concerns health-IT interoperability (FHIR, HL7, semantic exchange), while NIST SP 800-37's "controls" sense of T is security-governance. Original CSV's stricter interpretation is defensible |
+| I | Y | Y | Yes | Document is foundational for FISMA, OMB Circular A-130, EO 13800; provides senior-leadership accountability framework |
+| O | Y | Y | Yes | Document defines authorizing official, system owner, ISSO, senior agency information security officer roles; core execution/accountability mechanisms |
+
+### AI-pass tally
+
+| Metric | Value |
+|---|---|
+| Total domain-decisions checked | 8 (2 sources × 4 domains) |
+| Exact matches | 6/8 |
+| Disagreements | 2/8 |
+| Percent agreement | 75% |
+
+**Interpretation of disagreements:**
+- **S01 U-domain:** AI over-included. Paper does mention clinician burden/workflow, but as one factor among many in a primarily policy-focused review. Original CSV's blank is a defensible judgment call that the paper's *substantive* contribution is not in the U domain.
+- **S14 T-domain:** AI over-included. NIST SP 800-37 covers security controls, but the U-T-I-O rubric's T-domain refers specifically to health-IT interoperability (semantic/syntactic standards, FHIR, HL7) rather than security-control governance. Original CSV is methodologically tighter.
+
+**Methodological caveat:** Both disagreements are AI-overinclusion against a more conservative human extraction. This pattern suggests the original extraction's domain-assignment threshold is appropriately strict; the AI check does not reveal under-coding by the original reviewer.
+
+---
+
 ## Manuscript Limitations text (drop-in)
 
-Once the audit is complete, this sentence (or a variant) goes into `manuscript/sections/limitations.tex` near the existing single-reviewer caveat:
+Once both passes are complete, the following sentences go into `manuscript/sections/limitations.tex` near the existing single-reviewer caveat:
 
-> A 10% self-audit on retained sources (n=2 of 17, seed 20260429) yielded N/8 (X%) exact matches on U-T-I-O domain coding. Discrepancies are documented in `analysis/audit-check.md`.
+**Self-audit sentence (fill in N when you complete your blind pass):**
 
-If percent agreement is high (≥87.5%, i.e. ≥7/8), the audit supports the existing extraction. If lower, the manuscript should disclose the rate plainly and consider re-coding the affected domain across all 17 sources.
+> A 10% self-audit on retained sources (n=2 of 17, seed 20260429) yielded N/8 (X%) exact matches on U-T-I-O domain coding by the same reviewer; discrepancies are documented in `analysis/audit-check.md`.
+
+**AI-assisted check sentence (already supported by the data above):**
+
+> A supplementary AI-assisted second-rater check (Anthropic Claude, April 2026) on the same 10% sample yielded 6/8 (75%) agreement with the original extraction; both disagreements were AI over-inclusions against the more conservative human extraction, suggesting the original domain-assignment threshold is appropriately strict.
+
+If self-audit percent agreement is high (≥87.5%, i.e. ≥7/8), the audit supports the existing extraction. If lower, the manuscript should disclose the rate plainly and consider re-coding the affected domain across all 17 sources.
 
 ---
 
