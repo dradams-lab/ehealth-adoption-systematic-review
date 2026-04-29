@@ -1,0 +1,26 @@
+% =========================
+% tables/summary_table.tex
+% IJMI-required Summary Table (2-4 bullet points)
+% Uses \caption* (unnumbered) so it does not consume the table counter
+% =========================
+
+\begin{table}[H]
+\caption*{\textbf{Summary Table}}
+\centering
+\small
+\renewcommand{\arraystretch}{1.55}
+\setlength{\tabcolsep}{10pt}
+\arrayrulecolor{headerblue}
+\begin{tabular}{p{14cm}}
+\toprule
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{What this systematic review adds}} \\
+\midrule
+\textcolor{headerblue}{\textbullet}\ eHealth adoption is determined by alignment across four interacting domains—User Readiness, Technical Interoperability, Institutional Alignment, and Organizational Execution—not by any single domain in isolation. \\
+\textcolor{headerblue}{\textbullet}\ Across 17 reviewed sources and four national implementation cases, no source identified a single-domain explanation as sufficient; multi-domain convergence emerged as the decisive predictor of adoption maturity. \\
+\textcolor{headerblue}{\textbullet}\ Strong institutional mandate and technical infrastructure are necessary but insufficient: the VA/DoD case demonstrates how organizational execution and user-readiness gaps constrain adoption value despite congressional mandate and sustained investment. \\
+\textcolor{headerblue}{\textbullet}\ The U-T-I-O Model functions as both a descriptive framework and a diagnostic tool, providing a structured basis for assessing implementation readiness and identifying domain-level misalignment risks before deployment. \\
+\bottomrule
+\end{tabular}
+\arrayrulecolor{black}
+\end{table}

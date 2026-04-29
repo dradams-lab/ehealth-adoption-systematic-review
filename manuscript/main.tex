@@ -78,6 +78,9 @@
 % ---- Abstract ----
 \input{sections/abstract}
 
+% ---- Summary Table (IJMI requirement, unnumbered) ----
+\input{tables/summary_table}
+
 % ---- Main Sections ----
 \input{sections/introduction}
 
@@ -90,7 +93,6 @@
 \input{figures/prisma_tikz}
 
 \input{sections/results}
-\input{tables/evidence_extraction_table}
 \input{tables/determinant_matrix}
 
 \input{sections/discussion}
@@ -104,5 +106,12 @@
 \nocite{*}
 \bibliographystyle{plainnat}
 \bibliography{references}
+
+% ---- Supplementary Materials (appendix; tables here are renumbered S1, S2, ...) ----
+\appendix
+\renewcommand{\thetable}{S\arabic{table}}
+\setcounter{table}{0}
+\section*{Supplementary Materials}
+\input{tables/evidence_extraction_table}
 
 \end{document}
