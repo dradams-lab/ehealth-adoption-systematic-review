@@ -2,7 +2,7 @@
 
 **Purpose:** Light mitigation for single-reviewer bias on U-T-I-O domain coding (per `notes/protocol.md` §14). The reviewer (the author) blind-re-codes a randomly sampled subset of retained sources and compares the blind re-coding to the original extraction. Disagreements are documented; the result feeds the manuscript Limitations section.
 
-**Status:** Sample generated; blind re-coding pending.
+**Status:** Self-audit complete (6/8 = 75% agreement). AI-assisted second-rater pass complete (6/8 = 75% agreement, opposite-direction disagreements).
 
 ---
 
@@ -62,10 +62,10 @@ Fill in the **Blind** columns first; only after both records are blind-re-coded 
 
 | Domain | Blind re-code (Y / blank) | Original (from CSV) | Match? (Y / N) | Notes if disagree |
 |---|---|---|---|---|
-| U |   |   |   |   |
-| T |   |   |   |   |
-| I |   |   |   |   |
-| O |   |   |   |   |
+| U | blank | blank | Y | Focus is on policy and future research need; user mentions limited to research context |
+| T | blank | Y | **N** | FHIR/HL7 mentioned but only at high-level / superficial; not substantively engaged. Original was more permissive |
+| I | Y | Y | Y | Policy discussion is the article's central frame, even if treatment is high-level |
+| O | blank | Y | **N** | High-level mention of leadership buy-in; no detail on implementation, change management, or vendor governance. Original was more permissive |
 
 ### S14 — NIST SP 800-37 Rev. 2 (2018)
 
@@ -73,10 +73,10 @@ Fill in the **Blind** columns first; only after both records are blind-re-coded 
 
 | Domain | Blind re-code (Y / blank) | Original (from CSV) | Match? (Y / N) | Notes if disagree |
 |---|---|---|---|---|
-| U |   |   |   |   |
-| T |   |   |   |   |
-| I |   |   |   |   |
-| O |   |   |   |   |
+| U | blank | blank | Y | Document is focused on secured best practices and security threat mitigation, not user readiness |
+| T | blank | blank | Y | T-domain is health-IT interoperability; document addresses security controls, which are distinct |
+| I | Y | Y | Y | One component of many regulatory frameworks applicable to eHealth adoption / interoperability |
+| O | Y | Y | Y | Substantively addresses organizational execution, but limited to security roles (appropriate to scope) |
 
 ---
 
@@ -85,9 +85,11 @@ Fill in the **Blind** columns first; only after both records are blind-re-coded 
 | Metric | Value |
 |---|---|
 | Total domain-decisions checked | 8 (2 sources × 4 domains) |
-| Exact matches |   /8 |
-| Disagreements |   /8 |
-| Percent agreement |   % |
+| Exact matches | **6/8** |
+| Disagreements | **2/8** |
+| Percent agreement | **75%** |
+
+**Pattern of disagreement:** Both disagreements involve S01 (Holmgren et al. 2023), and both go in the same direction — the blind re-coding was *stricter* than the original on the T and O domains. The blind re-coder applied a "substantive engagement, not just mention" criterion that the original extraction had treated more permissively. The 75% agreement is below the 87.5% threshold the protocol set for "audit fully supports the existing extraction"; per `notes/protocol.md` §14, the disagreement is documented transparently in the manuscript Limitations rather than retroactively fixing the original extraction. Considering re-coding T and O across all 17 sources under the stricter standard is recommended as future work but not required for this submission.
 
 ---
 
@@ -134,15 +136,9 @@ Fill in the **Blind** columns first; only after both records are blind-re-coded 
 
 Once both passes are complete, the following sentences go into `manuscript/sections/limitations.tex` near the existing single-reviewer caveat:
 
-**Self-audit sentence (fill in N when you complete your blind pass):**
+**Combined sentence used in `manuscript/sections/limitations.tex`:**
 
-> A 10% self-audit on retained sources (n=2 of 17, seed 20260429) yielded N/8 (X%) exact matches on U-T-I-O domain coding by the same reviewer; discrepancies are documented in `analysis/audit-check.md`.
-
-**AI-assisted check sentence (already supported by the data above):**
-
-> A supplementary AI-assisted second-rater check (Anthropic Claude, April 2026) on the same 10% sample yielded 6/8 (75%) agreement with the original extraction; both disagreements were AI over-inclusions against the more conservative human extraction, suggesting the original domain-assignment threshold is appropriately strict.
-
-If self-audit percent agreement is high (≥87.5%, i.e. ≥7/8), the audit supports the existing extraction. If lower, the manuscript should disclose the rate plainly and consider re-coding the affected domain across all 17 sources.
+> A 10\% self-audit (n=2 of 17, seed 20260429) and a supplementary AI-assisted second-rater check both yielded 6/8 (75\%) agreement on U-T-I-O domain coding; disagreements went in opposite directions (self-audit stricter than the original extraction on Holmgren 2023 T and O; AI over-inclusion on the same paper's U), and are documented in `analysis/audit-check.md`.
 
 ---
 
