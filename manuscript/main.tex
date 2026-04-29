@@ -25,6 +25,7 @@
 \usepackage{array}         % Advanced column formatting
 \usepackage{tabularx}      % Auto-adjusting table widths
 \usepackage{longtable}     % For tables spanning multiple pages
+\usepackage{pdflscape}     % Landscape pages for wide tables (e.g. Supp Table S1)
 \usepackage{makecell}      % Easy cell line breaks/formatting
 \usepackage{ragged2e}      % Better text alignment (RaggedRight)
 \usepackage{caption}       % Customizing captions
@@ -37,7 +38,9 @@
 \definecolor{lightgray}{gray}{0.96} % Subtle color for tables
 
 % --- 7. Bibliography & References ---
-\usepackage{natbib}
+% IJMI uses Elsevier Vancouver-numbered style: numbered citations in order
+% of first appearance, e.g. [1], [2,3], [4-6].
+\usepackage[numbers,sort&compress]{natbib}
 \usepackage{hyperref}      % ALWAYS load hyperref LAST to avoid conflicts
 
 % ============================================================
@@ -104,7 +107,7 @@
 
 % ---- Bibliography ----
 \nocite{*}
-\bibliographystyle{plainnat}
+\bibliographystyle{unsrtnat}
 \bibliography{references}
 
 % ---- Supplementary Materials (appendix; tables here are renumbered S1, S2, ...) ----
@@ -112,6 +115,11 @@
 \renewcommand{\thetable}{S\arabic{table}}
 \setcounter{table}{0}
 \section*{Supplementary Materials}
+
+% Supplementary Table S1 is wide (7 columns x 17 rows) — render in landscape
+% for legibility. pdflscape rotates the page in the PDF without affecting flow.
+\begin{landscape}
 \input{tables/evidence_extraction_table}
+\end{landscape}
 
 \end{document}
