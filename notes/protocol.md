@@ -163,17 +163,46 @@ This is the fastest defensible alternative to PROSPERO pre-registration for a si
 
 ---
 
-## 14. Single-Reviewer Audit Check
+## 14. Single-Reviewer Audit Checks
 
-Independent dual-rating is the strongest mitigation for single-reviewer bias but requires recruiting a second rater. As an interim, lighter mitigation, perform a self-audit on a 10% random sample of retained sources before submission:
+Independent dual-rating is the strongest mitigation for single-reviewer bias but requires recruiting a credentialed second rater. As an interim, two complementary internal checks are performed:
 
-1. Generate a 10% random sample of the 17 retained sources (and the 4 cases) using a documented seed (record seed in `analysis/synthesis.md`).
-2. Re-extract U-T-I-O domain coding for each sampled source from scratch, blind to original coding (cover the original extraction column).
+### 14a. 17-source domain-presence audit (Y/blank coding)
+
+Self-audit on a 10% random sample of retained sources before submission:
+
+1. Generate a 10% random sample of the 17 retained sources using a documented seed (recorded in `analysis/audit-check.md`).
+2. Re-extract U-T-I-O domain coding (Y / blank) for each sampled source from scratch, blind to original coding (cover the original extraction column).
 3. Compare blind re-extraction to the original extraction. Record matches, partial matches, and disagreements in `analysis/audit-check.md`.
-4. Report the result in the manuscript Limitations: "A 10% self-audit on retained sources yielded N/N (X%) exact matches on U-T-I-O domain coding; discrepancies are documented in the project repository (`analysis/audit-check.md`)."
-5. If a second rater becomes available later, the same sample can be used for an inter-rater reliability statistic (Cohen's kappa or percent agreement).
+4. Supplementary: an AI-assisted second-rater check (Anthropic Claude) re-codes the same sample independently for transparency; documented alongside the self-audit.
+5. Report the result in manuscript Limitations.
 
-This does not replace independent dual-rating but does provide a reproducible internal check that is documented and citable.
+### 14b. 4-case rubric-rating audit (H / M / L–M / L coding)
+
+Second-rater pass on the 16 case-domain rubric ratings:
+
+1. Use the rubric criteria and case definitions in `analysis/second-rater-protocol.md` §2; the rater is blinded to the original ratings.
+2. Compute exact agreement, within-one-band agreement, and linear-weighted Cohen's κ (N = 16; κ point estimate is high-variance and reported for transparency, not as an inferential claim).
+3. Adjudicate each disagreement as (a) different evidence interpretation, (b) rubric-band ambiguity, or (c) candidate for revision based on rubric trigger language matched by the second rater. Record in `analysis/second-rater-protocol.md` §4.
+4. Report in manuscript Methods §3.2.2 and Limitations.
+
+Currently the second-rater pass has been completed in AI-assisted form (Anthropic Claude Opus 4.7, April 2026); a credentialed human second rater remains an outstanding methodological gap.
+
+### 14c. External-reviewer cross-check (independent human dual-rating, light-touch)
+
+A 2-source independent external-reviewer pass — the strongest of the three audits but kept deliberately small to respect the reviewer's time:
+
+1. Sample 2 sources from the 17 using a documented seed, excluding sources already audited in §14a, the author's own dissertation (S07), lengthy grey-literature reports unsuitable for a 30-minute review (S08–S13, S15–S16), and any non-open-access sources (S17). Eligible pool: peer-reviewed open-access sources (S02–S06).
+2. Prepare the tear-off packet at `analysis/external-reviewer-packet.md` containing: a one-paragraph cover, the U-T-I-O rubric, both papers with open-access links, and a blank response form.
+3. Send the packet (or its tear-off section) to a credentialed reviewer (health-IT or systematic-review familiarity preferred). Two-week reply-by suggested.
+4. Record the reviewer's response in the recording section of the same file; compute matches and disagreements; adjudicate.
+5. Report in manuscript Limitations §4 and Acknowledgements (with reviewer's permission).
+
+The current sample, generated 2026-04-30 with seed `20260430`, is S04 (Fennelly 2020) and S05 (Aguirre 2019).
+
+### 14d. Why all three checks
+
+The three audits cover complementary methodological gaps: the §14a self-audit checks the author's own consistency (intra-rater); the §14b AI-assisted case-rating pass checks the rubric application against an independent re-reading; the §14c external-reviewer pass adds a credentialed independent human voice. None substitutes for full independent dual-rating across all 17 sources, but together they triangulate the original extraction's defensibility.
 
 ---
 
