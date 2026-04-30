@@ -74,8 +74,8 @@
 ### Finding 1: Multi-domain convergence is the decisive predictor
 No source in the evidence base identifies a single-domain explanation as sufficient for adoption success. All 6 systematic/umbrella reviews cite multi-domain determinants. The Estonia case is the only case among the four with High ratings across all four domains — and it demonstrates the highest adoption maturity.
 
-### Finding 2: Technical strength without user/organizational alignment yields limited adoption value
-ONC HIE programs and the VA/DoD initiative both deployed substantial technical infrastructure (T = High or Medium-High) but neither achieved the adoption breadth or user engagement of Estonia. The gap is attributable to user readiness and organizational execution domain deficits, consistent with the U-T-I-O model's prediction.
+### Finding 2: Technical investment without multi-domain alignment yields limited adoption value
+ONC HIE programs and the VA/DoD initiative both deployed substantial technical infrastructure but neither achieved the adoption breadth or user engagement of Estonia. ONC HIE achieves T = High but is constrained by U and O gaps; VA/DoD's investment has not translated into realised technical interoperability (T = Low–Medium post-revision per the second-rater audit) and is further constrained by U and O gaps. In both cases, the adoption gap is attributable to multi-domain misalignment rather than to any single domain in isolation, consistent with the U-T-I-O model's prediction.
 
 ### Finding 3: Institutional mandate is necessary but not transformative alone
 Both the U.S. (HITECH, Cures Act) and VA/DoD (Congressional mandate) cases demonstrate strong institutional alignment. Yet adoption outcomes differ substantially. Institutional mandate creates the conditions for adoption — it does not guarantee it.
@@ -85,7 +85,7 @@ Applying the model retrospectively to all four cases yields predictions consiste
 - Estonia: f(H, H, H, H) → Highest adoption maturity ✓
 - ONC HIE: f(M, H, H, M) → Broad adoption with variable organizational uptake ✓
 - NHS Shared Care: f(M, H, H, M) → Strong national vision, variable local execution ✓
-- VA/DoD: f(M, M, H, L-M) → Strong mandate, constrained realised adoption value ✓
+- VA/DoD: f(L-M, L-M, H, L-M) → Strong mandate, constrained realised adoption value across U/T/O ✓
 
 ---
 

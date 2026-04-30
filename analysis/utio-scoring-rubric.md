@@ -107,14 +107,16 @@ For each case, ratings are anchored to specific sources from the bibliography (c
 | **I** | H | `europeancommission2016estoniaehr` documents the legal mandate for provider participation; 2008 Estonian Health Information System Act provides statutory backbone |
 | **O** | H | `estonia2026ehealth` describes sustained ministry-level governance and evolving operational frameworks; consistent execution across two decades of national infrastructure operation |
 
-### U.S. VA/DoD EHR Modernization — U(M) T(M) I(H) O(L--M)
+### U.S. VA/DoD EHR Modernization — U(L–M) T(L–M) I(H) O(L–M)
 
 | Domain | Rating | Evidence anchor |
 |---|---|---|
-| **U** | M | `gao2025vaehr` (GAO-25-108091, Feb 2025) documents persistent clinician dissatisfaction at deployed VA sites; `gao2024dodehr` (GAO-24-106187, Apr 2024) cites user-satisfaction scores below targets at DoD sites |
-| **T** | M | `gao2025vaehr` describes mature commercial Oracle Health platform but substantial configuration burden integrating with legacy VistA and DoD clinical systems; T not High because integration debt remains material |
+| **U** | L–M | `gao2025vaehr` (GAO-25-108091, Feb 2025) documents persistent clinician dissatisfaction at deployed VA sites; `gao2024dodehr` (GAO-24-106187, Apr 2024) cites user-satisfaction scores below targets at DoD sites. The rubric's U decision rule lists "Documented persistent user-satisfaction crisis (e.g., GAO findings) → L"; the L–M rating reflects the documented crisis tempered by ongoing remediation activity at deployed sites. Revised from M (2026-04-30, see audit-trail note below). |
+| **T** | L–M | `gao2025vaehr` describes mature commercial Oracle Health platform but substantial configuration burden integrating with legacy VistA and DoD clinical systems; documented system-quality and data-completeness gaps in deployed sites. The rubric's T decision rule "Standards adopted but with substantial integration debt → L–M" is the closest match. Revised from M (2026-04-30, see audit-trail note below). |
 | **I** | H | Congressional mandate via FY2018 NDAA; sustained appropriations; clear executive-branch authority — `gao2025vaehr`, `gao2024dodehr` both confirm institutional backing |
-| **O** | L--M | `gao2025vaehr` flags inadequate vendor governance and slow remediation; `gao2024dodehr` cites issue-management process inadequacies and schedule slips. Persistent execution gaps drive the lowest of any rating in the four-case set |
+| **O** | L–M | `gao2025vaehr` flags inadequate vendor governance and slow remediation; `gao2024dodehr` cites issue-management process inadequacies and schedule slips. Persistent execution gaps drive the lowest-tier ratings in the four-case set |
+
+> **Audit-trail note (2026-04-30):** The U and T ratings for VA/DoD were revised from M to L–M following the AI-assisted second-rater pass documented in `analysis/second-rater-protocol.md`. The second rater applied the rubric's explicit decision-rule trigger language for both domains; the original ratings (M for both) were a band more lenient than the rubric strictly indicated. Revised ratings retain a middle position (L–M rather than the second rater's L for U) to reflect ongoing remediation activity at deployed sites. Inter-rater agreement statistics in `second-rater-protocol.md` §3.3 are computed on the *pre-revision* ratings, as is methodologically appropriate (κ measures original-vs-second-rater agreement at the time of the audit, not post-revision).
 
 > **How to reproduce:** A second rater should retrieve the cited source(s) for each cell, apply the rubric criteria above, and assign a rating. Rating disagreements between this rubric and a second rater should be reported as an inter-rater reliability outcome. Single-rater limitation acknowledged in manuscript Limitations.
 
