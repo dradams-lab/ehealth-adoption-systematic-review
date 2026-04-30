@@ -1,6 +1,8 @@
-# Single-Reviewer Audit Check
+# Single-Reviewer Audit Check — 17-source domain-presence coding
 
-**Purpose:** Light mitigation for single-reviewer bias on U-T-I-O domain coding (per `notes/protocol.md` §14). The reviewer (the author) blind-re-codes a randomly sampled subset of retained sources and compares the blind re-coding to the original extraction. Disagreements are documented; the result feeds the manuscript Limitations section.
+**Purpose:** Light mitigation for single-reviewer bias on U-T-I-O domain *presence* coding (Y / blank) across the 17-source corpus (per `notes/protocol.md` §14a). The reviewer (the author) blind-re-codes a randomly sampled subset of retained sources and compares the blind re-coding to the original extraction. Disagreements are documented; the result feeds the manuscript Limitations section.
+
+**Companion audit.** A separate second-rater check covers the *case-level rubric ratings* (H / M / L–M / L for the 4 cases × 4 domains) and is documented in `analysis/second-rater-protocol.md` (per `notes/protocol.md` §14b). The two audits cover different units of analysis — presence of a domain in a source vs. strength of realization in a case — and are reported separately in the manuscript.
 
 **Status:** Self-audit complete (6/8 = 75% agreement). AI-assisted second-rater pass complete (6/8 = 75% agreement, opposite-direction disagreements).
 
