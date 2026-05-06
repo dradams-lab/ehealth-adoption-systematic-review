@@ -1,0 +1,539 @@
+% ============================================================
+% Supplementary File S4: Second-Rater Protocol
+% ============================================================
+
+\newpage
+\section*{Supplementary File S4: Second-Rater Protocol --- U-T-I-O Case Ratings}
+\label{sec:S4}
+
+\noindent\textbf{Purpose:} Mitigate the single-rater limitation on the case-level U-T-I-O ratings
+(4~cases $\times$ 4~domains = 16 ordinal ratings on a four-band scale: H~/ M~/ L--M~/ L).
+Distinct from the 17-source domain-presence self-audit (audit-check.md), which audits
+\textit{domain-presence} coding (Y/blank) on the 17-source corpus.
+
+\noindent\textbf{Scope:} Applies the rubric in Supplementary File~S3 to the four cases
+(U.S.\ ONC HIE, NHS Shared Care Records, Estonia eHealth, U.S.\ VA/DoD EHR Modernization).
+Each case-domain cell is re-rated by a second rater blind to the original ratings,
+then compared and adjudicated.
+
+\bigskip
+
+% ------------------------------------------------------------------
+% 1. METHOD
+% ------------------------------------------------------------------
+
+\subsection*{1. Method}
+
+\subsubsection*{1.1 Rater Independence}
+
+The second rater receives: (a) the construct-level criteria for U, T, I, and O (the four
+rubric tables in Supplementary File~S3); (b) the case-by-case evidence anchors with
+citation keys, but \textbf{with the original ratings redacted}; and (c) the bibliography
+for source verification. The second rater does \textbf{not} see the original H / M / L--M / L
+assignments before producing their own.
+
+\subsubsection*{1.2 Rater Types Reported}
+
+This protocol supports two rater types, reported separately:
+\begin{enumerate}
+\item \textbf{Human second rater} (preferred; not yet recruited). A credentialed reviewer
+  with health-IT or implementation-science expertise re-rates from the blinded rubric.
+  Status: pending.
+\item \textbf{AI-assisted second rater} (supplementary; executed). Anthropic Claude Opus~4.7,
+  accessed 2026-04-29. Given the blinded rubric and access to the cited primary sources via
+  web tools. \textbf{Does not substitute} for human dual-rating; mirrors the AI-assisted
+  pattern used in the 17-source domain-presence self-audit.
+\end{enumerate}
+
+\subsubsection*{1.3 Agreement Statistics}
+
+With N~=~16 ordinal cells on a 4-band scale, three statistics are reported jointly:
+\begin{itemize}
+\item \textbf{Percent exact agreement} --- fraction of cells where second rater matches
+  original exactly (primary; easy to interpret).
+\item \textbf{Percent within-one-band agreement} --- fraction where ratings are within one
+  band of each other (catches close disagreements that may reflect rubric-band ambiguity).
+\item \textbf{Linear-weighted Cohen's~$\kappa$} --- ordinal-aware agreement statistic.
+  Weights: $w_{ij} = |i-j|/3$ where $i$, $j$ are band indices on a 1--4 scale
+  (L=1, L--M=2, M=3, H=4). Reported with the explicit caveat that \textbf{N~=~16
+  yields a high-variance $\kappa$ point estimate}; reported for transparency, not
+  as a robust inferential claim.
+\end{itemize}
+
+\subsubsection*{1.4 Disagreement Adjudication}
+
+For each disagreement (exact mismatch), the original rater records: which construct(s)
+drove the original rating; which construct(s) the second rater appears to have weighted
+differently; and whether the disagreement reflects (a)~different evidence interpretation,
+(b)~rubric-band ambiguity, or (c)~a defensible rating revision. If category~(c), the
+original rating is updated in Supplementary File~S3 with a logged change.
+
+\bigskip
+
+% ------------------------------------------------------------------
+% 2. BLINDED RUBRIC
+% ------------------------------------------------------------------
+
+\subsection*{2. Blinded Rubric Handed to the Second Rater}
+
+\noindent\textit{Note for second rater: Use the construct definitions in Supplementary
+File~S3 and the rating decision rules. For each case below, read the cited sources and
+assign one of \{H, M, L--M, L\} per domain. Do not consult the evidence-anchored ratings
+section of Supplementary File~S3 before completing your ratings.}
+
+\medskip
+\noindent\textbf{Case A --- U.S.\ ONC HIE.}
+Primary sources: \textit{onc2025reports}, \textit{holmgren2023policyhie},
+\textit{eden2016barriers}, \textit{kruse2016adoption}.
+Context: Federated, market-based HIE infrastructure under HITECH Act incentives
+and 21st Century Cures Act / TEFCA. Rate U~/~T~/~I~/~O.
+
+\medskip
+\noindent\textbf{Case B --- NHS Shared Care Records (UK).}
+Primary sources: \textit{nhs2025sharedcare}, \textit{fennelly2020national}.
+Context: Centrally coordinated national interoperability programme within a single-payer
+health system. Rate U~/~T~/~I~/~O.
+
+\medskip
+\noindent\textbf{Case C --- Estonia eHealth.}
+Primary sources: \textit{estonia2026ehealth}, \textit{europeancommission2016estoniaehr},
+\textit{holmgren2023policyhie}.
+Context: Legally mandated national digital health infrastructure on the X-Road exchange
+platform, operational since 2008. Rate U~/~T~/~I~/~O.
+
+\medskip
+\noindent\textbf{Case D --- U.S.\ VA/DoD Federal EHR Modernization.}
+Primary sources: \textit{gao2025vaehr}, \textit{gao2024dodehr}.
+Context: Large-scale federal EHR replacement (Oracle Health~/~Cerner; MHS GENESIS)
+under FY2018 NDAA mandate. Rate U~/~T~/~I~/~O.
+
+\medskip
+
+\noindent\textbf{Blank rating sheet:}
+
+\renewcommand{\arraystretch}{1.25}
+\begin{table}[H]
+\footnotesize
+\centering
+\begin{tabular}{lcccc}
+\toprule
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Case}} &
+\textcolor{white}{\textbf{U}} &
+\textcolor{white}{\textbf{T}} &
+\textcolor{white}{\textbf{I}} &
+\textcolor{white}{\textbf{O}} \\
+\midrule
+\rowcolor{rowgray}
+A --- U.S.\ ONC HIE &  &  &  &  \\
+B --- NHS Shared Care Records &  &  &  &  \\
+\rowcolor{rowgray}
+C --- Estonia eHealth &  &  &  &  \\
+D --- VA/DoD EHR &  &  &  &  \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\bigskip
+
+% ------------------------------------------------------------------
+% 3. RESULTS
+% ------------------------------------------------------------------
+
+\subsection*{3. Results}
+
+\subsubsection*{3.1 AI-Assisted Second Rater (Anthropic Claude Opus~4.7, 2026-04-30)}
+
+The AI rater was given the rubric criteria (§§U--O of Supplementary File~S3) and the
+blinded case definitions in~§2 above. The rater operated in a fresh agent context with no
+exposure to the original ratings.
+\textbf{Audit-trail note:} A first AI pass was discarded after the rater reported
+inadvertent exposure to original ratings in an earlier draft. The ratings below are from
+the clean second pass; the discarded pass is not retained.
+
+\medskip
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{4pt}
+
+\begin{longtable}{p{2.8cm} p{0.8cm} >{\centering\arraybackslash}p{1.4cm} p{9.6cm}}
+
+\caption{AI-Assisted Second-Rater Ratings and Justifications}
+\label{tab:s4-airater}\\
+
+\toprule
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Case}} &
+\textcolor{white}{\textbf{Dom.}} &
+\textcolor{white}{\textbf{Rating}} &
+\textcolor{white}{\textbf{Justification ($\leq$2 sentences; constructs cited)}} \\
+\midrule
+\endfirsthead
+
+\caption[]{AI-Assisted Second-Rater Ratings (continued)}\\
+\toprule
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Case}} &
+\textcolor{white}{\textbf{Dom.}} &
+\textcolor{white}{\textbf{Rating}} &
+\textcolor{white}{\textbf{Justification ($\leq$2 sentences; constructs cited)}} \\
+\midrule
+\endhead
+
+\bottomrule
+\multicolumn{4}{r}{\footnotesize\textit{Continued on next page\ldots}}\\
+\endfoot
+
+\bottomrule
+\endlastfoot
+
+\rowcolor{rowgray}
+A --- U.S.\ ONC HIE & U & \cellcolor{lowred}\textcolor{lowredtext}{\textbf{L--M}} &
+Usability and workflow integration mixed across the federated HIE landscape with
+documented clinician burden (\textit{eden2016barriers}, \textit{kruse2016adoption});
+Patient engagement via portals exists but adoption is variable and Training adequacy
+varies widely across participating organisations. \\
+
+A --- U.S.\ ONC HIE & T & \cellcolor{medamber}\textcolor{medambertext}{\textbf{M}} &
+Syntactic interoperability advancing under FHIR/USCDI and the API/exchange layer is
+federated (TEFCA QHINs, eHealth Exchange) and operational, but Semantic interoperability
+and Data completeness remain voluntary and uneven --- fits ``federated/standards-based
+but voluntary~$\rightarrow$~M''. \\
+
+\rowcolor{rowgray}
+A --- U.S.\ ONC HIE & I & \cellcolor{medamber}\textcolor{medambertext}{\textbf{M}} &
+Strong Interoperability mandate (Cures Act information-blocking) and Incentive alignment
+(HITECH/MIPS) plus HIPAA Privacy law alignment are in place, but no unified statutory
+mandate to participate in HIE and Information governance varies state-by-state. \\
+
+A --- U.S.\ ONC HIE & O & \cellcolor{medamber}\textcolor{medambertext}{\textbf{M}} &
+Leadership commitment at federal ONC level is sustained and Implementation planning
+documented across multi-year reports to Congress, but Stakeholder engagement and
+Change management at the provider level are uneven. \\
+
+\rowcolor{rowgray}
+B --- NHS Shared Care & U & \cellcolor{medamber}\textcolor{medambertext}{\textbf{M}} &
+Workflow integration and Trust improving as ShCRs embed into clinician workflows
+across ICSs, but Usability scores are mixed across regional implementations and
+Training adequacy varies across the 42 ICS footprints. \\
+
+B --- NHS Shared Care & T & \cellcolor{medamber}\textcolor{medambertext}{\textbf{M}} &
+Syntactic interoperability uses FHIR UK Core and Semantic interoperability leverages
+SNOMED CT, with a federated regional API/exchange layer operational, but Data completeness
+and System quality vary across ICS-level instances rather than a single national backbone. \\
+
+\rowcolor{rowgray}
+B --- NHS Shared Care & I & \cellcolor{highgreen}\textcolor{highgreentext}{\textbf{H}} &
+National digital health strategy is documented and funded (NHS Long Term Plan, ShCR
+programme), Privacy law alignment is strong (UK GDPR + Data Protection Act + Caldicott),
+and Information governance is mature with national IG frameworks. \\
+
+B --- NHS Shared Care & O & \cellcolor{medamber}\textcolor{medambertext}{\textbf{M}} &
+Leadership commitment at NHS England and Implementation planning are documented, but
+Stakeholder engagement and Change management vary by ICS and Resource capacity is
+acknowledged as constrained (\textit{fennelly2020national}). \\
+
+\rowcolor{rowgray}
+C --- Estonia & U & \cellcolor{medamber}\textcolor{medambertext}{\textbf{M}} &
+Patient engagement is genuinely high (portal usage well above 50\%) and Trust among
+clinicians is generally favourable, but published Usability scores and Training adequacy
+detail are limited in the cited sources, preventing a confident H across all five
+constructs. \\
+
+C --- Estonia & T & \cellcolor{highgreen}\textcolor{highgreentext}{\textbf{H}} &
+National X-Road API/exchange layer is the canonical example of a national exchange
+backbone, with enforced Semantic and Syntactic interoperability standards, mandated
+Data completeness via the national EHR obligation, and documented high System quality
+--- meets the H decision rule cleanly. \\
+
+\rowcolor{rowgray}
+C --- Estonia & I & \cellcolor{highgreen}\textcolor{highgreentext}{\textbf{H}} &
+Statutory Regulatory mandate (national EHR law since 2008) plus a documented multi-year
+national digital health strategy, mature Information governance with patient opt-out,
+GDPR-aligned Privacy law, and an enforced Interoperability mandate --- satisfies
+``statutory mandate + enforced governance + national strategy~$\rightarrow$~H''. \\
+
+C --- Estonia & O & \cellcolor{medamber}\textcolor{medambertext}{\textbf{M}} &
+Leadership commitment and Implementation planning sustained over 15+ years with stable
+Vendor governance and Resource capacity, but cited sources provide limited evidence on
+Change management and Issue management practices at the operator level. \\
+
+\rowcolor{rowgray}
+D --- VA/DoD & U & \cellcolor{lowred}\textcolor{lowredtext}{\textbf{L}} &
+GAO findings document a persistent Usability crisis (clinician dissatisfaction at
+deployed VA sites), Workflow disruption with productivity loss, and Training adequacy
+gaps --- meets the explicit ``Documented persistent user-satisfaction crisis
+(e.g., GAO findings)'' trigger for L. \\
+
+D --- VA/DoD & T & \cellcolor{lowred}\textcolor{lowredtext}{\textbf{L--M}} &
+Oracle Health/Cerner and MHS GENESIS use HL7/FHIR standards (not ``no common standards''),
+but System quality issues (outages, patient-safety incidents) and Data completeness /
+Integration burden problems documented in GAO reports indicate substantial
+integration debt~$\rightarrow$~L--M. \\
+
+\rowcolor{rowgray}
+D --- VA/DoD & I & \cellcolor{medamber}\textcolor{medambertext}{\textbf{M}} &
+Statutory direction via FY2018 NDAA and federal Privacy law alignment (HIPAA + federal
+records statutes) provide strong policy scaffolding, but Information governance and
+Interoperability mandate enforcement between VA, DoD, and community providers remain
+partially realised per GAO --- fitting strong-incentives-without-full-mandate M. \\
+
+D --- VA/DoD & O & \cellcolor{lowred}\textcolor{lowredtext}{\textbf{L}} &
+GAO documents severe execution failures --- cost overruns, schedule slips, deployment
+pauses, Vendor governance disputes with Oracle, and audit findings of inadequate
+Change management, Issue management, and Resource capacity --- meets the L decision
+rule for ``documented severe execution failures''. \\
+
+\end{longtable}
+
+\subsubsection*{3.2 Comparison with Original Ratings}
+
+\begin{table}[H]
+\footnotesize
+\centering
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{p{2.8cm} >{\centering\arraybackslash}p{0.8cm} >{\centering\arraybackslash}p{1.3cm} >{\centering\arraybackslash}p{1.8cm} >{\centering\arraybackslash}p{1.5cm} >{\centering\arraybackslash}p{2.0cm}}
+\toprule
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Case}} &
+\textcolor{white}{\textbf{Dom.}} &
+\textcolor{white}{\textbf{Original}} &
+\textcolor{white}{\textbf{AI Rater}} &
+\textcolor{white}{\textbf{Exact}} &
+\textcolor{white}{\textbf{Within-one}} \\
+\midrule
+
+\rowcolor{rowgray}
+A --- U.S.\ ONC HIE & U & M & L--M & No & Yes \\
+A --- U.S.\ ONC HIE & T & H & M & No & Yes \\
+\rowcolor{rowgray}
+A --- U.S.\ ONC HIE & I & H & M & No & Yes \\
+A --- U.S.\ ONC HIE & O & M & M & \textbf{Yes} & Yes \\
+\rowcolor{rowgray}
+B --- NHS Shared Care & U & M & M & \textbf{Yes} & Yes \\
+B --- NHS Shared Care & T & H & M & No & Yes \\
+\rowcolor{rowgray}
+B --- NHS Shared Care & I & H & H & \textbf{Yes} & Yes \\
+B --- NHS Shared Care & O & M & M & \textbf{Yes} & Yes \\
+\rowcolor{rowgray}
+C --- Estonia & U & H & M & No & Yes \\
+C --- Estonia & T & H & H & \textbf{Yes} & Yes \\
+\rowcolor{rowgray}
+C --- Estonia & I & H & H & \textbf{Yes} & Yes \\
+C --- Estonia & O & H & M & No & Yes \\
+\rowcolor{rowgray}
+D --- VA/DoD & U & M & L & No & \textbf{No} \\
+D --- VA/DoD & T & M & L--M & No & Yes \\
+\rowcolor{rowgray}
+D --- VA/DoD & I & H & M & No & Yes \\
+D --- VA/DoD & O & L--M & L & No & Yes \\
+
+\bottomrule
+\end{tabular}
+\vspace{4pt}\\
+{\footnotesize\textit{Note: Original ratings are pre-revision values, as methodologically appropriate for inter-rater reliability computation. Two cells (D-U and D-T) were subsequently revised; see §4.}}
+\end{table}
+
+\subsubsection*{3.3 AI-Pass Agreement Tally}
+
+\begin{table}[H]
+\footnotesize
+\centering
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{p{7.5cm} p{7.5cm}}
+\toprule
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Statistic}} &
+\textcolor{white}{\textbf{Value}} \\
+\midrule
+\rowcolor{rowgray}
+N & 16 \\
+Exact agreement & 6/16 (37.5\%) \\
+\rowcolor{rowgray}
+Within-one-band agreement & 15/16 (93.8\%) \\
+Linear-weighted Cohen's~$\kappa$ & 0.27 (Landis--Koch: ``fair'') \\
+\rowcolor{rowgray}
+Marginal distribution --- original & L=0, L--M=1, M=6, H=9 \\
+Marginal distribution --- AI rater & L=2, L--M=2, M=9, H=3 \\
+\rowcolor{rowgray}
+Direction of disagreements & All 10: AI more conservative (lower band) \\
+Cells $>$1 band apart & 1/16 (D --- VA/DoD U: M vs.\ L) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent\textbf{Reproducibility note:}
+$\kappa$ computed with linear weights $w_{ij} = |i-j|/3$ over the four-band ordinal
+scale (L=1, L--M=2, M=3, H=4). At N=16 the $\kappa$ point estimate is high-variance;
+the within-one-band percentage is the more interpretable agreement signal.
+
+\medskip
+\noindent\textbf{Interpretation:} The AI rater was systematically more conservative than
+the original across all 10 disagreements. The marginal-distribution shift---original modal
+H, AI modal M---depresses $\kappa$ even though within-one-band agreement is 94\%.
+Two cells (D-U, D-T) are flagged in~§4 as candidates for revision because the rubric's
+explicit decision-rule trigger language more closely matches the AI's rating.
+
+\subsubsection*{3.4 Human Second Rater}
+
+Status: pending recruitment. The same blinded rubric (§2) and rating sheet apply.
+
+\bigskip
+
+% ------------------------------------------------------------------
+% 4. ADJUDICATION LOG
+% ------------------------------------------------------------------
+
+\subsection*{4. Adjudication Log}
+
+\noindent For each of the 10 exact mismatches, the disagreement is classified as
+\textbf{(a) different evidence interpretation}, \textbf{(b) rubric-band ambiguity},
+or \textbf{(c) defensible rating revision}. Disposition: \textbf{kept} (original
+retained); \textbf{revised} (original updated); \textbf{flagged} (unchanged pending
+external second-rater confirmation).
+
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{4pt}
+
+\begin{longtable}{p{1.0cm} p{1.3cm} >{\centering\arraybackslash}p{0.4cm} p{1.5cm} p{7.5cm} p{2.5cm}}
+
+\caption{Adjudication Log for All 10 Exact Mismatches}
+\label{tab:s4-adjudication}\\
+
+\toprule
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Cell}} &
+\textcolor{white}{\textbf{Orig~$\rightarrow$~AI}} &
+\textcolor{white}{\textbf{$\Delta$}} &
+\textcolor{white}{\textbf{Class}} &
+\textcolor{white}{\textbf{Reasoning}} &
+\textcolor{white}{\textbf{Disposition}} \\
+\midrule
+\endfirsthead
+
+\caption[]{Adjudication Log (continued)}\\
+\toprule
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Cell}} &
+\textcolor{white}{\textbf{Orig~$\rightarrow$~AI}} &
+\textcolor{white}{\textbf{$\Delta$}} &
+\textcolor{white}{\textbf{Class}} &
+\textcolor{white}{\textbf{Reasoning}} &
+\textcolor{white}{\textbf{Disposition}} \\
+\midrule
+\endhead
+
+\bottomrule
+\multicolumn{6}{r}{\footnotesize\textit{Continued on next page\ldots}}\\
+\endfoot
+
+\bottomrule
+\endlastfoot
+
+\rowcolor{rowgray}
+A-U & M~$\rightarrow$~L--M & 1 & (b) Rubric ambiguity &
+M/L--M boundary is the fuzziest band on the U domain. Original M cites variable
+adoption + workflow concerns. AI L--M cites the same evidence and applies the
+``two or more constructs at L--M with usability or training gaps documented in
+audits'' decision rule. Both are defensible. &
+Kept \\
+
+A-T & H~$\rightarrow$~M & 1 & (a) Evidence interp. &
+Original weights Cures Act + FHIR API mandate + TEFCA infrastructure as H.
+AI weights TEFCA's federated/voluntary structure + non-bound semantic standards
+as fitting ``Federated/standards-based but voluntary~$\rightarrow$~M''. &
+Flagged --- borderline H/M; Cures Act enforcement is a defensible H-tipping factor \\
+
+\rowcolor{rowgray}
+A-I & H~$\rightarrow$~M & 1 & (a) Evidence interp. &
+Original weights Cures Act enforcement + HITECH + HIPAA as collectively H per the
+rubric's ``enforcement clause.'' AI treats absence of statutory participation mandate
++ state-by-state IG variation as M. &
+Kept --- H is consistent with rubric's enforcement clause \\
+
+B-T & H~$\rightarrow$~M & 1 & (a) Evidence interp. &
+Original weights national interoperability standards + ShCR platform as H.
+AI cites federated regional implementation across 42 ICSs and variable Data
+completeness as M. &
+Flagged --- borderline H/M; federated regional structure is a genuine H constraint \\
+
+\rowcolor{rowgray}
+C-U & H~$\rightarrow$~M & 1 & (a) Evidence interp. &
+Original weights $\sim$99\% patient e-Health Record adoption + clinician advocacy as H.
+AI cites limited published Usability/Training data in cited sources as preventing
+a five-construct H. &
+Kept --- patient engagement and trust evidence supports H per U decision rule \\
+
+C-O & H~$\rightarrow$~M & 1 & (a) Evidence interp. &
+Original weights sustained ministry-level governance over 15+ years as H.
+AI cites limited evidence on Change management and Issue management at operator
+level in cited sources. &
+Flagged --- H is supported by execution longevity but construct-level evidence partial \\
+
+\rowcolor{rowgray}
+D-U & M~$\rightarrow$~L & 2 & (c) Revised &
+Rubric U decision rule states: ``Documented persistent user-satisfaction crisis
+(e.g., GAO findings)~$\rightarrow$~L.'' \textit{gao2025vaehr} and \textit{gao2024dodehr}
+are GAO findings of persistent dissatisfaction. Original M was more lenient than the
+rubric strictly indicates. &
+\textbf{Revised: M~$\rightarrow$~L--M} (2026-04-30). Middle ground reflecting
+documented crisis plus ongoing remediation; not pure L. \\
+
+D-T & M~$\rightarrow$~L--M & 1 & (c) Revised &
+Rubric T decision rule: ``Standards adopted but with substantial integration
+debt~$\rightarrow$~L--M.'' GAO documents Oracle/Cerner integration debt, deployment
+pauses, system quality issues. AI's L--M tracks the rubric language more directly
+than original M. &
+\textbf{Revised: M~$\rightarrow$~L--M} (2026-04-30). Aligns with rubric trigger language. \\
+
+\rowcolor{rowgray}
+D-I & H~$\rightarrow$~M & 1 & (a) Evidence interp. &
+Original weights FY2018 NDAA mandate + congressional appropriations as H.
+AI cites partial mandate-enforcement between VA, DoD, and community providers as M. &
+Kept --- statutory mandate + sustained appropriations support H \\
+
+D-O & L--M~$\rightarrow$~L & 1 & (b) Rubric ambiguity &
+L/L--M boundary on O is fuzzy. Original L--M acknowledges audit findings of
+execution gaps. AI L applies ``documented severe execution failures'' trigger ---
+GAO reports do document cost overruns, schedule slips, and inadequate management. &
+Kept --- but AI's L is defensible; a third rater confirming would tighten the case \\
+
+\end{longtable}
+
+\medskip
+
+\begin{table}[H]
+\footnotesize
+\centering
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{lc}
+\toprule
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Disposition}} & \textcolor{white}{\textbf{Count}} \\
+\midrule
+\rowcolor{rowgray}
+Kept (original retained) & 5 \\
+Flagged --- left for external second rater & 3 \\
+\rowcolor{rowgray}
+Revised (rubric trigger language matched by AI rater) & 2 \\
+\midrule
+\textbf{Total disagreements} & \textbf{10} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent\textbf{Revisions applied (2026-04-30):} Two cells in the VA/DoD case were revised
+from M to L--M. The VA/DoD case row was updated from U(M) T(M) I(H) O(L--M) to
+U(L--M) T(L--M) I(H) O(L--M) in the rubric (Supplementary File~S3, Case~4) and
+propagated to the manuscript results table and conclusion.
+
+\medskip
+\noindent\textbf{Important methodological note:} The agreement statistics in~§3.3
+(6/16 exact, 15/16 within-one-band, $\kappa~=~0.27$) are computed on the
+\textit{pre-revision} ratings. Recomputing post-revision would be circular and is not reported.
+
+\bigskip
+
+\noindent\textit{Created: 2026-04-29 --- Last updated: 2026-04-29}

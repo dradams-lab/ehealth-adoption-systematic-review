@@ -1,0 +1,455 @@
+% ============================================================
+% Supplementary File S3: U-T-I-O Scoring Rubric
+% ============================================================
+
+\newpage
+\section*{Supplementary File S3: U--T--I--O Scoring Rubric for Multi-Case Analysis}
+\label{sec:S3}
+
+\noindent\textbf{Purpose:} Provide explicit, reproducible criteria for assigning each case a
+High~/~Medium~/~Low--Medium~/~Low rating on each of the four U-T-I-O domains.
+Enables a second rater or replicator to reproduce or challenge the case ratings
+reported in the manuscript.
+
+\noindent\textbf{Scope:} Applied to four cases in this review (U.S.\ ONC HIE; NHS Shared Care
+Records; Estonia eHealth; U.S.\ VA/DoD EHR modernization) but designed to generalise
+to any national or organisational eHealth implementation.
+
+\noindent\textbf{Rating scale:} \textbf{H}~=~High;\; \textbf{M}~=~Medium;\;
+\textbf{L--M}~=~Low--Medium (constrained by clear gaps but not absent);\;
+\textbf{L}~=~Low.
+
+\bigskip
+
+% ------------------------------------------------------------------
+% U DOMAIN
+% ------------------------------------------------------------------
+
+\subsection*{U --- User Readiness}
+
+\noindent The extent to which clinicians, administrators, and patients are prepared and
+willing to engage with the eHealth system.
+
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{4pt}
+
+\begin{table}[H]
+\footnotesize
+\begin{tabular}{p{2.5cm} p{3.1cm} p{3.1cm} p{3.1cm} p{3.1cm}}
+\toprule
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Construct}} &
+\textcolor{white}{\textbf{High (H)}} &
+\textcolor{white}{\textbf{Medium (M)}} &
+\textcolor{white}{\textbf{Low--Medium (L--M)}} &
+\textcolor{white}{\textbf{Low (L)}} \\
+\midrule
+
+\rowcolor{rowgray}
+Usability &
+Documented favourable usability scores; SUS/clinician-satisfaction surveys consistently $\geq$75 &
+Mixed survey results; some pain points but no widespread crisis &
+Clinician satisfaction below targets in published audits &
+Persistent, documented usability crisis (e.g., GAO findings of dissatisfaction) \\
+
+Workflow integration &
+Designed with clinician co-design; embedded in existing workflows &
+Partial workflow embedding; some retrofit required &
+Workflow disruption acknowledged in audits &
+Documented workflow disruption with productivity loss \\
+
+\rowcolor{rowgray}
+Training adequacy &
+Funded, multi-modal training programme deployed pre-go-live &
+Training exists but variable quality across sites &
+Training gaps identified in audits &
+No structured training programme \\
+
+Trust / perceived usefulness &
+Clinician advocates speak publicly in favour of the system &
+Mixed clinician advocacy &
+Clinician resistance documented in formal surveys &
+Active clinician opposition or resistance \\
+
+\rowcolor{rowgray}
+Patient engagement &
+Patient portal adoption $\geq$50\% nationally &
+Patient portal exists; adoption variable &
+Portal exists but low usage &
+No patient-facing functionality \\
+
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent\textbf{Rating decision rule:}
+Two or more constructs meeting H criteria with no constructs at L $\rightarrow$ \textbf{H}.
+Mix of M with one or two H/L $\rightarrow$ \textbf{M}.
+Two or more constructs at L--M with usability or training gaps documented in audits $\rightarrow$ \textbf{L--M}.
+Documented persistent user-satisfaction crisis (e.g., GAO findings) $\rightarrow$ \textbf{L}.
+
+\bigskip
+
+% ------------------------------------------------------------------
+% T DOMAIN
+% ------------------------------------------------------------------
+
+\subsection*{T --- Technical Interoperability}
+
+\noindent The capacity of eHealth systems to exchange, interpret, and use clinical data
+across organisational boundaries.
+
+\begin{table}[H]
+\footnotesize
+\begin{tabular}{p{2.5cm} p{3.1cm} p{3.1cm} p{3.1cm} p{3.1cm}}
+\toprule
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Construct}} &
+\textcolor{white}{\textbf{High (H)}} &
+\textcolor{white}{\textbf{Medium (M)}} &
+\textcolor{white}{\textbf{Low--Medium (L--M)}} &
+\textcolor{white}{\textbf{Low (L)}} \\
+\midrule
+
+\rowcolor{rowgray}
+Semantic interoperability &
+National terminology binding (SNOMED CT, LOINC); enforced &
+Standards adopted but not nationally bound &
+Partial standards adoption &
+No common terminology \\
+
+Syntactic interoperability &
+HL7 FHIR R4 + CDA mandated; conformance testing &
+FHIR adoption variable across vendors &
+Legacy formats predominant &
+No interoperability standard \\
+
+\rowcolor{rowgray}
+System quality &
+Documented uptime $\geq$99.5\%; mature tooling &
+Acceptable uptime; episodic incidents &
+Reliability concerns in audits &
+System reliability crisis \\
+
+Data completeness &
+National data set obligation enforced &
+Voluntary upload with high participation &
+Variable coverage &
+Sparse coverage \\
+
+\rowcolor{rowgray}
+API / exchange layer &
+National exchange backbone deployed (e.g., X-Road) &
+Federated exchange (HIE network) operational &
+Bilateral interfaces only &
+No exchange \\
+
+Integration burden &
+Vendor agnostic; standards-driven integration &
+Some vendor lock-in but multiple options &
+Heavy custom integration required &
+Vendor monoculture / lock-in \\
+
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent\textbf{Rating decision rule:}
+National exchange backbone + enforced standards + uptime $\rightarrow$ \textbf{H}.
+Federated/standards-based but voluntary $\rightarrow$ \textbf{M}.
+Standards adopted but with substantial integration debt $\rightarrow$ \textbf{L--M}.
+No common standards / pervasive bilateral interfaces $\rightarrow$ \textbf{L}.
+
+\bigskip
+
+% ------------------------------------------------------------------
+% I DOMAIN
+% ------------------------------------------------------------------
+
+\subsection*{I --- Institutional Alignment}
+
+\noindent The degree to which regulatory, policy, governance, and legal environments
+support and incentivise eHealth adoption.
+
+\begin{table}[H]
+\footnotesize
+\begin{tabular}{p{2.5cm} p{3.1cm} p{3.1cm} p{3.1cm} p{3.1cm}}
+\toprule
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Construct}} &
+\textcolor{white}{\textbf{High (H)}} &
+\textcolor{white}{\textbf{Medium (M)}} &
+\textcolor{white}{\textbf{Low--Medium (L--M)}} &
+\textcolor{white}{\textbf{Low (L)}} \\
+\midrule
+
+\rowcolor{rowgray}
+Regulatory mandate &
+Statutory obligation to participate (e.g., national EHR law) &
+Strong incentive programme (HITECH-style) without mandate &
+Voluntary policy framework &
+No coordinating policy \\
+
+National digital health strategy &
+Documented, funded, multi-year national strategy &
+Policy framework with episodic funding &
+Strategy in development &
+No national strategy \\
+
+\rowcolor{rowgray}
+Information governance &
+Mature data-sharing agreements; national opt-out &
+Information governance frameworks exist; local variation &
+Information governance gaps acknowledged &
+No coherent governance \\
+
+Privacy law alignment &
+Health-IT-specific privacy law (HIPAA, GDPR + national act) &
+Generic privacy law applied to health data &
+Privacy gaps acknowledged &
+No applicable framework \\
+
+\rowcolor{rowgray}
+Interoperability mandate &
+Information blocking prohibited and enforced &
+Interoperability standards required (e.g., Cures Act) &
+Voluntary interoperability targets &
+No interoperability obligation \\
+
+Incentive alignment &
+Direct financial incentives for adoption + use &
+Indirect incentives (quality reporting) &
+Limited incentive structure &
+No incentive structure \\
+
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent\textbf{Rating decision rule:}
+Statutory mandate + enforced governance + national strategy $\rightarrow$ \textbf{H}.
+Strong incentives + interoperability rules without mandate $\rightarrow$ \textbf{M} to \textbf{H} depending on enforcement.
+Voluntary frameworks with documented gaps $\rightarrow$ \textbf{L--M}.
+Absent or fragmented regulatory environment $\rightarrow$ \textbf{L}.
+
+\bigskip
+
+% ------------------------------------------------------------------
+% O DOMAIN
+% ------------------------------------------------------------------
+
+\subsection*{O --- Organizational Execution}
+
+\noindent The internal organisational capabilities and leadership practices that determine whether an
+eHealth adoption strategy is planned, resourced, governed, and executed effectively.
+
+\begin{table}[H]
+\footnotesize
+\begin{tabular}{p{2.5cm} p{3.1cm} p{3.1cm} p{3.1cm} p{3.1cm}}
+\toprule
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Construct}} &
+\textcolor{white}{\textbf{High (H)}} &
+\textcolor{white}{\textbf{Medium (M)}} &
+\textcolor{white}{\textbf{Low--Medium (L--M)}} &
+\textcolor{white}{\textbf{Low (L)}} \\
+\midrule
+
+\rowcolor{rowgray}
+Leadership commitment &
+Sustained executive sponsorship; named accountable owners &
+Leadership engagement at launch; sustainment variable &
+Leadership turnover or disengagement during execution &
+No accountable owner \\
+
+Implementation planning &
+Documented multi-phase plan with milestones; published &
+Plan exists; milestones missed without remediation &
+Reactive rather than planned execution &
+No formal plan \\
+
+\rowcolor{rowgray}
+Change management &
+Funded change-management capability throughout lifecycle &
+Change-management activities at go-live only &
+Change management identified as gap in audits &
+No change-management capacity \\
+
+Stakeholder engagement &
+Clinician co-design + ongoing feedback channels &
+Stakeholder engagement at launch; episodic after &
+Stakeholder voice limited in execution &
+No engagement mechanism \\
+
+\rowcolor{rowgray}
+Vendor governance &
+Mature vendor-management practice; contract performance tracked &
+Contract management functional &
+Vendor disputes documented in audits &
+Vendor relationship dysfunctional \\
+
+Resource capacity &
+IT staff, financial, and clinical-time resources adequate &
+Resource constraints acknowledged but managed &
+Resource gaps cited as adoption barrier &
+Severe resource constraint \\
+
+\rowcolor{rowgray}
+Issue management &
+Proactive issue identification and resolution &
+Reactive issue resolution &
+Issue backlog documented in audits &
+No issue-management process \\
+
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent\textbf{Rating decision rule:}
+All seven constructs meeting at least M, with leadership and change-management at H $\rightarrow$ \textbf{H}.
+Mixed M/L--M with vendor or change-management weakness $\rightarrow$ \textbf{M}.
+Two or more constructs at L--M, audit findings of execution gaps $\rightarrow$ \textbf{L--M}.
+Documented severe execution failures (cost overruns, schedule slips, audit findings of inadequate management) $\rightarrow$ \textbf{L}.
+
+\bigskip
+
+% ------------------------------------------------------------------
+% APPLICATION TO FOUR CASES
+% ------------------------------------------------------------------
+
+\subsection*{Evidence-Anchored Ratings for the Four Cases}
+
+\noindent For each case, ratings are anchored to specific sources from the bibliography
+(citation keys in parentheses). This is the audit trail a reviewer or replicator can
+use to challenge or reproduce any rating.
+
+\medskip
+
+\noindent\textbf{Case 1: U.S.\ ONC HIE --- U(M) T(H) I(H) O(M)}
+
+\begin{table}[H]
+\footnotesize
+\begin{tabular}{p{1.2cm} >{\centering\arraybackslash}p{1.4cm} p{12.5cm}}
+\toprule
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Domain}} &
+\textcolor{white}{\textbf{Rating}} &
+\textcolor{white}{\textbf{Evidence anchor}} \\
+\midrule
+\rowcolor{rowgray}
+U & \cellcolor{medamber}\textcolor{medambertext}{\textbf{M}} &
+\textit{onc2025reports} documents variable clinician engagement and adoption-rate gaps across participating entities; \textit{eden2016barriers} identifies clinician trust and workflow concerns as persistent HIE barriers; \textit{kruse2016adoption} lists usability and training as adoption inhibitors. \\
+T & \cellcolor{highgreen}\textcolor{highgreentext}{\textbf{H}} &
+\textit{onc2025reports} references FHIR API mandates under the Cures Act; \textit{holmgren2023policyhie} describes the U.S.\ as one of five mature HIE-policy nations; nationwide TEFCA infrastructure deployed. \\
+\rowcolor{rowgray}
+I & \cellcolor{highgreen}\textcolor{highgreentext}{\textbf{H}} &
+HITECH Act incentive program drove U.S.\ EHR adoption from $\sim$10\% to $>$80\% (\textit{onc2025reports}); 21st Century Cures Act information-blocking rules now enforced (\textit{holmgren2023policyhie}); strong statutory framework. \\
+O & \cellcolor{medamber}\textcolor{medambertext}{\textbf{M}} &
+\textit{onc2025reports} documents variable participation rates across HIEs; organisational uptake heterogeneity is the primary O-domain weakness; \textit{fennelly2020national} describes execution as the differentiator across national programs. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\medskip
+
+\noindent\textbf{Case 2: NHS Shared Care Records (UK) --- U(M) T(H) I(H) O(M)}
+
+\begin{table}[H]
+\footnotesize
+\begin{tabular}{p{1.2cm} >{\centering\arraybackslash}p{1.4cm} p{12.5cm}}
+\toprule
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Domain}} &
+\textcolor{white}{\textbf{Rating}} &
+\textcolor{white}{\textbf{Evidence anchor}} \\
+\midrule
+\rowcolor{rowgray}
+U & \cellcolor{medamber}\textcolor{medambertext}{\textbf{M}} &
+\textit{nhs2025sharedcare} acknowledges variable local clinician engagement; sustained training and workflow integration cited as central challenges. \\
+T & \cellcolor{highgreen}\textcolor{highgreentext}{\textbf{H}} &
+\textit{nhs2025sharedcare} describes national interoperability standards plus a shared-care-record platform; cross-organisational information sharing operational. \\
+\rowcolor{rowgray}
+I & \cellcolor{highgreen}\textcolor{highgreentext}{\textbf{H}} &
+NHS Long Term Plan + national data opt-out + information governance frameworks documented in \textit{nhs2025sharedcare}; central national strategy authority. \\
+O & \cellcolor{medamber}\textcolor{medambertext}{\textbf{M}} &
+\textit{nhs2025sharedcare} flags local information-governance variability and workflow integration as persistent execution challenges; \textit{fennelly2020national} lists O-domain factors as decisive across national EHR rollouts. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\medskip
+
+\noindent\textbf{Case 3: Estonia eHealth --- U(H) T(H) I(H) O(H)}
+
+\begin{table}[H]
+\footnotesize
+\begin{tabular}{p{1.2cm} >{\centering\arraybackslash}p{1.4cm} p{12.5cm}}
+\toprule
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Domain}} &
+\textcolor{white}{\textbf{Rating}} &
+\textcolor{white}{\textbf{Evidence anchor}} \\
+\midrule
+\rowcolor{rowgray}
+U & \cellcolor{highgreen}\textcolor{highgreentext}{\textbf{H}} &
+\textit{estonia2026ehealth} reports near-comprehensive coverage and high clinician engagement; 99\% patient e-Health Record adoption widely cited. \\
+T & \cellcolor{highgreen}\textcolor{highgreentext}{\textbf{H}} &
+\textit{estonia2026ehealth} describes the X-Road secure data-exchange layer; \textit{holmgren2023policyhie} cites Estonia as architectural reference; enforced national standards. \\
+\rowcolor{rowgray}
+I & \cellcolor{highgreen}\textcolor{highgreentext}{\textbf{H}} &
+\textit{europeancommission2016estoniaehr} documents the legal mandate for provider participation; 2008 Estonian Health Information System Act provides statutory backbone. \\
+O & \cellcolor{highgreen}\textcolor{highgreentext}{\textbf{H}} &
+\textit{estonia2026ehealth} describes sustained ministry-level governance and evolving operational frameworks; consistent execution across two decades of national infrastructure operation. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\medskip
+
+\noindent\textbf{Case 4: U.S.\ VA/DoD EHR Modernization --- U(L--M) T(L--M) I(H) O(L--M)}
+
+\begin{table}[H]
+\footnotesize
+\begin{tabular}{p{1.2cm} >{\centering\arraybackslash}p{1.4cm} p{12.5cm}}
+\toprule
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Domain}} &
+\textcolor{white}{\textbf{Rating}} &
+\textcolor{white}{\textbf{Evidence anchor}} \\
+\midrule
+\rowcolor{rowgray}
+U & \cellcolor{lowred}\textcolor{lowredtext}{\textbf{L--M}} &
+\textit{gao2025vaehr} documents persistent clinician dissatisfaction at deployed VA sites; \textit{gao2024dodehr} cites user-satisfaction scores below targets at DoD sites. The rubric's U decision rule lists ``Documented persistent user-satisfaction crisis (e.g., GAO findings)~$\rightarrow$~L''; the L--M rating reflects the documented crisis tempered by ongoing remediation activity at deployed sites. \textit{Revised from M (2026-04-30); see audit-trail note below.} \\
+T & \cellcolor{lowred}\textcolor{lowredtext}{\textbf{L--M}} &
+\textit{gao2025vaehr} describes mature commercial Oracle Health platform but substantial configuration burden integrating with legacy VistA and DoD clinical systems; documented system-quality and data-completeness gaps at deployed sites. The rubric's T decision rule ``Standards adopted but with substantial integration debt~$\rightarrow$~L--M'' is the closest match. \textit{Revised from M (2026-04-30); see audit-trail note below.} \\
+\rowcolor{rowgray}
+I & \cellcolor{highgreen}\textcolor{highgreentext}{\textbf{H}} &
+Congressional mandate via FY2018 NDAA; sustained appropriations; clear executive-branch authority --- \textit{gao2025vaehr}, \textit{gao2024dodehr} both confirm institutional backing. \\
+O & \cellcolor{lowred}\textcolor{lowredtext}{\textbf{L--M}} &
+\textit{gao2025vaehr} flags inadequate vendor governance and slow remediation; \textit{gao2024dodehr} cites issue-management process inadequacies and schedule slips. Persistent execution gaps drive the lowest-tier ratings in the four-case set. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\smallskip
+\noindent\textbf{Audit-trail note (2026-04-30):} The U and T ratings for VA/DoD were revised from M to L--M following the AI-assisted second-rater pass documented in Supplementary File~S4. The second rater applied the rubric's explicit decision-rule trigger language for both domains; the original ratings (M for both) were a band more lenient than the rubric strictly indicated. Revised ratings retain a middle position (L--M rather than the second rater's L for U) to reflect ongoing remediation activity at deployed sites. Inter-rater agreement statistics in Supplementary File~S4 are computed on the \textit{pre-revision} ratings, as is methodologically appropriate.
+
+\medskip
+\noindent\textbf{How to reproduce:} A second rater should retrieve the cited source(s) for each cell, apply the rubric criteria above, and assign a rating. Rating disagreements should be reported as an inter-rater reliability outcome.
+
+\bigskip
+
+% ------------------------------------------------------------------
+% LIMITATIONS OF THE RUBRIC
+% ------------------------------------------------------------------
+
+\subsection*{Limitations of this Rubric}
+
+\begin{enumerate}
+\item \textbf{Single-rater application.} Ratings in the current manuscript were assigned by one reviewer (the author). Independent dual-rating with inter-rater reliability is not yet performed.
+\item \textbf{Categorical resolution.} Four bands (H / M / L--M / L) are coarse. A reviewer wanting finer resolution could move to a 5- or 7-point ordinal scale.
+\item \textbf{Construct weighting.} Each domain treats its constructs as equally informative; in practice, some constructs (e.g., regulatory mandate within~I) may dominate the rating. This is not formalised here.
+\item \textbf{Evidence weighting.} Government audit findings and peer-reviewed literature are weighted equally; some reviewers might down-weight grey literature.
+\end{enumerate}
+
+\noindent\textit{Last updated: 2026-04-29}
