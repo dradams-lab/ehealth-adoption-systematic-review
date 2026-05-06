@@ -24,3 +24,6 @@
 notes/ehealth_reference_review_start.zip
 notes/ehealth_reference_review/articles/
 notes/ehealth_reference_review/reports/
+
+# Claude Code local settings
+.claude/
