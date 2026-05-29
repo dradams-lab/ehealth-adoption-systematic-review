@@ -3,6 +3,10 @@
 % =========================
 \documentclass[12pt]{article}
 
+% Pass the [table] option to xcolor BEFORE any package (e.g. tikz) loads it,
+% to avoid the "Option clash for package xcolor" fatal error.
+\PassOptionsToPackage{table}{xcolor}
+
 % --- 1. Encoding & Language ---
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc} % Better font encoding for special characters
@@ -114,12 +118,18 @@ During the preparation of this manuscript, the author used Anthropic Claude (Ant
 \bibliographystyle{unsrtnat}
 \bibliography{references}
 
-% ---- Supplementary Materials (appendix; tables here are renumbered S1, S2, ...) ----
+% ---- Supplementary Materials (appendix) ----
+% Supplementary TABLES use an "ST" prefix (ST1, ST2, ...) so they do not collide
+% with the document-level "Supplementary File S1-S4" naming used in the text.
 \appendix
-\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thetable}{ST\arabic{table}}
 \setcounter{table}{0}
 \newpage
 \section*{Supplementary Materials}
+
+\input{supplements/S1_search_strategy}
+
+\input{supplements/S2_excluded_studies}
 
 \input{tables/evidence_extraction_table}
 
