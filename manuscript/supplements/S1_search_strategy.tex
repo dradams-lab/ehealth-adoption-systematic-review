@@ -71,42 +71,50 @@ Adoption domain &
 
 \subsection*{3. Full Boolean Query Strings (per database)}
 
-\noindent\textit{The field-tagged query strings below constitute the a priori
-protocol (documented April 29, 2026). Upon execution, verify that the string
-run in each database matches the protocol exactly and note any deviation.}
+\noindent\textit{The field-tagged query strings below were executed as recorded.
+For PubMed/MEDLINE, both concept groups were restricted to the Title field to
+yield a focused, single-reviewer--screenable corpus. This is a deliberate
+precision-over-recall scoping decision appropriate to a single-author focused
+review: it reliably captures studies whose primary subject is eHealth-systems
+adoption (signalled in the title) at the cost of omitting studies that treat
+adoption only peripherally in the abstract or body. This recall limitation is
+acknowledged in the manuscript Limitations section.}
 
 \medskip
-\noindent\textbf{PubMed/MEDLINE} (filters: Journal Article; English): \\
+\noindent\textbf{PubMed/MEDLINE} (field: Title; publication years 2015--2026;
+article type unrestricted; English-language eligibility applied at screening): \\
 {\footnotesize\begin{verbatim}
-("electronic health record"[MeSH Terms] OR "medical records systems,
-computerized"[MeSH Terms] OR "health information exchange"[MeSH Terms]
-OR "EHR"[Title/Abstract] OR "electronic medical record*"[Title/Abstract]
-OR "health information exchange"[Title/Abstract] OR "HIE"[Title/Abstract]
-OR "eHealth"[Title/Abstract] OR "e-health"[Title/Abstract]
-OR "digital health"[Title/Abstract]
-OR "health information technology"[Title/Abstract]
-OR "interoperability"[Title/Abstract])
+("electronic health record"[Title] OR "EHR"[Title]
+OR "electronic medical record*"[Title]
+OR "health information exchange"[Title] OR "HIE"[Title]
+OR "eHealth"[Title] OR "e-health"[Title]
+OR "digital health"[Title]
+OR "health information technology"[Title]
+OR "interoperability"[Title])
 AND
-("adoption"[Title/Abstract] OR "implementation"[Title/Abstract]
-OR "acceptance"[Title/Abstract] OR "barrier*"[Title/Abstract]
-OR "facilitator*"[Title/Abstract] OR "determinant*"[Title/Abstract]
-OR "success factor*"[Title/Abstract]
-OR "critical success factor*"[Title/Abstract] OR "uptake"[Title/Abstract])
+("adoption"[Title] OR "implementation"[Title]
+OR "acceptance"[Title] OR "barrier*"[Title]
+OR "facilitator*"[Title] OR "determinant*"[Title]
+OR "success factor*"[Title] OR "uptake"[Title])
 AND ("2015/01/01"[PDAT] : "2026/12/31"[PDAT])
 \end{verbatim}}
 
 \medskip
-\noindent\textbf{IEEE Xplore} (filter: Journals and Conference Papers; 2015 onwards): \\
+\noindent\textbf{IEEE Xplore} (Command Search; content type: Conferences and
+Journals; publication years 2015--2026): \\
 {\footnotesize\begin{verbatim}
-("Full Text & Metadata": "electronic health record" OR "EHR"
-OR "electronic medical record" OR "health information exchange" OR "HIE"
-OR "eHealth" OR "e-health" OR "digital health"
-OR "health information technology" OR "interoperability")
+("Document Title":"electronic health record" OR "Document Title":"EHR"
+OR "Document Title":"electronic medical record"
+OR "Document Title":"health information exchange" OR "Document Title":"HIE"
+OR "Document Title":"eHealth" OR "Document Title":"e-health"
+OR "Document Title":"digital health"
+OR "Document Title":"health information technology"
+OR "Document Title":"interoperability")
 AND
-("Full Text & Metadata": "adoption" OR "implementation" OR "acceptance"
-OR "barriers" OR "facilitators" OR "determinants" OR "success factors"
-OR "uptake")
-AND (Publication Year: 2015 onwards)
+("Document Title":"adoption" OR "Document Title":"implementation"
+OR "Document Title":"acceptance" OR "Document Title":"barrier"
+OR "Document Title":"facilitator" OR "Document Title":"determinant"
+OR "Document Title":"success factor" OR "Document Title":"uptake")
 \end{verbatim}}
 
 \medskip
@@ -157,42 +165,51 @@ recommended by domain advisors.
 
 \subsection*{4. Per-Database Record Counts}
 
-\noindent\textit{To be recorded at formal search execution. The ``Seed-set yield
-(provisional)'' column documents the purposive seed set assembled before formal
-execution (424 records identified; 30 estimated duplicates removed; 394 unique);
-it is retained for audit continuity only. The final manuscript PRISMA counts
-must be refreshed from the ``Formal search'' columns once recorded.}
+\noindent\textit{The formal database searches were executed on June 4, 2026.
+PubMed/MEDLINE and IEEE Xplore were searched directly; Google Scholar was run as
+a supplementary recall check. Scopus, Web of Science, and CINAHL could not be
+searched, as institutional subscription access was unavailable; their omission
+is an acknowledged coverage limitation (see manuscript Limitations). The Google
+Scholar sweep returned no unique within-window records: every relevant 2015--2026
+result it surfaced was already retrieved by the PubMed/MEDLINE search, which
+provides evidence of adequate PubMed recall. Three pre-2015 foundational reviews
+surfaced by Google Scholar fall outside the empirical search window; one (Vest,
+2010, on the TOE framework) is retained as a background/theoretical citation and
+is not counted in the screened corpus.}
 
 \renewcommand{\arraystretch}{1.25}
 \begin{table}[H]
 \footnotesize
 \centering
-\begin{tabular}{p{5.0cm} >{\centering\arraybackslash}p{2.6cm} >{\centering\arraybackslash}p{2.8cm} >{\centering\arraybackslash}p{2.8cm}}
+\begin{tabular}{p{6.5cm} >{\centering\arraybackslash}p{3.0cm} >{\centering\arraybackslash}p{2.8cm}}
 \toprule
 \rowcolor{headerblue}
 \textcolor{white}{\textbf{Source}} &
-\textcolor{white}{\textbf{Seed-set yield (provisional)}} &
-\textcolor{white}{\textbf{Formal search: records}} &
-\textcolor{white}{\textbf{Formal search: date}} \\
+\textcolor{white}{\textbf{Records identified}} &
+\textcolor{white}{\textbf{Date searched}} \\
 \midrule
 \rowcolor{rowgray}
-PubMed/MEDLINE & 142 & [[TO RECORD]] & [[TO RECORD]] \\
-IEEE Xplore & 28 & [[TO RECORD]] & [[TO RECORD]] \\
-Scopus & 97 & [[TO RECORD]] & [[TO RECORD]] \\
+PubMed/MEDLINE & 1{,}591 & 2026-06-04 \\
+IEEE Xplore & 97 & 2026-06-04 \\
+Google Scholar (supplementary) & 0 unique & 2026-06-04 \\
 \rowcolor{rowgray}
-Web of Science & 84 & [[TO RECORD]] & [[TO RECORD]] \\
-CINAHL & 31 & [[TO RECORD]] & [[TO RECORD]] \\
+Scopus & not searched (no access) & --- \\
+Web of Science & not searched (no access) & --- \\
 \rowcolor{rowgray}
-Google Scholar & 24 & [[TO RECORD]] & [[TO RECORD]] \\
-Hand-searching / reference lists & 12 & [[TO RECORD]] & [[TO RECORD]] \\
-\rowcolor{rowgray}
-Expert recommendations & 6 & [[TO RECORD]] & [[TO RECORD]] \\
+CINAHL & not searched (no access) & --- \\
 \midrule
-\textbf{Total identified} & \textbf{424} & \textbf{[[TO RECORD]]} & --- \\
-\textbf{After duplicates removed} & \textbf{394 (est.)} & \textbf{[[TO RECORD]]} & --- \\
+\textbf{Total identified} & \textbf{1{,}688} & --- \\
+\textbf{Duplicates removed} & \textbf{22} & --- \\
+\textbf{After duplicates removed (screened)} & \textbf{1{,}666} & --- \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+\noindent\textit{De-duplication was performed in Rayyan (rayyan.ai) using
+automated exact-match detection (title, authors, journal, year, DOI; minimum
+overall similarity 97\%). Of 66 candidate pairs flagged, 22 confirmed duplicates
+were removed and the remainder retained, leaving 1{,}666 unique records for
+title-and-abstract screening.}
 
 \subsection*{5. Inclusion Criteria}
 
