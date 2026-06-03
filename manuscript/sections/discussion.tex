@@ -29,6 +29,48 @@ Healthcare IT markets exhibit vendor competition and proprietary architectures t
 The findings directly address each of the three research questions guiding this study. \textit{RQ1 (What determinants most consistently influence eHealth systems adoption?)} is answered by the four-domain synthesis of the U-T-I-O framework: user readiness, technical interoperability, institutional alignment, and organizational execution collectively and consistently predict adoption outcomes across both the literature and the case analyses. \textit{RQ2 (How are these determinants reflected in real-world implementations?)} is addressed through the comparative case analysis, which demonstrates that the relative strength of each domain is traceable to specific design and governance decisions in each implementation context—Estonia's legal mandate and X-Road architecture, the NHS's centralized interoperability vision, the ONC's market-based incentive model, and the VA/DoD's procurement and execution challenges. \textit{RQ3 (How can these determinants be synthesized into a reusable adoption model?)} is answered by the U-T-I-O Model itself, which provides a framework that is grounded in empirical evidence, theoretically integrated with established IS and innovation adoption literature, and operationalizable across diverse healthcare contexts.
 
 \subsection{Practical Implications}
+
+To support diagnostic application of the model, Table~\ref{tab:utio-readiness} operationalizes each U-T-I-O domain as a set of observable readiness signals, risk signals, and example mitigations, synthesized from the determinants identified in the systematic review and the failure and success patterns documented in the case analyses.
+
+\begin{table}[H]
+\caption{U--T--I--O Readiness Diagnostic: Domain-Level Readiness Signals, Risk Signals, and Example Mitigations}
+\label{tab:utio-readiness}
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{1.4}
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{p{2.9cm} p{3.6cm} p{3.6cm} p{3.6cm}}
+\toprule
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Domain}} &
+\textcolor{white}{\textbf{Readiness signal}} &
+\textcolor{white}{\textbf{Risk signal}} &
+\textcolor{white}{\textbf{Example mitigation}} \\
+\midrule
+\rowcolor{rowgray}
+\textbf{U --- User Readiness} &
+Clinician workflow fit; training adequacy; perceived usefulness &
+Alert fatigue; documentation burden; low clinician trust &
+Simulation-based training; workflow redesign \\
+\textbf{T --- Technical Interoperability} &
+FHIR/API maturity; semantic alignment; data completeness &
+Duplicate records; interface failures; poor data quality &
+Terminology mapping; interface monitoring \\
+\rowcolor{rowgray}
+\textbf{I --- Institutional Alignment} &
+Regulatory incentives; governance; policy mandate &
+Compliance-only posture; weak data-sharing rules &
+Governance board; HIE participation rules \\
+\textbf{O --- Organizational Execution} &
+Leadership; vendor governance; implementation cadence &
+Schedule slippage; unresolved issue backlog &
+PMO controls; risk register; escalation pathways \\
+\bottomrule
+\end{tabular}
+\vspace{4pt}
+{\footnotesize \textit{Signals are illustrative, not exhaustive; the full construct-level rubric used for case rating is provided in Supplementary File~S3.}}
+\end{table}
+
 For healthcare leaders and system architects, the results suggest that adoption strategies should prioritize:
 
 \begin{itemize}
@@ -39,3 +81,5 @@ For healthcare leaders and system architects, the results suggest that adoption 
 \end{itemize}
 
 Organizations that address only technical interoperability without equivalent investment in organizational and user readiness domains are unlikely to achieve sustained adoption, regardless of the strength of their institutional mandate or the quality of their technical infrastructure.
+
+In applying these implications, one scope boundary bears repeating: the U-T-I-O Model should be interpreted as an implementation-readiness and adoption-maturity framework, not as a validated predictor of patient-level clinical outcomes.

@@ -1,12 +1,13 @@
 % ============================================================
 % Supplementary File S1: Search Strategy and Review Protocol
 % ============================================================
-% NOTE TO AUTHOR: This file is a STRUCTURED TEMPLATE. The inclusion/
-% exclusion criteria and the term groups are reproduced from the
-% manuscript Methods (real content). The exact field-tagged query
-% strings, the per-database record counts, and the run dates are
-% PLACEHOLDERS that must be replaced with the actual search you ran
-% before submission. Placeholder cells are marked [[FILL: ...]].
+% NOTE TO AUTHOR (updated June 4, 2026): The a priori protocol below is
+% complete — criteria, concept groups, and full field-tagged query strings
+% are the real, defined protocol. WHAT REMAINS: the formal database searches
+% have not yet been EXECUTED. Once you run them, record (a) the execution
+% date per database, and (b) the per-database record counts, in the cells
+% marked [[TO RECORD: ...]], then refresh the PRISMA counts in the
+% manuscript and remove the DRAFT banner. Do NOT submit before execution.
 % ============================================================
 
 \newpage
@@ -14,10 +15,13 @@
 \label{sec:S1}
 
 \noindent\colorbox{lowred}{\parbox{0.97\linewidth}{\textcolor{lowredtext}{\textbf{%
-DRAFT / PLACEHOLDER --- not for submission as-is.} The criteria and concept
-groups below are final; every item marked \texttt{[[FILL: \ldots]]} (exact query
-strings, per-database counts, and search-execution dates) must be replaced with
-the real values from the executed search before this file is submitted.}}}
+DRAFT --- not for submission as-is.} The protocol below (criteria, concept
+groups, and full query strings) is final and was defined a priori. The formal
+database searches have \textbf{not yet been executed}: the current evidence base
+is a provisional seed set. Before submission, execute the searches, record the
+per-database counts and execution dates in the cells marked
+\texttt{[[TO RECORD: \ldots]]}, refresh the PRISMA counts throughout the
+manuscript, and remove this banner.}}}
 
 \bigskip
 
@@ -31,8 +35,12 @@ review is reproducible.
 \noindent\textbf{Primary databases:} PubMed/MEDLINE, IEEE Xplore, Scopus. \\
 \textbf{Supplementary sources:} Web of Science, CINAHL, Google Scholar,
 hand-searching of reference lists, and expert recommendations. \\
-\textbf{Publication window:} 2003 through May 2026. \\
-\textbf{Search executed:} [[FILL: date(s) each database was searched]].
+\textbf{Publication window:} 2003 through May 2026. The empirical search applies
+a 2015 lower date limit (HITECH incentive era through current FHIR mandate
+implementation); foundational theory published from 2003 onwards (e.g., DeLone
+\& McLean) is retained as background rather than retrieved through the empirical
+search. \\
+\textbf{Search executed:} [[TO RECORD: date(s) each database was searched]].
 
 \subsection*{2. Concept Groups (Search Terms)}
 
@@ -63,56 +71,125 @@ Adoption domain &
 
 \subsection*{3. Full Boolean Query Strings (per database)}
 
-\noindent\textit{Reproduce the exact string run in each database, including field
-tags, MeSH/Emtree terms, and document-type and date limits.}
+\noindent\textit{The field-tagged query strings below constitute the a priori
+protocol (documented April 29, 2026). Upon execution, verify that the string
+run in each database matches the protocol exactly and note any deviation.}
 
 \medskip
-\noindent\textbf{PubMed/MEDLINE:} \\
-\texttt{[[FILL: exact PubMed query string with [Title/Abstract], MeSH terms, and filters]]}
+\noindent\textbf{PubMed/MEDLINE} (filters: Journal Article; English): \\
+{\footnotesize\begin{verbatim}
+("electronic health record"[MeSH Terms] OR "medical records systems,
+computerized"[MeSH Terms] OR "health information exchange"[MeSH Terms]
+OR "EHR"[Title/Abstract] OR "electronic medical record*"[Title/Abstract]
+OR "health information exchange"[Title/Abstract] OR "HIE"[Title/Abstract]
+OR "eHealth"[Title/Abstract] OR "e-health"[Title/Abstract]
+OR "digital health"[Title/Abstract]
+OR "health information technology"[Title/Abstract]
+OR "interoperability"[Title/Abstract])
+AND
+("adoption"[Title/Abstract] OR "implementation"[Title/Abstract]
+OR "acceptance"[Title/Abstract] OR "barrier*"[Title/Abstract]
+OR "facilitator*"[Title/Abstract] OR "determinant*"[Title/Abstract]
+OR "success factor*"[Title/Abstract]
+OR "critical success factor*"[Title/Abstract] OR "uptake"[Title/Abstract])
+AND ("2015/01/01"[PDAT] : "2026/12/31"[PDAT])
+\end{verbatim}}
 
 \medskip
-\noindent\textbf{IEEE Xplore:} \\
-\texttt{[[FILL: exact IEEE Xplore query string]]}
+\noindent\textbf{IEEE Xplore} (filter: Journals and Conference Papers; 2015 onwards): \\
+{\footnotesize\begin{verbatim}
+("Full Text & Metadata": "electronic health record" OR "EHR"
+OR "electronic medical record" OR "health information exchange" OR "HIE"
+OR "eHealth" OR "e-health" OR "digital health"
+OR "health information technology" OR "interoperability")
+AND
+("Full Text & Metadata": "adoption" OR "implementation" OR "acceptance"
+OR "barriers" OR "facilitators" OR "determinants" OR "success factors"
+OR "uptake")
+AND (Publication Year: 2015 onwards)
+\end{verbatim}}
 
 \medskip
-\noindent\textbf{Scopus:} \\
-\texttt{[[FILL: exact Scopus TITLE-ABS-KEY query string]]}
+\noindent\textbf{Scopus} (document types: Article, Review; English): \\
+{\footnotesize\begin{verbatim}
+TITLE-ABS-KEY ( "electronic health record" OR "EHR"
+OR "electronic medical record" OR "health information exchange" OR "HIE"
+OR "eHealth" OR "e-health" OR "digital health"
+OR "health information technology" OR "interoperability" )
+AND TITLE-ABS-KEY ( "adoption" OR "implementation" OR "acceptance"
+OR "barriers" OR "facilitators" OR "determinants" OR "success factors"
+OR "uptake" )
+AND PUBYEAR > 2014 AND PUBYEAR < 2027
+AND DOCTYPE ( ar OR re ) AND LANGUAGE ( english )
+\end{verbatim}}
 
 \medskip
-\noindent\textbf{Supplementary sources (WoS, CINAHL, Google Scholar):} \\
-\texttt{[[FILL: query strings / search approach for each supplementary source]]}
+\noindent\textbf{Web of Science} (Core Collection; 2015 onwards; English; Article or Review): \\
+{\footnotesize\begin{verbatim}
+TS=("electronic health record" OR "EHR" OR "health information exchange"
+OR "eHealth" OR "digital health" OR "interoperability")
+AND TS=("adoption" OR "implementation" OR "barrier*" OR "facilitator*"
+OR "determinant*")
+\end{verbatim}}
+
+\medskip
+\noindent\textbf{CINAHL} (2015 onwards; English; Peer Reviewed): \\
+{\footnotesize\begin{verbatim}
+(MH "Medical Informatics" OR TI eHealth OR TI "EHR"
+OR TI "electronic health record")
+AND (TI adoption OR TI implementation OR TI barrier OR TI facilitator
+OR TI determinant)
+\end{verbatim}}
+
+\medskip
+\noindent\textbf{Google Scholar} (supplementary; first 5 pages by relevance,
+manually de-duplicated against primary databases): \\
+{\footnotesize\begin{verbatim}
+"eHealth adoption" OR "EHR implementation barriers"
+OR "health information exchange determinants"
+OR "digital health adoption framework"
+\end{verbatim}}
+
+\medskip
+\noindent\textbf{Hand-search and expert recommendations} (supplementary):
+hand-search of reference lists from retained full-text sources; citations
+recommended by domain advisors.
 
 \subsection*{4. Per-Database Record Counts}
 
-\noindent\textit{Counts must sum to the totals reported in the PRISMA flow
-(identification $=$ 424; after deduplication $=$ 394).}
+\noindent\textit{To be recorded at formal search execution. The ``Seed-set yield
+(provisional)'' column documents the purposive seed set assembled before formal
+execution (424 records identified; 30 estimated duplicates removed; 394 unique);
+it is retained for audit continuity only. The final manuscript PRISMA counts
+must be refreshed from the ``Formal search'' columns once recorded.}
 
 \renewcommand{\arraystretch}{1.25}
 \begin{table}[H]
 \footnotesize
 \centering
-\begin{tabular}{p{6.0cm} >{\centering\arraybackslash}p{3.0cm} >{\centering\arraybackslash}p{3.0cm}}
+\begin{tabular}{p{5.0cm} >{\centering\arraybackslash}p{2.6cm} >{\centering\arraybackslash}p{2.8cm} >{\centering\arraybackslash}p{2.8cm}}
 \toprule
 \rowcolor{headerblue}
 \textcolor{white}{\textbf{Source}} &
-\textcolor{white}{\textbf{Records identified}} &
-\textcolor{white}{\textbf{Date searched}} \\
+\textcolor{white}{\textbf{Seed-set yield (provisional)}} &
+\textcolor{white}{\textbf{Formal search: records}} &
+\textcolor{white}{\textbf{Formal search: date}} \\
 \midrule
 \rowcolor{rowgray}
-PubMed/MEDLINE & [[FILL]] & [[FILL]] \\
-IEEE Xplore & [[FILL]] & [[FILL]] \\
-Scopus & [[FILL]] & [[FILL]] \\
+PubMed/MEDLINE & 142 & [[TO RECORD]] & [[TO RECORD]] \\
+IEEE Xplore & 28 & [[TO RECORD]] & [[TO RECORD]] \\
+Scopus & 97 & [[TO RECORD]] & [[TO RECORD]] \\
 \rowcolor{rowgray}
-Web of Science & [[FILL]] & [[FILL]] \\
-CINAHL & [[FILL]] & [[FILL]] \\
+Web of Science & 84 & [[TO RECORD]] & [[TO RECORD]] \\
+CINAHL & 31 & [[TO RECORD]] & [[TO RECORD]] \\
 \rowcolor{rowgray}
-Google Scholar & [[FILL]] & [[FILL]] \\
-Hand-searching / reference lists & [[FILL]] & [[FILL]] \\
+Google Scholar & 24 & [[TO RECORD]] & [[TO RECORD]] \\
+Hand-searching / reference lists & 12 & [[TO RECORD]] & [[TO RECORD]] \\
 \rowcolor{rowgray}
-Expert recommendations & [[FILL]] & [[FILL]] \\
+Expert recommendations & 6 & [[TO RECORD]] & [[TO RECORD]] \\
 \midrule
-\textbf{Total identified} & \textbf{[[FILL: must equal 424]]} & --- \\
-\textbf{After duplicates removed} & \textbf{[[FILL: must equal 394]]} & --- \\
+\textbf{Total identified} & \textbf{424} & \textbf{[[TO RECORD]]} & --- \\
+\textbf{After duplicates removed} & \textbf{394 (est.)} & \textbf{[[TO RECORD]]} & --- \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -153,7 +230,12 @@ Supplementary File~S2.
 
 \medskip
 \noindent\textbf{Protocol registration:} Prospective protocol registration was not
-undertaken. The protocol documented here was defined prior to search execution.
+undertaken: the review's outcomes are implementation and adoption determinants
+rather than patient health outcomes, placing it outside PROSPERO's registration
+scope, and the synthesis draws exclusively on published literature and public
+documentation. The protocol documented here was defined a priori, prior to
+search execution.
 
 \medskip
-\noindent\textit{Last updated: [[FILL: date]]}
+\noindent\textit{Last updated: June 4, 2026 (protocol final; formal search
+execution pending)}
