@@ -2,17 +2,42 @@
 
 \subsection{Evidence Base}
 
-Following application of the inclusion and exclusion criteria, the systematic review retained 17 sources for evidence extraction and thematic synthesis: 4 systematic or umbrella reviews, 3 scoping or narrative reviews (including one IS theory foundation), 4 government and institutional reports (GAO audit findings and ONC reports to Congress), and 6 policy, regulatory, and framework analyses (national digital health strategy documents, interoperability legal frameworks, NIST governance standards, and HIPAA de-identification guidance). Four national eHealth implementation cases were additionally analyzed from primary-source documentation. The full evidence extraction matrix, with source-level U-T-I-O coding and key findings, is provided in Supplementary Table~\ref{tab:evidence}.
+The systematic review retained 17 sources for evidence extraction and thematic synthesis following application of inclusion and exclusion criteria. These included 4 systematic or umbrella reviews, 3 scoping or narrative reviews (including one IS theory foundation), 4 government and institutional reports (including GAO audit findings and ONC reports to Congress), and 6 policy, regulatory, and framework analyses (including national digital health strategy documents, interoperability legal frameworks, NIST governance standards, and HIPAA de-identification guidance). Additionally, 4 national eHealth implementation cases were analyzed using primary source documentation. The full evidence extraction matrix, including source-level U-T-I-O domain coding and key findings, is provided in Supplementary Table~\ref{tab:evidence}.
 
 \subsection{Systematic Review Findings}
-Across all 17 retained sources, adoption determinants consistently cluster into four domains corresponding to the U-T-I-O Model. No single technical or organizational variable emerged as independently determinative of adoption outcomes; rather, determinants across domains consistently co-occur and interact in shaping implementation success or failure. The source-by-domain mapping underlying this synthesis is provided in Supplementary Table~\ref{tab:determinant-matrix}.
+Across all 17 retained sources, adoption determinants consistently cluster into four domains corresponding to the U-T-I-O Model. No single technical or organizational variable emerged as independently determinative of adoption outcomes; rather, determinants across domains consistently co-occur and interact in shaping implementation success or failure.
 
 User readiness determinants—including usability, workflow fit, trust, training, perceived usefulness, and user satisfaction—are reported across multiple systematic reviews~\cite{kruse2016adoption,fennelly2020national,aguirre2019ehr} and are consistently linked to adoption success in qualitative case evidence~\cite{adams2020strategies}. Technical determinants—including system quality, information quality, semantic and syntactic interoperability, interface reliability, and data completeness—are identified as necessary infrastructure conditions~\cite{torab2023interoperability,eden2016barriers}. Institutional determinants—regulatory incentives, national digital health strategy, privacy law compliance, and interoperability mandates—emerge as especially prominent in policy-intensive healthcare environments~\cite{holmgren2023policyhie,fennelly2020national,onc2025reports}. Organizational determinants—leadership, implementation planning, stakeholder engagement, change management, vendor governance, and resource capacity—are cited as execution-level differentiators between otherwise comparable implementations~\cite{fennelly2020national,gao2025vaehr,gao2024dodehr}.
 
 \subsection{Multi-Case Findings}
 Four public cases were selected to compare determinant patterns across different implementation environments: ONC-supported U.S. health information exchange programs, NHS Shared Care Records, Estonia's national eHealth system, and VA/DoD federal EHR modernization.
 
-Domain-level ratings were assigned using the four-band scale defined in Supplementary Table~\ref{tab:rating-scale}; the full construct-level rubric, decision rules, and per-case evidence justifications are provided in Supplementary File~S3.
+Domain-level ratings were assigned using the four-band scale defined in Table~\ref{tab:rating-scale}; the full construct-level rubric, decision rules, and per-case evidence justifications are provided in Supplementary File~S3.
+
+\begin{table}[H]
+\caption{Rating Scale for Case-Level U--T--I--O Domain Assessments}
+\label{tab:rating-scale}
+\centering
+\small
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{8pt}
+\begin{tabular}{p{2.6cm} p{11.0cm}}
+\toprule
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Rating}} &
+\textcolor{white}{\textbf{Meaning}} \\
+\midrule
+\rowcolor{rowgray}
+\textbf{High} & Strong evidence of domain alignment across policy, implementation, and adoption evidence \\
+\textbf{Medium} & Partial alignment with documented gaps \\
+\rowcolor{rowgray}
+\textbf{Low--Medium} & Material gaps that constrain adoption value \\
+\textbf{Low} & Persistent or systemic failure in domain execution \\
+\bottomrule
+\end{tabular}
+\vspace{4pt}\\
+{\footnotesize \textit{Full decision rules, construct definitions, and per-case justifications: Supplementary File~S3.}}
+\end{table}
 
 \begin{table}[H]
 \caption{Comparative Case Analysis of U--T--I--O Adoption Determinants Across Four National Implementations}
@@ -65,45 +90,19 @@ VA/DoD EHR~\cite{gao2025vaehr,gao2024dodehr} &
 \bottomrule
 \end{tabular}
 \vspace{4pt}
-{\footnotesize \textit{Domain ratings reflect the preponderance of evidence in primary source documentation, applied per the rating scale in Supplementary Table~\ref{tab:rating-scale} and the decision rules in Supplementary File~S3. U = User Readiness; T = Technical Interoperability; I = Institutional Alignment; O = Organizational Execution.}}
+{\footnotesize \textit{Domain ratings reflect the preponderance of evidence in primary source documentation, applied per the rating scale in Table~\ref{tab:rating-scale} and the decision rules in Supplementary File~S3. U = User Readiness; T = Technical Interoperability; I = Institutional Alignment; O = Organizational Execution.}}
 \end{table}
-
-\subsection{U-T-I-O Alignment Index}
-
-To summarize the multi-domain profiles in Table~\ref{tab:case-comparison} as a single comparable quantity, each case's four ordinal ratings were mapped to equidistant numeric values (High~$=1.00$, Medium~$=0.67$, Low--Medium~$=0.33$, Low~$=0.00$) and averaged with equal weights, per Equation~(2) in the Methods. The resulting U-T-I-O Alignment Index (Figure~\ref{fig:alignment-index}) orders the four cases from highest to lowest assessed alignment: Estonia (1.00), the ONC HIE and NHS programs (0.83 each), and the VA/DoD program (0.50). Consistent with the constraints stated in the Methods, the index is an ordinal-derived, equal-weighted, illustrative summary of the ratings already justified in Supplementary File~S3; with four cases it is descriptive rather than predictive, and it is not a validated measurement instrument.
-
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}[x=8.2cm, y=1.05cm]
-  % --- gridlines and x-axis ticks (0 to 1) ---
-  \foreach \xv in {0,0.25,0.5,0.75,1.0}{
-    \draw[rowgray] (\xv,-0.4) -- (\xv,3.6);
-    \node[below=3pt, font=\footnotesize] at (\xv,-0.4) {\xv};
-  }
-  % --- y-axis baseline ---
-  \draw[black!75] (0,-0.4) -- (0,3.6);
-  % --- bars (length = Alignment Index); anchor case in dark navy ---
-  \fill[headerblue] (0,2.72) rectangle (1.00,3.28);
-  \fill[headerteal] (0,1.72) rectangle (0.83,2.28);
-  \fill[headerteal] (0,0.72) rectangle (0.83,1.28);
-  \fill[headerteal] (0,-0.28) rectangle (0.50,0.28);
-  % --- case labels (left of axis) ---
-  \node[left, font=\footnotesize] at (-0.015,3) {Estonia eHealth};
-  \node[left, font=\footnotesize] at (-0.015,2) {ONC HIE};
-  \node[left, font=\footnotesize] at (-0.015,1) {NHS Shared Care Records};
-  \node[left, font=\footnotesize] at (-0.015,0) {VA/DoD EHR Modernization};
-  % --- value labels (right of each bar end) ---
-  \node[right, font=\footnotesize\bfseries] at (1.00,3) {1.00};
-  \node[right, font=\footnotesize\bfseries] at (0.83,2) {0.83};
-  \node[right, font=\footnotesize\bfseries] at (0.83,1) {0.83};
-  \node[right, font=\footnotesize\bfseries] at (0.50,0) {0.50};
-  % --- x-axis title ---
-  \node[below=18pt, font=\footnotesize] at (0.5,-0.4) {U--T--I--O Alignment Index (equal-weighted, 0--1 scale)};
-\end{tikzpicture}
-\caption{Illustrative U--T--I--O Alignment Index by case (equal-weighted, ordinal-derived, 0--1 scale). Ordinal-to-numeric mapping: High~$=1.00$, Medium~$=0.67$, Low--Medium~$=0.33$, Low~$=0.00$; the index is the unweighted mean of the four domain values (Methods, Eq.~2). Equal weighting is a deliberate conservative default; the index is illustrative and not a validated instrument. Underlying domain values ($v_U, v_T, v_I, v_O$): Estonia (1.00, 1.00, 1.00, 1.00); ONC HIE (0.67, 1.00, 1.00, 0.67); NHS Shared Care Records (0.67, 1.00, 1.00, 0.67); VA/DoD (0.33, 0.33, 1.00, 0.33).}
-\label{fig:alignment-index}
-\end{figure}
 
 \subsection{Synthesis}
 
-The systematic review and multi-case findings converge on a consistent pattern supporting the conceptual dependence the model asserts, $Adoption = f(U, T, I, O)$. Across the literature the four domains appear as co-determinants of adoption, and no reviewed source identified a single-domain explanation as sufficient; cases weak in one or more domains exhibited lower adoption value, higher user resistance, or implementation delays. The case comparison reinforces this empirically: technical interoperability is necessary but insufficient—both ONC HIE programs and the VA/DoD initiative deployed substantial infrastructure yet did not match Estonia's breadth of adoption and user engagement. The decisive differentiator is multi-domain convergence: Estonia's uniformly high ratings yield the highest assessed maturity (Alignment Index~1.00), whereas the VA/DoD case—despite strong institutional mandate (I) and substantial technical investment—shows the lowest value (Alignment Index~0.50) through persistent gaps in user readiness (U), realised technical interoperability (T), and organizational execution (O), exactly as the model predicts. The U-T-I-O Model thus serves as both a descriptive and a diagnostic tool, explaining why well-funded, mandate-backed implementations can still fall short of their intended outcomes.
+The systematic review and multi-case findings converge on a consistent pattern. The evidence supports the proposed model:
+
+\begin{equation}
+Adoption = f(U, T, I, O)
+\end{equation}
+
+Across the literature, the four U-T-I-O domains consistently appear as co-determinants of adoption outcomes. No reviewed source identified a single-domain explanation as sufficient. Cases in which one or more domains were weak—regardless of the strength of others—exhibited measurably lower adoption value, higher user resistance, or implementation delays.
+
+The case comparison reinforces this finding empirically. Technical interoperability is necessary but demonstrably insufficient: both ONC HIE programs and the VA/DoD initiative deployed substantial technical infrastructure, yet neither achieved the breadth of adoption or user engagement observed in Estonia's nationally aligned system. The decisive differentiator across cases is multi-domain convergence. Estonia's high ratings across all four domains correspond to the highest assessed adoption maturity. The VA/DoD case, despite strong institutional mandate (I) and substantial technical investment, exhibits the lowest overall adoption value, with persistent gaps in user readiness (U), realised technical interoperability (T), and organizational execution (O)—an outcome directly consistent with the U-T-I-O Model's prediction that domain-level misalignment constrains adoption regardless of isolated domain strengths.
+
+These findings validate the U-T-I-O Model as both a descriptive and diagnostic tool: it accurately characterizes observed adoption patterns and provides an explanatory account of why well-funded, mandate-backed implementations can still fall short of their intended outcomes.
