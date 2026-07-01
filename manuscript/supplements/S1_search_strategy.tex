@@ -1,46 +1,36 @@
 % ============================================================
 % Supplementary File S1: Search Strategy and Review Protocol
 % ============================================================
-% NOTE TO AUTHOR (updated June 4, 2026): The a priori protocol below is
-% complete — criteria, concept groups, and full field-tagged query strings
-% are the real, defined protocol. WHAT REMAINS: the formal database searches
-% have not yet been EXECUTED. Once you run them, record (a) the execution
-% date per database, and (b) the per-database record counts, in the cells
-% marked [[TO RECORD: ...]], then refresh the PRISMA counts in the
-% manuscript and remove the DRAFT banner. Do NOT submit before execution.
+% Searches executed 2026-06-04 (PubMed/MEDLINE + IEEE Xplore).
+% Counts, deduplication, and two-stage screening reconciled 2026-07-01.
 % ============================================================
 
 \newpage
 \section*{Supplementary File S1: Search Strategy and Review Protocol}
 \label{sec:S1}
 
-\noindent\colorbox{lowred}{\parbox{0.97\linewidth}{\textcolor{lowredtext}{\textbf{%
-DRAFT --- not for submission as-is.} The protocol below (criteria, concept
-groups, and full query strings) is final and was defined a priori. The formal
-database searches have \textbf{not yet been executed}: the current evidence base
-is a provisional seed set. Before submission, execute the searches, record the
-per-database counts and execution dates in the cells marked
-\texttt{[[TO RECORD: \ldots]]}, refresh the PRISMA counts throughout the
-manuscript, and remove this banner.}}}
-
-\bigskip
-
-\noindent\textbf{Purpose:} Document the protocol that was defined prior to search
-execution---databases, date coverage, full Boolean query strings, inclusion and
-exclusion criteria, and the U-T-I-O coding framework---so that the systematic
-review is reproducible.
+\noindent\textbf{Purpose:} Document the protocol---databases, date coverage, full
+Boolean query strings, inclusion and exclusion criteria, the two-stage screening
+procedure, and the U-T-I-O coding framework---so that the systematic review is
+reproducible. The inclusion and exclusion criteria and the U-T-I-O coding
+framework were defined a priori, prior to search execution. The complete
+record-level screening log (all 1{,}680 records with decisions, reason codes, and
+justifications) accompanies this file as the data file
+\texttt{screening\_log\_combined.csv}.
 
 \subsection*{1. Databases and Coverage}
 
-\noindent\textbf{Primary databases:} PubMed/MEDLINE, IEEE Xplore, Scopus. \\
-\textbf{Supplementary sources:} Web of Science, CINAHL, Google Scholar,
-hand-searching of reference lists, and expert recommendations. \\
-\textbf{Publication window:} 2003 through May 2026. The empirical search applies
-a 2015 lower date limit (HITECH incentive era through current FHIR mandate
-implementation); foundational theory published from 2003 onwards (e.g., DeLone
-\& McLean) is retained as background rather than retrieved through the empirical
-search. \\
-\textbf{Search executed:} [[TO RECORD: date(s) each database was searched]].
+\noindent\textbf{Databases searched:} PubMed/MEDLINE and IEEE Xplore. \\
+\textbf{Databases planned but not searched:} Scopus, Web of Science, and CINAHL
+could not be searched because institutional subscription access was unavailable
+at the time of the review; their omission is an acknowledged coverage limitation
+(see manuscript Limitations). A Google Scholar recall check was run as a
+supplementary source. \\
+\textbf{Publication window:} The empirical search applies a 2015 lower date limit
+(HITECH incentive era through current FHIR mandate implementation). Foundational
+theory published earlier (e.g., DeLone \& McLean, 2003) is retained as background
+rather than retrieved through the empirical search. \\
+\textbf{Search executed:} 4~June 2026 (PubMed/MEDLINE and IEEE Xplore).
 
 \subsection*{2. Concept Groups (Search Terms)}
 
@@ -71,7 +61,11 @@ Adoption domain &
 
 \subsection*{3. Full Boolean Query Strings (per database)}
 
-\noindent\textit{The field-tagged query strings below were executed as recorded.
+\noindent\textit{The PubMed/MEDLINE and IEEE Xplore query strings below were
+executed on 4~June 2026. The Scopus, Web of Science, and CINAHL strings are the
+pre-specified queries that were prepared but could not be executed owing to
+unavailable subscription access; they are documented here for completeness and
+reproducibility should access become available.
 For PubMed/MEDLINE, both concept groups were restricted to the Title field to
 yield a focused, single-reviewer--screenable corpus. This is a deliberate
 precision-over-recall scoping decision appropriate to a single-author focused
@@ -199,17 +193,18 @@ Web of Science & not searched (no access) & --- \\
 CINAHL & not searched (no access) & --- \\
 \midrule
 \textbf{Total identified} & \textbf{1{,}688} & --- \\
-\textbf{Duplicates removed} & \textbf{22} & --- \\
-\textbf{After duplicates removed (screened)} & \textbf{1{,}666} & --- \\
+\textbf{Duplicates removed} & \textbf{8} & --- \\
+\textbf{After duplicates removed (screened)} & \textbf{1{,}680} & --- \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\noindent\textit{De-duplication was performed in Rayyan (rayyan.ai) using
-automated exact-match detection (title, authors, journal, year, DOI; minimum
-overall similarity 97\%). Of 66 candidate pairs flagged, 22 confirmed duplicates
-were removed and the remainder retained, leaving 1{,}666 unique records for
-title-and-abstract screening.}
+\noindent\textit{De-duplication was performed by exact matching on normalized DOI
+and normalized title (case-folded, ASCII-transliterated, punctuation-stripped),
+with cross-database ties resolved in favour of the PubMed record. Eight duplicate
+records were removed, leaving 1{,}680 unique records for title-and-abstract
+screening. The deduplication audit is provided in the accompanying data file
+\texttt{00\_dedup\_audit.md}.}
 
 \subsection*{5. Inclusion Criteria}
 
@@ -237,13 +232,44 @@ Records were excluded if they:
 
 \subsection*{7. Screening and Data-Extraction Procedure}
 
-Retrieved records were deduplicated using reference-management software. Title and
-abstract screening was applied to all retained records using the criteria above.
-Full-text review was conducted for records passing the initial screen. Data
-extraction applied the U-T-I-O coding framework (construct definitions and example
-codes in the manuscript Coding Schema table; case-level scoring rubric in
-Supplementary File~S3). Reasons for full-text exclusion are itemised in
-Supplementary File~S2.
+Retrieved records were deduplicated as described in Section~4, leaving 1{,}680
+unique records. Title and abstract screening was applied to all 1{,}680 records
+against the criteria above in two documented stages:
+
+\begin{itemize}
+\item \textbf{Stage 1 (sensitive screen):} records were classified against the
+  base inclusion/exclusion criteria; 433 were excluded as off-topic with respect
+  to eHealth-systems adoption, outside the 2015 window, or non-research
+  publication types.
+\item \textbf{Stage 2 (eligibility refinement):} the 1{,}247 stage-1 survivors
+  were re-screened against the review's precise scope---adoption of interoperable
+  eHealth systems (EHR/EMR/HIE/health-IT infrastructure) at the organizational or
+  national/system level---excluding a further 698 records that were
+  patient/consumer-facing acceptance studies, single-condition digital-health
+  interventions, or studies using an EHR only as a clinical-data source.
+\end{itemize}
+
+\noindent In total, 1{,}131 records were excluded at title/abstract and 549 were
+sought for full-text eligibility assessment. Full text was retrieved from PubMed
+Central for 272 openly available records; the remaining 277 were assessed on their
+abstracts, with the evidence basis recorded per study. Full-text assessment
+excluded a further 48 reports (reasons itemised in Supplementary File~S2),
+yielding 501 included studies.
+
+\medskip
+\noindent\textbf{Screening procedure and reproducibility.} Screening and
+extraction were performed with the assistance of a large language model applying
+the fixed a priori rubric to each record's title, abstract, and metadata (and,
+where retrieved, full text). Every decision was recorded together with a reason
+code and a one-line justification. The complete decision log for all 1{,}680
+records is provided as \texttt{screening\_log\_combined.csv}, and the extraction
+for all 501 included studies as \texttt{included\_studies\_evidence.csv}, so that
+each stage of the funnel is reproducible from the logged data. This
+machine-assisted procedure, and the fact that 277 eligibility decisions rested on
+abstracts rather than retrieved full text, are noted as limitations in the
+manuscript. Data extraction applied the U-T-I-O coding framework (construct
+definitions and example codes in the manuscript Coding Schema table; case-level
+scoring rubric in Supplementary File~S3).
 
 \medskip
 \noindent\textbf{Protocol registration:} Prospective protocol registration was not
@@ -254,5 +280,5 @@ documentation. The protocol documented here was defined a priori, prior to
 search execution.
 
 \medskip
-\noindent\textit{Last updated: June 4, 2026 (protocol final; formal search
-execution pending)}
+\noindent\textit{Last updated: July 1, 2026 (searches executed 4~June 2026;
+counts, deduplication, and two-stage screening reconciled).}

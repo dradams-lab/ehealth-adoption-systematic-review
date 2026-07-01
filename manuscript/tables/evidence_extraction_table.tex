@@ -1,146 +1,110 @@
 % =========================
 % tables/evidence_extraction_table.tex
+% Review-level evidence extraction (representative subset of the 501 included studies).
+% Full study-level matrix: supplementary CSV included_studies_evidence.csv
 % =========================
 
 \small
 \setlength{\tabcolsep}{5pt}
 \renewcommand{\arraystretch}{1.25}
 
-\begin{longtable}{p{2.6cm} >{\centering\arraybackslash}p{0.7cm} p{2.0cm} p{2.1cm} p{1.8cm} >{\centering\arraybackslash}p{1.8cm} p{3.8cm}}
+\begin{longtable}{p{3.4cm} >{\centering\arraybackslash}p{0.7cm} p{1.9cm} p{2.4cm} >{\centering\arraybackslash}p{0.8cm} >{\centering\arraybackslash}p{1.1cm} p{3.4cm}}
 
-\caption{Evidence Extraction Matrix: Included Sources and U--T--I--O Domain Coding}
+\caption{Evidence Extraction Matrix: Included Review-Level Studies and U--T--I--O Domain Coding}
 \label{tab:evidence}\\
 
-% ---- First-page header ----
 \toprule
 \rowcolor{headerblue}
-\textcolor{white}{\textbf{Source}} &
+\textcolor{white}{\textbf{Source (short title)}} &
 \textcolor{white}{\textbf{Year}} &
 \textcolor{white}{\textbf{Study Type}} &
-\textcolor{white}{\textbf{Focus}} &
-\textcolor{white}{\textbf{Context}} &
+\textcolor{white}{\textbf{Primary Determinants}} &
+\textcolor{white}{\textbf{Basis}} &
 \textcolor{white}{\textbf{Domains}} &
 \textcolor{white}{\textbf{Key Finding}} \\
 \midrule
 \endfirsthead
 
-% ---- Continuation header ----
 \caption[]{Evidence Extraction Matrix (continued)}\\
 \toprule
 \rowcolor{headerblue}
-\textcolor{white}{\textbf{Source}} &
+\textcolor{white}{\textbf{Source (short title)}} &
 \textcolor{white}{\textbf{Year}} &
 \textcolor{white}{\textbf{Study Type}} &
-\textcolor{white}{\textbf{Focus}} &
-\textcolor{white}{\textbf{Context}} &
+\textcolor{white}{\textbf{Primary Determinants}} &
+\textcolor{white}{\textbf{Basis}} &
 \textcolor{white}{\textbf{Domains}} &
 \textcolor{white}{\textbf{Key Finding}} \\
 \midrule
 \endhead
 
-% ---- Footer ----
-\bottomrule
-\multicolumn{7}{r}{\footnotesize\textit{Continued on next page\ldots}}\\
+\midrule
+\multicolumn{7}{r}{\footnotesize\textit{Continued on next page}} \\
 \endfoot
 
 \bottomrule
-\multicolumn{7}{l}{\footnotesize\textit{U = User Readiness; T = Technical Interoperability; I = Institutional Alignment; O = Organizational Execution.}}\\
+\multicolumn{7}{p{15.5cm}}{\footnotesize\textit{Review-level studies (systematic, scoping, umbrella, meta-analytic, and realist reviews) among the 501 included studies, ordered by year. Basis: FT = assessed on retrieved full text; Ab = assessed on abstract. Domains list the U--T--I--O domains each study addresses. The complete study-level extraction for all 501 included studies (including primary studies) is provided as the supplementary data file \texttt{included\_studies\_evidence.csv}. U = User Readiness; T = Technical Interoperability; I = Institutional Alignment; O = Organizational Execution.}} \\
 \endlastfoot
 
-% ---- Row 1 ----
-\rowcolor{rowgray}
-Holmgren et al.~\cite{holmgren2023policyhie} & 2023 & Policy review &
-HIE policy landscape & U.S./Global & I, T, O &
-Policy alignment and exchange governance are primary drivers of HIE interoperability adoption. \\
-
-% ---- Row 2 ----
-Eden et al.~\cite{eden2016barriers} & 2016 & Systematic review &
-HIE adoption barriers & HIE orgs & U, T, O, I &
-Adoption barriers span workflow, technical, financial, and policy layers; no single-domain explanation is sufficient. \\
-
-% ---- Row 3 ----
-\rowcolor{rowgray}
-Kruse et al.~\cite{kruse2016adoption} & 2016 & Systematic review &
-EHR adoption factors & Healthcare orgs & U, T, O &
-Perceived usefulness, usability, training adequacy, and organisational readiness are key adoption determinants. \\
-
-% ---- Row 4 ----
-Fennelly et al.~\cite{fennelly2020national} & 2020 & Umbrella review &
-National EHR implementation & National systems & U, T, O, I &
-Successful national EHR programmes require coordinated leadership, governance, and stakeholder engagement. \\
-
-% ---- Row 5 ----
-\rowcolor{rowgray}
-Aguirre et al.~\cite{aguirre2019ehr} & 2019 & Scoping review &
-EHR barriers and effects & EHR systems & U, T, O &
-Benefits are moderated by workflow disruption, usability barriers, and unintended implementation consequences. \\
-
-% ---- Row 6 ----
-Torab-Miandoab et al.~\cite{torab2023interoperability} & 2023 & Systematic review &
-HIS interoperability & Heterogeneous HIS & T, I &
-Interoperability requires layered semantic, syntactic, and technical standards alignment across systems. \\
-
-% ---- Row 7 ----
-\rowcolor{rowgray}
-Adams~\cite{adams2020strategies} & 2020 & Qualitative case study &
-eHealth adoption strategies & IT leaders & U, T, I, O &
-Six adoption themes from senior IT leader interviews support a multidimensional adoption model. \\
-
-% ---- Row 8 ----
-ONC Reports to Congress~\cite{onc2025reports} & 2025 & Government report &
-U.S. health IT adoption & U.S. ecosystem & I, T &
-National EHR progress depends on policy-driven interoperability mandates and exchange infrastructure maturity. \\
-
-% ---- Row 9 ----
-\rowcolor{rowgray}
-NHS Shared Care Records~\cite{nhs2025sharedcare} & 2025 & Official guidance &
-Shared care records & England NHS & I, T, O &
-Cross-organisational records require information governance frameworks and clinical workflow integration. \\
-
-% ---- Row 10 ----
-Estonia eHealth System~\cite{estonia2026ehealth} & 2026 & National case &
-National EHR & Estonia & U, T, I &
-Estonia's national system — operational since 2008 — achieves broad provider participation through legal mandate and X-Road architecture. \\
-
-% ---- Row 11 ----
-\rowcolor{rowgray}
-EU / Estonia EHR Law~\cite{europeancommission2016estoniaehr} & 2016 & Policy review &
-EHR legal framework & Estonia & I, T &
-Mandatory provider upload obligations and national governance underpin comprehensive EHR coverage. \\
-
-% ---- Row 12 ----
-GAO / VA EHR Modernisation~\cite{gao2025vaehr} & 2025 & Government audit &
-VA EHR modernisation & U.S. VA & U, T, O, I &
-Misalignment across user, technical, and organisational domains produces significant adoption risk despite strong institutional mandate. \\
-
-% ---- Row 13 ----
-\rowcolor{rowgray}
-GAO / DoD EHR Deployment~\cite{gao2024dodehr} & 2024 & Government audit &
-Federal EHR deployment & DoD/VA & U, T, O &
-User satisfaction deficits and systematic issue management failures undermine federal EHR adoption outcomes. \\
-
-% ---- Row 14 ----
-NIST SP 800-37~\cite{nist80037r2} & 2018 & Risk mgmt framework &
-Security risk governance & Systems & I, O &
-Structured risk management frameworks support system trust and organisational security governance. \\
-
-% ---- Row 15 ----
-\rowcolor{rowgray}
-NIST SP 800-53~\cite{nist80053r5} & 2020 & Security controls catalog &
-Security \& privacy controls & Systems & I, T, O &
-Control baselines support privacy engineering, system integrity, and governance compliance. \\
-
-% ---- Row 16 ----
-HIPAA De-identification Guidance~\cite{hhs2012deidentification} & 2012 & Regulatory guidance &
-PHI de-identification & U.S. health data & I &
-Safe Harbour and expert determination standards enable lawful secondary use of de-identified health data. \\
-
-% ---- Row 17 ----
-\rowcolor{rowgray}
-DeLone \& McLean~\cite{delone2003model} & 2003 & IS theory / model &
-IS success model & Cross-domain IS & U, T &
-System quality and information quality shape system use, user satisfaction, and net benefits; foundational IS-success anchor for the U and T domains. \\
+Towards lifetime electronic health recor... & 2015 & Literature review & Culture; Regulation; Infor... & Ab & UTIO & Culture, regulation, informational self-determination, incen... \\
+Barriers and Facilitators of Health Info... & 2015 & Systematic review & Organizational barriers; E... & Ab & UTIO & HIE adoption in the US is driven by regulatory mandates but ... \\
+Adoption factors associated with electro... & 2015 & Systematic review & Cost and financial resourc... & FT & UTIO & EHR adoption in long-term care facilities is facilitated by ... \\
+Progress in electronic medical record ad... & 2015 & Scoping review & Provincial incentives; Use... & Ab & UTIO & Canadian EMR adoption increased from 20\% to 62\% between 2006... \\
+National Health Models and the Adoption ... & 2015 & Scoping review & National health model type... & Ab & TI & High ePrescribing adoption rates correlate strongly with NHS... \\
+Barriers and facilitators to health info... & 2016 & Systematic review & Leadership and policy dire... & Ab & UTIO & Strong leadership, clear policy, financial support, staff tr... \\
+Barriers to Electronic Health Record Ado... & 2016 & Systematic review & Initial cost; Technical su... & FT & UTIO & Initial cost, technical support, technical concerns, and res... \\
+Factors that influence the implementatio... & 2016 & Systematic review & Knowledge and beliefs abou... & FT & UTIO & Multi-level factors across innovation characteristics, outer... \\
+Adoption Factors of the Electronic Healt... & 2016 & Systematic review & Efficiency; Organization/h... & FT & UTIO & A systematic review of 31 articles identified 25 facilitator... \\
+Mind the Gap. A systematic review to ide... & 2016 & Systematic review & Clinical workflow and usab... & Ab & UIO & Six critical themes (workflow, training, governance, customi... \\
+Why sub-Saharan Africa lags in electroni... & 2017 & Scoping review & High implementation and ma... & FT & UTIO & EHR adoption in sub-Saharan Africa is constrained by high co... \\
+Barriers and opportunities to implementa... & 2017 & Scoping review & Lack of policy framework; ... & FT & UTIO & Uganda has trialled multiple e-Health solutions but most lac... \\
+Are We There Yet? Human Factors Knowledg... & 2017 & Selective review & Human factors and usabilit... & Ab & UIO & Human factors and usability approaches remain poorly integra... \\
+Facilitators and Barriers of Electronic ... & 2018 & Systematic review & Technical infrastructure; ... & Ab & UTIO & EMR implementation in resource-constrained settings requires... \\
+Primary care physicians' attitudes to th... & 2018 & Systematic review & Clinician computer literac... & FT & UTIO & PCP attitudes to EMR adoption are shaped by interconnected m... \\
+Nursing Home Implementation of Health In... & 2018 & Scoping review & Staff training and prepara... & FT & UTIO & Nursing homes lack systematic HIT implementation processes a... \\
+Capabilities and Advantages of Cloud Com... & 2018 & Systematic review & Cost reduction; Security a... & FT & UTO & Cloud computing offers ten key capabilities (cost, security,... \\
+A systematic review of reviews to identi... & 2019 & Systematic review & Stakeholder acceptance and... & Ab & UTIO & eHealth implementation faces five key challenge areas spanni... \\
+Narrative Review for Exploring Barriers ... & 2019 & Scoping review & Individual readiness (psyc... & FT & UTIO & Barriers to EHR readiness differ significantly between devel... \\
+A systematic review of the adoption and ... & 2019 & Systematic review & Stakeholder acceptance; Or... & Ab & UTIO & Thirty-nine factors influencing eHealth adoption and accepta... \\
+Barriers and Facilitators to the Impleme... & 2019 & Systematic review & Digital health literacy; D... & FT & UTIO & A comprehensive synthesis of 77 barriers and 292 facilitator... \\
+Development of Trust-Integrated Technolo... & 2019 & Meta-analysis & Trust; perceived usefulnes... & Ab & UTI & Meta-analysis identified personal, system, and interaction f... \\
+Role Played and Strategies Employed by M... & 2019 & Scoping review & Nurse manager decision-mak... & Ab & UO & Nurse managers play critical roles in health IT adoption thr... \\
+Effects of Electronic Health Record Impl... & 2020 & Scoping review & Poor/insufficient training... & FT & UTIO & EHR implementation effects are mixed across clinical work, d... \\
+The adoption of electronic medical recor... & 2020 & Systematic review & Privacy and security conce... & FT & UTIO & Physicians perceive multiple barriers to EMR adoption, with ... \\
+Perceptions of healthcare professionals ... & 2020 & Systematic review & Healthcare professionals' ... & FT & UTIO & Healthcare professionals' perceptions of EHRs are influenced... \\
+MHS Genesis Implementation: Strategies i... & 2020 & Systematic review & Change Champions; Training... & Ab & UIO & Critical success factors (change champions, training, feedba... \\
+Implementation of Electronic Medical Rec... & 2021 & Scoping review & Clinician acceptability an... & FT & UTIO & EMR adoption in mental health is determined by clinician per... \\
+Benefits, challenges, and contributors t... & 2021 & Scoping review & User acceptance and trust;... & Ab & UTIO & Success of national eHealth implementations depends on promo... \\
+Digital Health Platforms in Saudi Arabia... & 2021 & Scoping review & Governmental support and f... & FT & UTIO & Saudi Arabia successfully optimized digital health technolog... \\
+Barriers to the Adoption of Electronic M... & 2021 & Systematic review & Lack of EMR training; Limi... & FT & UTO & Lack of EMR training, limited computer access, poor computer... \\
+Electronic Health Record: a systematic r... & 2021 & Systematic review & Professional resistance to... & Ab & UIO & A systematic review of EPR implementation in Brazil (2006–20... \\
+Theories Informing eHealth Implementatio... & 2021 & Systematic review & Technology Acceptance Mode... & FT & UO & eHealth implementation theories predominantly focus on indiv... \\
+Data Integration and Interoperability Pr... & 2021 & Systematic review & HL7 FHIR interoperability ... & Ab & TO & Systematic review identified integration and interoperabilit... \\
+Design of an Integrated Acceptance Frame... & 2022 & Systematic review & Perceived usefulness; Perc... & FT & UTIO & A systematic review of 43 studies identified 105 acceptance ... \\
+Using an Integrated Framework to Investi... & 2022 & Systematic review & Relative advantage of HIT;... & FT & UTIO & HIT implementation for chronic disease management is determi... \\
+Implementation of eHealth to Support Ass... & 2022 & Systematic review & Inner setting requirements... & FT & UTIO & eHealth implementation in dementia care homes is multifactor... \\
+Adoption of electronic health record sys... & 2023 & Systematic review & Healthcare provider readin... & FT & UTIO & EHR adoption in low-income countries is at early implementat... \\
+Exploring facilitators and barriers of t... & 2023 & Systematic review & Effort expectancy; Perform... & FT & UTIO & Effort expectancy was the most common facilitator of eHealth... \\
+Electronic Medical Record System Use and... & 2023 & Systematic review & Age <30 years; EMR manual ... & FT & UIO & Pooled EMR utilization in Ethiopia is 51.85\%, with younger a... \\
+The Country's Implementation and Adoptio... & 2023 & Systematic review & Health terminology standar... & Ab & TIO & Standardized health terminologies are critical for achieving... \\
+Benefits, facilitators, and barriers of ... & 2024 & Scoping review & Training and change manage... & FT & UTIO & EMR implementation in outpatient settings yields direct pati... \\
+Technology adoption of electronic medica... & 2024 & Systematic review & Computer literacy and educ... & FT & UTIO & EMR adoption in developing economies is constrained by physi... \\
+Examining South Tyrol's Experience: Digi... & 2024 & Scoping review & GP resistance to collabora... & FT & UTIO & Successful implementation of Italy's primary care reform (D.... \\
+Construction of the Digital Health Equit... & 2024 & Scoping review & User digital literacy and ... & FT & UTIO & The DH-EquIR model integrates digital health implementation ... \\
+Factors identified as barriers or facili... & 2024 & Scoping review & Teamwork support; Data man... & Ab & UTIO & EMR/EHR systems facilitate interprofessional teamwork but fa... \\
+Overcoming Electronic Medical Records Ad... & 2024 & Systematic review & User acceptance and digita... & FT & UTIO & EMR adoption in Saudi Arabia requires integrated strategies ... \\
+eHealth implementation in Europe: a scop... & 2024 & Scoping review & Legal compliance (MDR/GDPR... & FT & TIO & eHealth implementation success requires integrated attention... \\
+Contextual Barriers to Implementing Open... & 2024 & Scoping review & Limited funding and sustai... & FT & TIO & Implementation of open-source EHRs in LMICs is hindered by s... \\
+A realist review of factors critical for... & 2025 & Realist review & Digital literacy and usabi... & FT & UTIO & eHealth implementation for chronic disease management is dri... \\
+Examining implementation outcomes in hea... & 2025 & Scoping review & Adoption barriers and faci... & Ab & UTIO & Implementation outcomes in HIE systems are inconsistently de... \\
+25 Years of Electronic Health Record Imp... & 2025 & Scoping review & Government and policy role... & FT & UTIO & EHR implementation is a complex, time-consuming process requ... \\
+Facilitators and Barriers to the Impleme... & 2025 & Scoping review & Continuous on-the-job trai... & FT & UTIO & In LMICs hospitals, telemedicine and hospital information sy... \\
+Integration of Screening and Referral To... & 2025 & Scoping review & Leadership support and cli... & FT & UTIO & Integration of SDOH and modifiable risk factor screening in ... \\
+Constructing a Digital Bridge: A Systema... & 2025 & Systematic review & Technical infrastructure r... & Ab & UTIO & EMR and telehealth adoption in Ugandan neurosurgery is const... \\
+Unveiling practical insights of eHealth ... & 2025 & Scoping review & Legal/regulatory complianc... & FT & TIO & eHealth implementation in Europe faces interrelated LEFT bar... \\
+Adoption, barriers and opportunities of ... & 2026 & Scoping review & Technical capacity and inf... & FT & UTIO & Adoption of eHealth interoperability standards in Africa rem... \\
+Challenges and facilitators of electroni... & 2026 & Scoping review & Leadership and political s... & Ab & UTIO & EHR implementation success depends on multilevel factors spa... \\
+When Tech Meets Touch: Multistakeholder ... & 2026 & Systematic review & Stakeholder sentiment and ... & FT & UTIO & A hybrid computational-qualitative systematic review mapping... \\
+Interoperability Barriers in the Europea... & 2026 & Scoping review & Technical standardization ... & Ab & TIO & EHDS implementation is hindered by persistent technical, org... \\
 
 \end{longtable}
-
-\normalsize

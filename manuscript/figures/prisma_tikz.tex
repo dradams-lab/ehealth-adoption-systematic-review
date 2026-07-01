@@ -7,7 +7,7 @@
     draw,
     rounded corners,
     align=center,
-    minimum width=7.5cm,
+    minimum width=8.2cm,
     minimum height=1.1cm,
     font=\small
   },
@@ -15,7 +15,7 @@
     draw,
     rounded corners,
     align=center,
-    minimum width=5.5cm,
+    minimum width=6.0cm,
     minimum height=1.1cm,
     font=\small
   },
@@ -26,47 +26,49 @@
 \node[box] (id) {
 \textbf{Identification}\\
 Records identified from databases\\
-(PubMed, IEEE Xplore, Scopus) and\\
-supplementary sources (WoS, CINAHL,\\
-Google Scholar, hand search, expert recs.)\\
-$n = 424$
+(PubMed $n=1{,}591$; IEEE Xplore $n=97$)\\
+$n = 1{,}688$
 };
 
 \node[box, below=of id] (dup) {
 Records after duplicates removed\\
-$n = 394$
+$n = 1{,}680$
 };
 
 \node[box, below=of dup] (screen) {
 Records screened (title/abstract)\\
-$n = 394$
+$n = 1{,}680$
 };
 
 \node[box, below=of screen] (full) {
-Full-text articles assessed for eligibility\\
-$n = 41$ \;\textit{(43 sought; 2 not retrievable)}
+Reports assessed for eligibility\\
+$n = 549$
 };
 
 \node[box, below=of full] (inc) {
 \textbf{Studies included in synthesis}\\
-$n = 17$
+$n = 501$
 };
 
 \node[box, below=of inc] (case) {
-Public implementation cases included\\
+National implementation cases\\
+included in multi-case analysis\\
 $n = 4$
 };
 
 % --- SIDE (EXCLUSIONS) ---
-\node[side, right=2.0cm of screen] (exclude) {
-Records excluded (title/abstract)\\
-$n = 351$
+\node[side, right=1.8cm of screen] (exclude) {
+Records excluded at title/abstract\\
+($n = 1{,}131$)\\
+\textit{Stage 1 off-topic/type: $1{,}131 - 698 = 433$}\\
+\textit{Stage 2 out of system-level scope: $698$}
 };
 
-\node[side, right=1.5cm of full] (fullx) {
-Full-text articles excluded ($n = 24$)\\
-\textit{Reasons: wrong focus, wrong outcome,}\\
-\textit{wrong setting, narrative-only, duplicates}
+\node[side, right=1.8cm of full] (fullx) {
+Reports excluded ($n = 48$)\\
+\textit{EHR as data source only ($41$),}\\
+\textit{patient/consumer-only ($4$),}\\
+\textit{publication type ($3$)}
 };
 
 % --- ARROWS ---
@@ -81,7 +83,7 @@ Full-text articles excluded ($n = 24$)\\
 
 \end{tikzpicture}
 
-\caption[PRISMA 2020 Flow Diagram for Study Selection]{PRISMA 2020 Flow Diagram for Study Selection, structured per the standard PRISMA 2020 reporting template~\cite{prisma2020flow}.}
+\caption[PRISMA 2020 Flow Diagram for Study Selection]{PRISMA 2020 Flow Diagram for Study Selection. Searches of PubMed and IEEE Xplore were executed on 4~June 2026; Scopus, Web of Science, and CINAHL could not be searched owing to unavailable institutional subscription access, and a supplementary Google Scholar recall check returned no unique in-window records (Supplementary File~S1). Title/abstract screening was conducted in two documented stages; full-text was retrieved where openly available (PubMed Central) and eligibility was otherwise assessed on the abstract. Structured per the PRISMA 2020 reporting template~\cite{prisma2020flow}.}
 \label{fig:prisma-flow}
 
 \end{figure}

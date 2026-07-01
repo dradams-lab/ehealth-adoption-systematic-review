@@ -1,0 +1,19 @@
+{
+  "identified_pubmed": 1591,
+  "identified_ieee": 97,
+  "identified_total": 1688,
+  "identified_other_sources": 0,
+  "duplicates_removed": 8,
+  "records_screened": 1680,
+  "excluded_title_abstract": 1131,
+  "excluded_ta_stage1": 433,
+  "excluded_ta_stage2": 698,
+  "sought_fulltext": 549,
+  "fulltext_not_retrievable": 0,
+  "fulltext_assessed": 549,
+  "fulltext_ondrawn_fulltext": 272,
+  "fulltext_on_abstract": 277,
+  "excluded_fulltext": 48,
+  "included_studies": 501,
+  "national_case_studies": 4
+}

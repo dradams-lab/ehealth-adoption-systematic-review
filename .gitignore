@@ -28,3 +28,9 @@ notes/ehealth_reference_review/reports/
 
 # Claude Code local settings
 .claude/
+
+# Session transients / large raw intermediates (2026-07-01 real-review execution)
+_view_*.png
+handoff/
+data/fulltext/
+data/screened/_*.json

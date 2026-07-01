@@ -1,64 +1,52 @@
 % ============================================================
 % Supplementary File S2: Full-Text Exclusions with Reasons
 % ============================================================
-% NOTE TO AUTHOR (updated June 4, 2026): This file is a STRUCTURED
-% TEMPLATE awaiting the EXECUTED full-text screening. IMPORTANT: the
-% "Excluded Full Texts (S2)" tab in prisma/prisma-counts.xlsx contains
-% REPRESENTATIVE entries only (per its own note) — do NOT copy those in.
-% Populate this table exclusively from the real screening log after the
-% formal searches and full-text review are completed. The final row
-% count must match the full-text exclusion count in the refreshed
-% PRISMA flow.
+% Populated from the executed full-text eligibility assessment (2026-07-01).
+% Source data: data/final/fulltext_exclusions.csv
 % ============================================================
 
 \newpage
 \section*{Supplementary File S2: Full-Text Articles Excluded, with Reasons}
 \label{sec:S2}
 
-\noindent\colorbox{lowred}{\parbox{0.97\linewidth}{\textcolor{lowredtext}{\textbf{%
-DRAFT / PLACEHOLDER --- not for submission as-is.} This table must be populated
-from the \textbf{executed} full-text screening only. The formal database searches
-are pending; no real full-text exclusion records exist yet. After execution and
-screening, replace every \texttt{[[FILL: \ldots]]} with the actual reference and
-specific exclusion reason, and verify the row count matches the refreshed PRISMA
-full-text exclusion count.}}}
-
-\bigskip
-
-\noindent\textbf{Purpose:} Provide the per-record audit trail for the 24 full-text
-articles assessed for eligibility but excluded, as required for PRISMA 2020
-transparency.
+\noindent\textbf{Purpose:} Provide the per-record audit trail for the 48 reports
+assessed for eligibility but excluded, as required for PRISMA 2020 transparency.
+Records are drawn from the executed screening log; the full record-level data,
+including titles, identifiers, and the basis of assessment (retrieved full text
+vs.\ abstract), are provided in the accompanying data file
+\texttt{fulltext\_exclusions.csv}.
 
 \medskip
-\noindent\textbf{Exclusion-reason legend} (as shown in the PRISMA flow diagram):
+\noindent\textbf{Exclusion-reason legend} (Stage-2 / full-text scope codes):
 \begin{itemize}
-\item \textbf{E1 --- Wrong focus} --- not centrally about eHealth/EHR/HIE adoption
-  determinants.
-\item \textbf{E2 --- Wrong outcome} --- did not report adoption, implementation,
-  barriers, facilitators, or determinants.
-\item \textbf{E3 --- Wrong setting} --- non-healthcare IT context without healthcare
-  application.
-\item \textbf{E4 --- Insufficient methodology} --- opinion/editorial or narrative
-  piece without full methodology.
-\item \textbf{E5 --- Duplicate} --- duplicate of an already-included or
-  already-screened record (better source retained).
-\item \textbf{E6 --- Not retrievable} --- full text unavailable after library and
-  interlibrary loan requests (reported separately in the PRISMA flow).
+\item \textbf{X1 --- Patient/consumer-facing only} --- study of individual
+  patients' or consumers' acceptance, attitudes, or use of a portal/app/tool,
+  with no organizational or system-level adoption lens.
+\item \textbf{X2 --- Single-condition or single-intervention tool} --- a specific
+  digital-health intervention for one clinical condition, evaluated for clinical
+  effect or feasibility rather than system adoption.
+\item \textbf{X3 --- Wrong outcome} --- uses an EHR/health-IT system as a data
+  source or delivery channel to study a clinical/disease outcome, algorithm, or
+  cost, rather than studying adoption of the system itself.
+\item \textbf{X4 --- Out-of-scope technology/setting} --- not an
+  EHR/EMR/HIE/health-IT-infrastructure system, or a non-healthcare setting.
+\item \textbf{X5 --- Insufficient methodology / publication type} --- editorial,
+  letter, commentary, protocol-only, or abstract-only.
 \end{itemize}
 
 \renewcommand{\arraystretch}{1.25}
 \setlength{\tabcolsep}{5pt}
 
-\begin{longtable}{p{0.8cm} p{8.5cm} p{4.5cm}}
+\begin{longtable}{p{0.8cm} p{11.5cm} p{1.6cm}}
 
-\caption{Full-text articles excluded at eligibility, with reasons (n~$=$~24)}
+\caption{Full-text reports excluded at eligibility, with reasons (n~$=$~48)}
 \label{tab:s2-exclusions}\\
 
 \toprule
 \rowcolor{headerblue}
 \textcolor{white}{\textbf{\#}} &
-\textcolor{white}{\textbf{Excluded record (author, year, title, source)}} &
-\textcolor{white}{\textbf{Exclusion reason}} \\
+\textcolor{white}{\textbf{Excluded report (title, year)}} &
+\textcolor{white}{\textbf{Reason}} \\
 \midrule
 \endfirsthead
 
@@ -66,8 +54,8 @@ transparency.
 \toprule
 \rowcolor{headerblue}
 \textcolor{white}{\textbf{\#}} &
-\textcolor{white}{\textbf{Excluded record (author, year, title, source)}} &
-\textcolor{white}{\textbf{Exclusion reason}} \\
+\textcolor{white}{\textbf{Excluded report (title, year)}} &
+\textcolor{white}{\textbf{Reason}} \\
 \midrule
 \endhead
 
@@ -76,52 +64,92 @@ transparency.
 \endfoot
 
 \bottomrule
-\multicolumn{3}{l}{\footnotesize\textit{Rows must total 24 to match the PRISMA full-text exclusion count.}}\\
+\multicolumn{3}{l}{\footnotesize\textit{Total full-text exclusions: 48, matching the PRISMA full-text exclusion count.}}\\
 \endlastfoot
 
-1  & [[FILL: citation]] & [[FILL: reason]] \\
+1 & Call for implementation research: cross-continental partnership experiences from the Trans... (2023) & X1 \\
 \rowcolor{rowgray}
-2  & [[FILL: citation]] & [[FILL: reason]] \\
-3  & [[FILL: citation]] & [[FILL: reason]] \\
+2 & Digital Health Technology Adoption Depends On Tech Comfort Level, Willingness to Pay (2015) & X1 \\
+3 & Long-term care needs guidance for the implementation of digital health technologies (2023) & X1 \\
 \rowcolor{rowgray}
-4  & [[FILL: citation]] & [[FILL: reason]] \\
-5  & [[FILL: citation]] & [[FILL: reason]] \\
+4 & Barriers to Adoption of Electronic Health Record Systems from the Perspective of Nurses: A... (2022) & X1 \\
+5 & Beyond "implementation": digital health innovation and service design (2018) & X3 \\
 \rowcolor{rowgray}
-6  & [[FILL: citation]] & [[FILL: reason]] \\
-7  & [[FILL: citation]] & [[FILL: reason]] \\
+6 & Implementation and Analysis of an Institution-Wide EHR-Integrated Handoff Note (2022) & X3 \\
+7 & Enhancing nursing home quality through electronic health record implementation (2025) & X3 \\
 \rowcolor{rowgray}
-8  & [[FILL: citation]] & [[FILL: reason]] \\
-9  & [[FILL: citation]] & [[FILL: reason]] \\
+8 & Health Information Technology Adoption in the Emergency Department (2016) & X3 \\
+9 & The impact of e-health system implementation on UNWRA health services: an observational st... (2021) & X3 \\
 \rowcolor{rowgray}
-10 & [[FILL: citation]] & [[FILL: reason]] \\
-11 & [[FILL: citation]] & [[FILL: reason]] \\
+10 & Predicting Electronic Health Record Usability: Scoping Review of Adoption Models, Metrics,... (2026) & X3 \\
+11 & Acceptance of electronic referrals across the Kingdom of Saudi Arabia: results from a nati... (2024) & X3 \\
 \rowcolor{rowgray}
-12 & [[FILL: citation]] & [[FILL: reason]] \\
-13 & [[FILL: citation]] & [[FILL: reason]] \\
+12 & The Relationship Between Magnet Designation, Electronic Health Record Adoption, and Medica... (2017) & X3 \\
+13 & CLUSTERING AND PRIORITIZING PATIENT SAFETY ISSUES DURING EHR IMPLEMENTATION AND UPGRADES I... (2017) & X3 \\
 \rowcolor{rowgray}
-14 & [[FILL: citation]] & [[FILL: reason]] \\
-15 & [[FILL: citation]] & [[FILL: reason]] \\
+14 & Development, implementation, and initial evaluation of a foundational open interoperabilit... (2015) & X3 \\
+15 & Comparing the Trends of Electronic Health Record Adoption Among Hospitals of the United St... (2019) & X3 \\
 \rowcolor{rowgray}
-16 & [[FILL: citation]] & [[FILL: reason]] \\
-17 & [[FILL: citation]] & [[FILL: reason]] \\
+16 & Responding to change: Could co-design overcome the complexities of electronic health recor... (2023) & X3 \\
+17 & A Longitudinal Analysis of Institutional Adoption, Use, and Dissemination of an EHR Vendor... (2025) & X3 \\
 \rowcolor{rowgray}
-18 & [[FILL: citation]] & [[FILL: reason]] \\
-19 & [[FILL: citation]] & [[FILL: reason]] \\
+18 & Critical Success Factors for a Successful EHR Implementation for Physicians Practices (2015) & X3 \\
+19 & Effects of HIE/HIT Implementation and Coordination of Care on Health Outcomes and Quality (2015) & X3 \\
 \rowcolor{rowgray}
-20 & [[FILL: citation]] & [[FILL: reason]] \\
-21 & [[FILL: citation]] & [[FILL: reason]] \\
+20 & HOW FAR TO TRUE INTEROPERABILITY? Efforts ramp up to overcome barriers preventing the exch... (2015) & X3 \\
+21 & Improved Patient Flow and Provider Efficiency After the Implementation of an Electronic He... (2019) & X3 \\
 \rowcolor{rowgray}
-22 & [[FILL: citation]] & [[FILL: reason]] \\
-23 & [[FILL: citation]] & [[FILL: reason]] \\
+22 & Adoption of Certified Electronic Health Record Systems and Electronic Information Sharing ... (2016) & X3 \\
+23 & Electronic health record adoption among adult day services: Findings from the national stu... (2023) & X3 \\
 \rowcolor{rowgray}
-24 & [[FILL: citation]] & [[FILL: reason]] \\
+24 & Adolescents Are Still Waiting on a Digital Health Revolution: Accelerating Research-to-Pra... (2022) & X3 \\
+25 & Changes in Medication Errors after Implementation of an Electronic Health Record System in... (2026) & X3 \\
+\rowcolor{rowgray}
+26 & Successful Implementation of a Perioperative Data Warehouse Using Another Hospital's Publi... (2021) & X3 \\
+27 & Rapid-Cycle Implementation of a Multi-Organization Registry for Heart Failure with Preserv... (2019) & X3 \\
+\rowcolor{rowgray}
+28 & Creation and implementation of an electronic health record note for quality improvement in... (2021) & X3 \\
+29 & Implementation of Clinical Pharmacogenomics within a Large Health System: From Electronic ... (2016) & X3 \\
+\rowcolor{rowgray}
+30 & Implementation of Certified EHR, Patient Portal, and "Direct" Messaging Technology in a Ra... (2016) & X3 \\
+31 & Implementation challenges of the final rule of Title 42 of the Code of Federal Regulations... (2018) & X3 \\
+\rowcolor{rowgray}
+32 & Using digital health to facilitate compliance with standardized pediatric cancer treatment... (2020) & X3 \\
+33 & Chapter 5: Barriers and facilitators for eHealth (2015) & X3 \\
+\rowcolor{rowgray}
+34 & Barriers and Benefits of EHR Usage in Missouri: A Five-Year Journey (2017) & X3 \\
+35 & Barriers to Local Public Health Chronic Disease Surveillance Through Health Information Ex... (2017) & X3 \\
+\rowcolor{rowgray}
+36 & Checklists for Successful Specialty Electronic Medical Record Implementation (2020) & X3 \\
+37 & Barriers and facilitators to effective electronic health record-based sepsis screening in ... (2024) & X3 \\
+\rowcolor{rowgray}
+38 & Implementation and Impact of Psychiatric Electronic Medical Records in a Public Medical Ce... (2016) & X3 \\
+39 & The Role of a Nurse Practitioner in a "Big Bang" Electronic Medical Record Implementation (2021) & X3 \\
+\rowcolor{rowgray}
+40 & Implementation of Best Practice Alert in an Electronic Medical Record to Limit Lower-Value... (2018) & X3 \\
+41 & Navigating medication safety with electronic medical records: insights from a dual-phase i... (2025) & X3 \\
+\rowcolor{rowgray}
+42 & Implementation of a cloud-based electronic medical record exchange system in compliance wi... (2017) & X3 \\
+43 & Implementation of the Observational Medical Outcomes Partnership Model in Electronic Medic... (2024) & X3 \\
+\rowcolor{rowgray}
+44 & Research and Implementation of Real World Traditional Chinese Medicine Clinical Scientific... (2022) & X3 \\
+45 & Developing Fast Healthcare Interoperability Resources Implementation Guide for Indonesian ... (2025) & X3 \\
+\rowcolor{rowgray}
+46 & Correspondence to "Conceptualizing Patient as an Organization with the Adoption of Digital... (2024) & X5 \\
+47 & Personnel key to successful EHR implementation (2015) & X5 \\
+\rowcolor{rowgray}
+48 & The heroes among us: Leveraging Africa's youth for effective digital health implementation... (2025) & X5 \\
 
 \end{longtable}
 
 \medskip
-\noindent\textbf{Reason tally} (complete once rows are filled; should sum to 24):
-Wrong focus [[FILL]];\ Wrong outcome [[FILL]];\ Wrong setting [[FILL]];\
-Narrative-only [[FILL]];\ Duplicate [[FILL]].
+\noindent\textbf{Reason tally} (sums to 48):
+X1 (patient/consumer-facing) 4;\ 
+X3 (wrong outcome / EHR as data source) 41;\ 
+X5 (publication type) 3.
+No reports were excluded at this stage under X2 or X4, as those scope violations
+were resolved at title/abstract screening.
 
 \medskip
-\noindent\textit{Last updated: [[FILL: date]]}
+\noindent\textit{Last updated: July 1, 2026 (populated from executed full-text
+eligibility assessment).}
