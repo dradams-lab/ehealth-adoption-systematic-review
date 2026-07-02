@@ -14,7 +14,7 @@ The systematic review retained 501 studies for evidence extraction and thematic 
 \subsection{Systematic Review Findings}
 Across the 501 included studies, adoption determinants consistently cluster into four domains corresponding to the U-T-I-O Model. No single technical or organizational variable emerged as independently determinative of adoption outcomes; rather, determinants across domains consistently co-occur and interact in shaping implementation success or failure, as reflected in the finding that most studies present evidence spanning three or more domains simultaneously.
 
-User readiness determinants—including usability, workflow fit, trust, training, perceived usefulness, and user satisfaction—are reported across multiple systematic reviews~\cite{kruse2016adoption,alshahrani2019ehealth,aguirre2019ehr} and are consistently linked to adoption success in qualitative case evidence~\cite{adams2020strategies}. Technical determinants—including system quality, information quality, semantic and syntactic interoperability, interface reliability, and data completeness—are identified as necessary infrastructure conditions~\cite{kamuhanda2026interoperability,kruse2016barriers}. Institutional determinants—regulatory incentives, national digital health strategy, privacy law compliance, and interoperability mandates—emerge as especially prominent in policy-intensive healthcare environments~\cite{ross2016factors,akhlaq2016hie,onc2025reports}. Organizational determinants—leadership, implementation planning, stakeholder engagement, change management, vendor governance, and resource capacity—are cited as execution-level differentiators between otherwise comparable implementations~\cite{ahmed2018reviews,gao2025vaehr,gao2024dodehr}.
+User readiness determinants—including usability, workflow fit, trust, training, perceived usefulness, and user satisfaction—are reported across multiple systematic reviews~\cite{kruse2016adoption,alshahrani2019ehealth,aguirre2019ehr} and are consistently linked to adoption success in qualitative case evidence~\cite{adams2020strategies}. Technical determinants—including system quality, information quality, semantic and syntactic interoperability, interface reliability, and data completeness—are identified as necessary infrastructure conditions~\cite{kamuhanda2026interoperability,kruse2016barriers}. Institutional determinants—regulatory incentives, national digital health strategy, privacy law compliance, and interoperability mandates—emerge as especially prominent in policy-intensive healthcare environments~\cite{ross2016factors,akhlaq2016hie,onc2025reports}. Organizational determinants—leadership, implementation planning, stakeholder engagement, change management, vendor governance, and resource capacity—are cited as execution-level differentiators between otherwise comparable implementations~\cite{ahmed2019reviews,gao2025vaehr,gao2024dodehr}.
 
 \subsection{Multi-Case Findings}
 Four public cases were selected to compare determinant patterns across different implementation environments: ONC-supported U.S. health information exchange programs, NHS Shared Care Records, Estonia's national eHealth system, and VA/DoD federal EHR modernization.
@@ -47,7 +47,7 @@ Domain-level ratings were assigned using the four-band scale defined in Table~\r
 \end{table}
 
 \begin{table}[H]
-\caption{Comparative Case Analysis of U--T--I--O Adoption Determinants Across Four National Implementations}
+\caption{Comparative Case Analysis of U--T--I--O Adoption Determinants Across National Implementations (VA and DoD scored separately)}
 \label{tab:case-comparison}
 \centering
 \small
@@ -87,17 +87,25 @@ Estonia eHealth~\cite{estonia2026ehealth} &
   \cellcolor{highgreen}\textcolor{highgreentext}{\textbf{High}} &
   Mature national architecture with legal mandate, X-Road data layer, and broad provider participation; highest multi-domain alignment. \\
 
-VA/DoD EHR~\cite{gao2025vaehr,gao2024dodehr} &
+VA EHR (Oracle/Cerner)~\cite{gao2025vaehr} &
   \cellcolor{lowred}\textcolor{lowredtext}{\textbf{Low--Med}} &
   \cellcolor{lowred}\textcolor{lowredtext}{\textbf{Low--Med}} &
   \cellcolor{highgreen}\textcolor{highgreentext}{\textbf{High}} &
   \cellcolor{lowred}\textcolor{lowredtext}{\textbf{Low--Med}} &
-  Strong institutional mandate; persistent usability deficits, configuration debt, and execution gaps constrain realised adoption value across user, technical, and organisational domains. \\
+  Strong institutional mandate; persistent usability deficits, patient-safety findings, and configuration debt constrain realised adoption value across user, technical, and organisational domains. \\
+
+\rowcolor{rowgray}
+DoD MHS GENESIS~\cite{gao2024dodehr} &
+  \cellcolor{medamber}\textcolor{medambertext}{\textbf{Medium}} &
+  \cellcolor{lowred}\textcolor{lowredtext}{\textbf{Low--Med}} &
+  \cellcolor{highgreen}\textcolor{highgreentext}{\textbf{High}} &
+  \cellcolor{medamber}\textcolor{medambertext}{\textbf{Medium}} &
+  Same institutional mandate and Oracle Health platform as the VA program, but a later, more sequenced deployment (26 sites by 2024) with comparatively better-documented user uptake and organizational rollout. \\
 
 \bottomrule
 \end{tabular}
 \vspace{4pt}
-{\footnotesize \textit{Domain ratings reflect the preponderance of evidence in primary source documentation, applied per the rating scale in Table~\ref{tab:rating-scale} and the decision rules in Supplementary File~S3. U = User Readiness; T = Technical Interoperability; I = Institutional Alignment; O = Organizational Execution.}}
+{\footnotesize \textit{The U.S. Department of Veterans Affairs and Department of Defense programs are analysed as \textbf{separate cases}: although both migrated to the same Oracle Health (Cerner) platform under congressional mandate, they are distinct programs with different deployment timelines, governance, and documented outcomes, and are scored separately in the U-T-I-O Alignment Index (Table~\ref{tab:uai}). Domain ratings reflect the preponderance of evidence in primary source documentation, applied per the rating scale in Table~\ref{tab:rating-scale} and the decision rules in Supplementary File~S3. U = User Readiness; T = Technical Interoperability; I = Institutional Alignment; O = Organizational Execution.}}
 \end{table}
 
 \subsection{Synthesis}

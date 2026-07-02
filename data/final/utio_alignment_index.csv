@@ -1,0 +1,6 @@
+case,U,T,I,O,uai_equal,uai_evidence,interpretation
+ONC HIE (U.S.),Medium,High,High,Medium,0.8333333333333333,0.8269869166178481,Moderate-high
+NHS Shared Care (UK),Medium,High,High,Medium,0.8333333333333333,0.8269869166178481,Moderate-high
+Estonia eHealth,High,High,High,High,1.0,1.0,High alignment
+VA EHR (Oracle/Cerner),Low-Med,Low-Med,High,Low-Med,0.49999999999999994,0.48955282171450887,Mixed / constrained
+DoD MHS GENESIS,Medium,Low-Med,High,Medium,0.6666666666666666,0.6625659050966608,Moderate-high
