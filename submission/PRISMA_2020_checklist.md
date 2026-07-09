@@ -47,7 +47,7 @@ Location = manuscript section (page numbers refer to the compiled PDF).
 | 24c | Amendments | N/A | — |
 | 25 | Support / funding | Yes | Cover letter / end-matter |
 | 26 | Competing interests | Yes | Cover letter / end-matter |
-| 27 | Availability of data, code, materials | Yes | Data Availability statement (Zenodo DOI); public repository |
+| 27 | Availability of data, code, materials | Pending deposit | Data Availability statement points to a Zenodo reproducibility bundle (bundle assembled; **DOI to be minted on deposit before submission**) |
 
 **Honest notes for reviewers.** Items 11, 14, 15, 22, and 24a are the known
 departures from a full effectiveness-review protocol. They follow from the
