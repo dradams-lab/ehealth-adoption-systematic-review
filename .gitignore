@@ -34,3 +34,9 @@ _view_*.png
 handoff/
 data/fulltext/
 data/screened/_*.json
+
+# Zenodo staging (regenerable; data lives under data/)
+zenodo/data/
+zenodo/scripts/
+zenodo/docs/
+zenodo/*.zip

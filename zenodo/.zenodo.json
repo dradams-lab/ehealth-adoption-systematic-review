@@ -1,0 +1,35 @@
+{
+  "title": "Determinants of eHealth Systems Adoption: Reproducibility Bundle (screening log, evidence base, scoring data, and analysis code)",
+  "upload_type": "dataset",
+  "description": "<p>Reproducibility bundle for the manuscript <em>Determinants of eHealth Systems Adoption: A Systematic Review and Multi-Case Analysis</em> (U-T-I-O Model). Contains the complete machine-readable record of the executed systematic search and screening pipeline, the extracted evidence base, the U-T-I-O Alignment Index (UAI) scoring data, and the analysis scripts needed to reproduce the PRISMA funnel and figures.</p><p><strong>Search:</strong> PubMed/MEDLINE and IEEE Xplore, executed June 2026 (1,688 records identified). Scopus, Web of Science, and CINAHL could not be searched owing to unavailable institutional subscription access. <strong>Funnel:</strong> 1,688 identified &rarr; 8 duplicates removed &rarr; 1,680 screened (two documented stages) &rarr; 549 assessed at full text/abstract &rarr; 48 excluded &rarr; 501 included studies, plus 4 national implementation cases.</p><p><strong>Contents:</strong> unified deduplicated corpus; complete 1,680-record screening decision log with reason codes and justifications; 501-study evidence-extraction matrix with U-T-I-O domain coding; full-text exclusion table (coded); two-rater reliability comparison (Cohen's &kappa; = 0.61) and the stratified human-adjudication worklist; UAI scoring data; and the Python scripts for deduplication, PRISMA counts, and the verification sample draw (seed-reproducible).</p><p><strong>Note:</strong> screening and extraction were AI-assisted under explicit, human-authored eligibility rules; a two-rater reliability check is included. See the manuscript Methods and Supplementary Files S1&ndash;S4 for full provenance.</p>",
+  "creators": [
+    {
+      "name": "Adams, Joshua",
+      "orcid": "0000-0002-7185-9125",
+      "affiliation": "Resilient Consulting Solutions"
+    }
+  ],
+  "keywords": [
+    "electronic health records",
+    "health information exchange",
+    "medical informatics",
+    "health information interoperability",
+    "systematic review",
+    "implementation science",
+    "eHealth adoption",
+    "U-T-I-O Model",
+    "PRISMA 2020",
+    "reproducibility"
+  ],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "language": "eng",
+  "related_identifiers": [
+    {
+      "relation": "isSupplementTo",
+      "identifier": "[INSERT JMIR DOI ON ACCEPTANCE]",
+      "resource_type": "publication-article"
+    }
+  ],
+  "notes": "License note: code files are additionally available under the MIT License; text/data under CC-BY-4.0. If the manuscript is posted as a preprint, add its DOI as a related identifier (isPreprintOf)."
+}
