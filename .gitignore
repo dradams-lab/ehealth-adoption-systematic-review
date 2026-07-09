@@ -40,3 +40,7 @@ zenodo/data/
 zenodo/scripts/
 zenodo/docs/
 zenodo/*.zip
+
+# Gemini cross-rater scratch
+.venv-gemini/
+data/screened/_gemini_partial.json
