@@ -34,10 +34,9 @@ programs scored separately).
 fully documented, reproducible screening pipeline with a public decision log,
 an evidence-weighted scoring scheme, and candid reporting of its
 limitations—aligns with the journal's emphasis on open, rigorous, and
-reproducible informatics research. All underlying data and code
-[will be / have been] openly archived on Zenodo with a citable DOI
-[INSERT DOI AFTER DEPOSIT]; the Data Availability statement in the manuscript
-points to this deposit.
+reproducible informatics research. All underlying data and code are openly
+archived on Zenodo with a citable DOI (10.5281/zenodo.21282519); the Data
+Availability statement in the manuscript points to this deposit.
 
 **Disclosures (per JMIR policy).**
 

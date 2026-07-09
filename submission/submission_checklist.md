@@ -21,7 +21,7 @@ step I cannot complete.
 - [ ] **Confirm competing-interests statement** (likely "none")
 - [ ] **Choose preprint status** and fill the cover-letter bracket:
       none / medRxiv / JMIR Preprints — and disclose whichever you pick
-- [ ] **Deposit data+code to Zenodo**, then paste the DOI into: cover letter,
+- [x] **Deposited to Zenodo** — DOI 10.5281/zenodo.21282519 (via GitHub release v1.0-submission). Wired into cover letter, metadata, and manuscript Data Availability statement.
       submission_metadata.md, and the manuscript Data Availability statement
       (compliance_ethics.tex) — then recompile the PDF
 - [ ] **Request APF waiver/discount** at submission if applicable

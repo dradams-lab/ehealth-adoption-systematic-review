@@ -29,7 +29,12 @@
       "relation": "isSupplementTo",
       "identifier": "[INSERT JMIR DOI ON ACCEPTANCE]",
       "resource_type": "publication-article"
+    },
+    {
+      "relation": "isIdenticalTo",
+      "identifier": "10.5281/zenodo.21282519",
+      "resource_type": "dataset"
     }
   ],
-  "notes": "License note: code files are additionally available under the MIT License; text/data under CC-BY-4.0. If the manuscript is posted as a preprint, add its DOI as a related identifier (isPreprintOf)."
+  "notes": "License note: code files are additionally available under the MIT License; text/data under CC-BY-4.0. If the manuscript is posted as a preprint, add its DOI as a related identifier (isPreprintOf). Deposited via the GitHub release v1.0-submission of dradams-lab/ehealth-adoption-systematic-review; DOI 10.5281/zenodo.21282519."
 }
