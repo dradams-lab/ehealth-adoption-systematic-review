@@ -75,10 +75,12 @@ Screening reliability currently rests on **machine-vs-machine agreement**
 has adjudicated the disputed records yet.
 
 - The cross-model third-rater run (Gemini) **failed**: 439 of 449 calls returned
-  `PARSE_FAIL` (the `AQ.`-prefixed key looks like the wrong credential type, and/or
-  the model name needs adjusting). On the 10 that succeeded, Claude-vs-Gemini
-  κ = 0.78 — the method is sound; the run just needs a valid API key + fix, then rerun
-  (it is checkpointed, so the rerun is fast).
+  `PARSE_FAIL` — root cause was **HTTP 429 RESOURCE_EXHAUSTED (free-tier quota)**,
+  not a bad key (the key worked; the quota was used up after ~10 calls). On the 10
+  that succeeded, Claude-vs-Gemini κ = 0.78 — the method is sound; the run just needs
+  to be rerun after the quota resets (or with billing enabled / a lighter model).
+  It is checkpointed, so the rerun resumes from the 10 good ratings. See note D for
+  the script hardening that now handles this.
 - **This is the single strongest thing to finish before submission.** It converts
   the reliability section from "machine-vs-machine" into "human-validated," which
   is precisely the objection a methods reviewer will raise about AI-assisted screening.
