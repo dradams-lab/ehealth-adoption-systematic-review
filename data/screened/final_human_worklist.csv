@@ -1,0 +1,5 @@
+rec_id,stratum,title,year,doi,rater1_first_screen,rater2_claude,rater3_gemini,gemini_reason,your_decision,your_notes
+R0074,A_incl_fulltext,Barriers and opportunities to implementation of sustainable e-Health programmes in Uganda: A literature review.,2017,10.4102/phcfm.v9i1.1277,PASS,EXCLUDE,EXCLUDE,,,
+R0507,A_incl_fulltext,An iterative approach to developing a multifaceted implementation strategy for a complex eHealth intervention within clinical practice.,2023,10.1186/s12913-023-10439-1,PASS,EXCLUDE,EXCLUDE,,,
+R0794,A_incl_fulltext,"Exploring the Dynamics of Actors, Structural Factors, and Bricolage in the Implementation and Sustainability of eHealth Solutions: Qualitative Multiple-Case Study.",2026,10.2196/79999,PASS,EXCLUDE,PASS,,,
+R0795,A_incl_fulltext,Implementation of eHealth to Support Assessment and Decision-making for Residents With Dementia in Long-term Care: Systematic Review.,2022,10.2196/29837,PASS,EXCLUDE,EXCLUDE,,,

@@ -44,3 +44,6 @@ zenodo/*.zip
 # Gemini cross-rater scratch
 .venv-gemini/
 data/screened/_gemini_partial.json
+
+# Python bytecode
+__pycache__/

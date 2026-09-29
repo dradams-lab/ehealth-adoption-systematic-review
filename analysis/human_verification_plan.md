@@ -35,7 +35,7 @@ Within each stratum the sample size targets a **95% confidence interval of half-
 - Finite-population correction n = n0 / (1 + (n0-1)/N) is applied per stratum, giving 91, 88, 116, and 106 for A, B, D, E respectively.
 - Stratum C (48 records) is verified as a **complete census** because it is small and false full-text exclusions are the costliest error.
 
-The realized total is 449 records (27% of the frame). If observed agreement in a stratum is >= 0.95, the CI half-width tightens to ~0.035; if agreement falls below ~0.85, that stratum is escalated to a full re-screen (Section 7).
+The realized total is 449 records (27% of the frame). If observed agreement in a stratum is >= 0.95, the CI half-width tightens to ~0.035; if agreement falls below 0.80, that stratum is escalated to a full re-screen (Section 7; corrected 29 Sep 2026 from "~0.85" to match the Section 7 decision rule).
 
 ## 5. Sample selection
 

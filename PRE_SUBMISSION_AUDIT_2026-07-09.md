@@ -2,6 +2,18 @@
 **Date:** 9 July 2026 · **Target:** JMIR Medical Informatics (Original Paper)
 **Auditor:** full-text + data + build trace against the on-disk repository
 
+> **Addendum — 29 Sep 2026 (corrections to this audit).** The verdict below
+> ("nothing is misrepresented") was wrong on four points, now fixed in the repo:
+> (1) `submission/cover_letter.md` called the screening check "human … two
+> independent raters"; both raters were AI. PRISMA item 8 and the Zenodo
+> README/metadata also omitted that the second rater was AI. (2) The manuscript
+> never reported κ = 0.61, and its AI declaration omitted LLM screening. (3)
+> The Zenodo v1 deposit (10.5281/zenodo.21282519) has no description and lacks
+> `two_rater_comparison.csv`, which the Data Availability statement promises. (4)
+> Codes E6 and X1–X5 were missing from `analysis/screening_rubric.md`, and the
+> verification plan gave both 0.85 and 0.80 as the escalation threshold. See
+> `submission/submission_checklist.md` for the remaining steps.
+
 ## Verdict
 **Submittable on the science and the mechanics — one substantive step remains
 (human adjudication of the machine-assisted screen).** Every internal-consistency,

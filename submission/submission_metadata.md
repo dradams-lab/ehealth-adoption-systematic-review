@@ -46,11 +46,13 @@ None.
 - Competing interests: [confirm — likely "none declared"]
 - Ethics/IRB: Not required — secondary analysis of publicly available,
   de-identified sources; no human subjects (see Compliance & Ethics section).
-- Data availability: Openly archived on Zenodo — DOI 10.5281/zenodo.21282519
-  (https://doi.org/10.5281/zenodo.21282519). Screening log, evidence table,
+- Data availability: Openly archived on Zenodo — DOI 10.5281/zenodo.21282518
+  (https://doi.org/10.5281/zenodo.21282518). Screening log, evidence table,
   scoring data, and analysis scripts included; CC-BY-4.0 (data) / MIT (code).
 - Generative AI disclosure: Documented in the manuscript end-matter and cover
-  letter (supervised second-rater + screening assistance + language/formatting).
+  letter (LLM screening + AI second rater for the screening check + AI second
+  rater for case scoring + language/formatting). The screening reliability
+  check is AI-vs-AI; no human rater was involved.
 - Preprint: [confirm choice — none / medRxiv / JMIR Preprints — and disclose in
   cover letter].
 

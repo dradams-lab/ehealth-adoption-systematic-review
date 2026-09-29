@@ -11,7 +11,9 @@ step I cannot complete.
 - [x] PRISMA 2020 checklist prepared
 - [x] PRISMA-for-Abstracts checklist prepared
 - [x] Supplementary Files S1–S4 present and appended
-- [x] Generative-AI use disclosed (end-matter + cover letter)
+- [x] Generative-AI use disclosed (end-matter + cover letter) — corrected 29 Sep 2026:
+      end-matter now lists LLM screening and the AI second rater; cover letter
+      no longer calls the screening check human
 - [x] Ethics/IRB statement present (secondary public data; not required)
 - [x] Cover letter drafted with all JMIR-required disclosures
 
@@ -21,22 +23,50 @@ step I cannot complete.
 - [ ] **Confirm competing-interests statement** (likely "none")
 - [ ] **Choose preprint status** and fill the cover-letter bracket:
       none / medRxiv / JMIR Preprints — and disclose whichever you pick
-- [x] **Deposited to Zenodo** — DOI 10.5281/zenodo.21282519 (via GitHub release v1.0-submission). Wired into cover letter, metadata, and manuscript Data Availability statement.
-      submission_metadata.md, and the manuscript Data Availability statement
-      (compliance_ethics.tex) — then recompile the PDF
+- [ ] **Fill the [TO CONFIRM] placeholders** (added 29 Sep 2026) — which model
+      did the main screen and which Claude model did the screening second-rater
+      check, with dates. Locations: `manuscript/main.tex` (AI declaration),
+      `manuscript/sections/methods.tex`, `manuscript/supplements/S1_search_strategy.tex`
+      (2 spots), `submission/cover_letter.md` (2 spots). Clues from the file
+      record: screening log reconciled 1 Jul 2026; second-rater files written
+      2 Jul 2026. If the script/prompt used for the Claude second rater still
+      exists, add it to `scripts/`.
+- [ ] **Recompile the PDF on Overleaf** after the edits above (no local TeX).
+- [ ] **New Zenodo version needed.** The v1 deposit (10.5281/zenodo.21282519,
+      GitHub release v1.0-submission, 9 Jul 2026) has a generic title, no
+      description (`.zenodo.json` was not at the repo root), is missing
+      `two_rater_comparison.csv` and the adjudication worklist, and contains the
+      old cover letter that wrongly called the screening check human. Fixed in
+      the repo: `.zenodo.json` moved to root, files now tracked. To publish:
+      push, then create a new GitHub release (you do this). The manuscript,
+      cover letter, metadata, and PRISMA checklist now cite the **concept DOI
+      10.5281/zenodo.21282518**, which always resolves to the latest version.
+- [ ] Optional before the next release: `cover_letter.docx` (older Elsevier
+      letter) and `manuscript_anonymous.docx` (older draft) are out of date and
+      are included in the public archive.
 - [ ] **Request APF waiver/discount** at submission if applicable
 - [ ] Provide 3–4 suggested reviewers (optional but helpful)
 
 ## [ACTION] — the substantive blocker (my standing recommendation)
-- [ ] **Run the 126-record human adjudication** (human_adjudication_worklist.csv).
-      Until a person works this list, the reliability section rests on
-      machine-vs-machine agreement (κ=0.61). Doing it converts the AI-assisted
-      screening from a documented limitation into a human-validated result and
-      is the single strongest thing you can do before submission. A preprint or
-      submission puts your name on the claims — finish this first.
+- [ ] **Run the 126-record human adjudication** — use the blinded sheet
+      `data/screened/human_adjudication_blinded.csv` (instructions in
+      `HUMAN_ADJUDICATION_INSTRUCTIONS.md`). Until a person works this list, the
+      reliability section rests on machine-vs-machine agreement (κ=0.61), and
+      the AI second rater would have excluded 54 of 179 sampled included
+      studies (30%). A preprint or submission puts your name on the claims —
+      finish this first.
+      *Reporting note:* `analysis/human_verification_plan.md` specifies an
+      independent reviewer who did not build the rubric and all 449 records. If
+      you adjudicate the 126 yourself, the paper must say so (author
+      adjudication of AI disagreements plus a spot-check) as a deviation from
+      that plan.
 
 ## Recommended sequence
-1. Human adjudication (126 records) → update reliability numbers + Methods.
-2. Zenodo deposit → get DOI → update Data Availability + recompile PDF.
-3. Fill cover-letter brackets (funding, COI, preprint).
-4. Submit to JMIR MI; request fee waiver if needed.
+1. Fill the [TO CONFIRM] model placeholders.
+2. Human adjudication (126 records) → update reliability numbers in Methods,
+   Limitations, S1, cover letter, PRISMA item 8, and Zenodo README (search for
+   "UPDATE AFTER"); if a stratum falls below 0.80, re-screen it per the plan.
+3. Recompile PDF on Overleaf.
+4. Push, then new GitHub release → new Zenodo version (concept DOI already cited).
+5. Fill cover-letter brackets (funding, COI, preprint).
+6. Submit to JMIR MI; request fee waiver if needed.

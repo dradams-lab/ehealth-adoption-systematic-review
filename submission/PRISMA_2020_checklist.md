@@ -18,7 +18,7 @@ Location = manuscript section (page numbers refer to the compiled PDF).
 | 5 | Eligibility criteria | Yes | Methods (Eligibility); Suppl. S1; screening_rubric.md |
 | 6 | Information sources (databases, dates) | Yes | Methods; Suppl. S1 (PubMed/MEDLINE + IEEE Xplore; searched June 2026). Scopus/WoS/CINAHL not searched — access unavailable (stated) |
 | 7 | Full search strategy (all databases) | Yes | Suppl. S1 (query strings for all planned databases) |
-| 8 | Selection process (screeners, tools, automation) | Yes | Methods; Suppl. S1 — two-stage screen, AI-assisted under a priori rules; independent second-rater reliability check (κ=0.61) |
+| 8 | Selection process (screeners, tools, automation) | Yes | Methods; Suppl. S1 — two-stage screen by a large language model under a priori criteria (Stage-2 scope codes X1–X5 introduced at Stage 2); reliability check by an AI second rater (Anthropic Claude) on a 449-record stratified sample: 80% agreement, κ = 0.61, n = 447 (machine-vs-machine; no human rater). Human adjudication of disputed records pending [UPDATE AFTER ADJUDICATION] |
 | 9 | Data collection process | Yes | Methods; extraction schema in included_studies_evidence.csv |
 | 10a | Data items — outcomes | Yes | Methods — U-T-I-O domain coverage per study |
 | 10b | Data items — other variables | Yes | Methods — year, venue, study type, source DB |
@@ -47,7 +47,7 @@ Location = manuscript section (page numbers refer to the compiled PDF).
 | 24c | Amendments | N/A | — |
 | 25 | Support / funding | Yes | Cover letter / end-matter |
 | 26 | Competing interests | Yes | Cover letter / end-matter |
-| 27 | Availability of data, code, materials | Yes | Data Availability statement points to the Zenodo reproducibility bundle (DOI 10.5281/zenodo.21282519); public GitHub repository |
+| 27 | Availability of data, code, materials | Yes | Data Availability statement points to the Zenodo reproducibility bundle (DOI 10.5281/zenodo.21282518); public GitHub repository |
 
 **Honest notes for reviewers.** Items 11, 14, 15, 22, and 24a are the known
 departures from a full effectiveness-review protocol. They follow from the

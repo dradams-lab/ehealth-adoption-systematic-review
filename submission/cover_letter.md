@@ -35,7 +35,7 @@ fully documented, reproducible screening pipeline with a public decision log,
 an evidence-weighted scoring scheme, and candid reporting of its
 limitations—aligns with the journal's emphasis on open, rigorous, and
 reproducible informatics research. All underlying data and code are openly
-archived on Zenodo with a citable DOI (10.5281/zenodo.21282519); the Data
+archived on Zenodo with a citable DOI (10.5281/zenodo.21282518); the Data
 Availability statement in the manuscript points to this deposit.
 
 **Disclosures (per JMIR policy).**
@@ -45,18 +45,27 @@ Availability statement in the manuscript points to this deposit.
     otherwise published online. / 
   - A preprint of this manuscript is available at [medRxiv/JMIR Preprints DOI],
     posted [date]; it has not undergone peer review.
-- *Generative AI use.* Anthropic Claude was used in a documented, supervised
-  capacity: (1) as a supplementary second-rater tool for the U-T-I-O
-  case-domain scoring (Supplementary File S4); (2) to assist with
-  literature/evidence cross-referencing and with the title/abstract screening
-  of the search yield under explicit, human-authored eligibility rules
-  (Supplementary File S1; full decision log archived); (3) for language
-  refinement; and (4) for formatting. All study design, analysis,
-  interpretation, and intellectual contributions are the author's own; the
-  author has reviewed all AI-assisted content and takes full responsibility
-  for the integrity of the manuscript. A human reliability check of the
-  AI-assisted screening is reported (two independent raters; Cohen's
-  κ = 0.61 on a stratified verification sample).
+- *Generative AI use.* Generative AI was used in a documented, supervised
+  capacity: (1) Anthropic Claude (Claude Opus 4.7) as a supplementary
+  second-rater tool for the U-T-I-O case-domain scoring (Supplementary File
+  S4); (2) a large language model ([TO CONFIRM: screening model and version,
+  dates]) to perform the title/abstract screening and full-text eligibility
+  assessment of the search yield under explicit, human-authored eligibility
+  rules (Supplementary File S1; full decision log archived); (3) Anthropic
+  Claude ([TO CONFIRM: model and version, date]) as an AI second rater that
+  independently re-screened a 449-record stratified sample to check that
+  screening; and (4) Anthropic Claude to assist with literature/evidence
+  cross-referencing, language refinement, and formatting. All study design,
+  analysis, interpretation, and intellectual contributions are the author's
+  own; the author has reviewed all AI-assisted content and takes full
+  responsibility for the integrity of the manuscript. The screening
+  reliability check compared two AI raters; no human rater was involved.
+  Agreement between the primary screen and the AI second rater was 80%
+  (Cohen's κ = 0.61; n = 447, as two records received no rating), and 86 of
+  the 88 disagreements were records the primary screen included that the
+  second rater would have excluded. [UPDATE AFTER HUMAN ADJUDICATION: add the
+  result of the author's adjudication of the 126 disputed and spot-check
+  records.]
 - *Funding.* [SELECT: This research received no external funding. / Funded
   by …]
 - *Competing interests.* [SELECT: The author declares no competing interests.

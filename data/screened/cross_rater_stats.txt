@@ -1,0 +1,8 @@
+Cross-model reliability (n=10 with 3 valid labels; model=gemini-2.5-flash)
+  Parse failures (Gemini): 439
+  Unanimous (all 3 agree): 6 (60.0%)
+  Split (>=1 disagrees):   4 (40.0%)  <-- YOUR human worklist
+  Fleiss' kappa (3 raters): 0.255
+  Cohen kappa r1-r2 (screen vs Claude): 0.000
+  Cohen kappa r1-r3 (screen vs Gemini): 0.000
+  Cohen kappa r2-r3 (Claude vs Gemini): 0.783
