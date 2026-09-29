@@ -23,7 +23,20 @@ USAGE
     python scripts/gemini_cross_rater.py
 
 Resumable: progress is checkpointed to data/screened/_gemini_partial.json after
-every chunk, so you can Ctrl-C and rerun without losing work.
+every chunk. Records that errored (e.g. rate-limited) are RE-ATTEMPTED on rerun;
+only records with a valid PASS/EXCLUDE label are treated as done.
+
+RATE LIMITS (important)
+-----------------------
+The Gemini free tier has both a per-minute AND a per-day request cap. This script:
+  - does a fail-loud PREFLIGHT (one test call) and stops immediately with the
+    exact error if the key/model/quota is bad -- no more silent 449 failures;
+  - retries HTTP 429 with exponential backoff (respects Retry-After);
+  - trips a CIRCUIT BREAKER if the daily quota is exhausted -- it stops, keeps
+    the checkpoint, and tells you to resume later or use a higher-tier model,
+    rather than marking hundreds of records failed.
+If you hit the daily cap partway, just rerun tomorrow (or after the quota
+resets); it resumes from the checkpoint.
 
 OUTPUTS (written to data/screened/)
     gemini_ratings.csv          - Gemini's PASS/EXCLUDE + reason per record
@@ -38,9 +51,15 @@ from pathlib import Path
 # ----------------------------------------------------------------------
 # Config
 # ----------------------------------------------------------------------
-MODEL = "gemini-2.5-flash"        # cheap + capable; change to gemini-2.5-pro for max quality
+# gemini-2.5-flash-lite has the most generous free-tier limits and is plenty
+# for a PASS/EXCLUDE classification. Alternatives: "gemini-2.5-flash" (stronger,
+# lower free quota), "gemini-2.0-flash". Any current Gemini model id works.
+MODEL = "gemini-2.5-flash-lite"
 CHUNK = 25                        # records per checkpoint flush
-SLEEP_BETWEEN = 1.0               # seconds between calls (free-tier rate-limit friendly)
+SLEEP_BETWEEN = 4.0               # base seconds between calls (free tier ~10-15 rpm)
+MAX_RETRIES = 5                   # per-record retries on 429 before giving up on it
+BACKOFF_BASE = 8.0                # seconds; grows 8,16,32,... on repeated 429
+CIRCUIT_BREAK_AFTER = 8           # consecutive exhausted-record failures -> stop the run
 MAX_ABSTRACT_CHARS = 2500
 
 REPO = Path(__file__).resolve().parent.parent
@@ -95,6 +114,32 @@ def parse(text):
             (r.group(1).strip() if r else "")[:120])
 
 
+def is_rate_limit(exc):
+    s = str(exc)
+    return "429" in s or "RESOURCE_EXHAUSTED" in s or "quota" in s.lower()
+
+
+def rate(client, model, cfg, prompt):
+    """One rating call with 429 backoff. Returns (decision, reason, exhausted_bool).
+    exhausted_bool=True means we gave up on this record after MAX_RETRIES of 429."""
+    for attempt in range(MAX_RETRIES + 1):
+        try:
+            resp = client.models.generate_content(model=model, contents=prompt, config=cfg)
+            d, r = parse(resp.text)
+            return d, r, False
+        except Exception as e:
+            if is_rate_limit(e) and attempt < MAX_RETRIES:
+                wait = BACKOFF_BASE * (2 ** attempt)
+                print(f"    429 rate-limited; backing off {wait:.0f}s "
+                      f"(retry {attempt+1}/{MAX_RETRIES})")
+                time.sleep(wait)
+                continue
+            if is_rate_limit(e):
+                return "PARSE_FAIL", "rate_limited_exhausted", True
+            return "PARSE_FAIL", f"api_error: {str(e)[:100]}", False
+    return "PARSE_FAIL", "rate_limited_exhausted", True
+
+
 def fleiss_kappa(rows_of_counts):
     """rows_of_counts: list of [n_pass, n_exclude] per item, each summing to n_raters."""
     N = len(rows_of_counts)
@@ -132,26 +177,58 @@ def main():
     cfg = types.GenerateContentConfig(system_instruction=SYSTEM,
                                       max_output_tokens=120, temperature=0)
 
+    # ---- PREFLIGHT: one call; fail loud on record 1 if key/model/quota is bad ----
+    print(f"Preflight: testing one call to {MODEL} ...")
+    d, r, exhausted = rate(client, MODEL, cfg,
+                           "TITLE: test\nYEAR: 2020\nABSTRACT: EHR adoption barriers in hospitals.")
+    if d == "PARSE_FAIL" and ("api_error" in r or "rate_limited" in r):
+        sys.exit(
+            "\nPREFLIGHT FAILED -- stopping before wasting a run.\n"
+            f"  reason: {r}\n\n"
+            "Common fixes:\n"
+            "  - 429 / RESOURCE_EXHAUSTED: your free-tier quota is used up for now.\n"
+            "    Wait for the daily reset and rerun, or switch MODEL to a lighter\n"
+            "    one (gemini-2.5-flash-lite) / enable billing on your Google project.\n"
+            "  - 400 API_KEY_INVALID: the key is wrong or is not a Gemini *API key*\n"
+            "    (AI Studio keys start with 'AIza'). Regenerate at\n"
+            "    https://aistudio.google.com/apikey and re-export GEMINI_API_KEY.\n"
+            "  - 404 model not found: set MODEL to a current id (see config).\n")
+    print(f"  preflight OK (test verdict: {d}). Proceeding.\n")
+
     worklist = load_csv(WORKLIST)
     corpus = {r["rec_id"]: r.get("abstract", "") for r in load_csv(CORPUS)}
     print(f"Loaded {len(worklist)} sampled records; {len(corpus)} corpus abstracts.")
 
     out = json.loads(PARTIAL.read_text()) if PARTIAL.exists() else {}
-    todo = [r for r in worklist if r["rec_id"] not in out]
-    print(f"Already rated: {len(out)} | remaining: {len(todo)}")
+    # RESUME FIX: a record is "done" only if it has a valid label. Errored /
+    # rate-limited records are re-attempted on rerun.
+    done = {k for k, v in out.items() if v.get("gemini") in ("PASS", "EXCLUDE")}
+    todo = [r for r in worklist if r["rec_id"] not in done]
+    print(f"Valid ratings so far: {len(done)} | to (re)attempt: {len(todo)}")
 
+    consecutive_exhausted = 0
     for i, row in enumerate(todo, 1):
         rid = row["rec_id"]
         prompt = build_prompt(row, corpus.get(rid, ""))
-        try:
-            resp = client.models.generate_content(model=MODEL, contents=prompt, config=cfg)
-            decision, reason = parse(resp.text)
-        except Exception as e:
-            decision, reason = "PARSE_FAIL", f"api_error: {str(e)[:80]}"
+        decision, reason, exhausted = rate(client, MODEL, cfg, prompt)
         out[rid] = {"gemini": decision, "reason": reason}
+
+        # circuit breaker: sustained quota exhaustion -> stop cleanly, keep checkpoint
+        consecutive_exhausted = consecutive_exhausted + 1 if exhausted else 0
+        if consecutive_exhausted >= CIRCUIT_BREAK_AFTER:
+            PARTIAL.write_text(json.dumps(out))
+            valid = sum(1 for v in out.values() if v.get("gemini") in ("PASS", "EXCLUDE"))
+            sys.exit(
+                f"\nCIRCUIT BREAKER: {CIRCUIT_BREAK_AFTER} records in a row hit the "
+                f"rate limit even after backoff.\nYour daily free-tier quota is "
+                f"likely exhausted. Checkpoint saved ({valid} valid ratings so far).\n"
+                f"Rerun after the quota resets (usually ~24h) and it will continue "
+                f"from here, or switch MODEL / enable billing.\n")
+
         if i % CHUNK == 0 or i == len(todo):
             PARTIAL.write_text(json.dumps(out))
-            print(f"  {i}/{len(todo)} rated (checkpointed)")
+            valid = sum(1 for v in out.values() if v.get("gemini") in ("PASS", "EXCLUDE"))
+            print(f"  {i}/{len(todo)} attempted ({valid} valid total, checkpointed)")
         time.sleep(SLEEP_BETWEEN)
 
     # ---- assemble the three-way table ----

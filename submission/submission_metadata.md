@@ -22,7 +22,7 @@ Structured (Background / Objective / Methods / Results / Conclusions), 345 words
 Paste from manuscript/sections/abstract.tex.
 
 ## Keywords (5–10, semicolon-separated; MeSH-aligned where possible)
-Current manuscript keywords, re-ordered toward MeSH terms:
+This exact set is now also the keyword line in the manuscript abstract (they match):
 
 electronic health records; health information exchange; medical informatics;
 health information interoperability; diffusion of innovation; systematic review;
