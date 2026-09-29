@@ -23,14 +23,11 @@ step I cannot complete.
 - [ ] **Confirm competing-interests statement** (likely "none")
 - [ ] **Choose preprint status** and fill the cover-letter bracket:
       none / medRxiv / JMIR Preprints — and disclose whichever you pick
-- [ ] **Fill the [TO CONFIRM] placeholders** (added 29 Sep 2026) — which model
-      did the main screen and which Claude model did the screening second-rater
-      check, with dates. Locations: `manuscript/main.tex` (AI declaration),
-      `manuscript/sections/methods.tex`, `manuscript/supplements/S1_search_strategy.tex`
-      (2 spots), `submission/cover_letter.md` (2 spots). Clues from the file
-      record: screening log reconciled 1 Jul 2026; second-rater files written
-      2 Jul 2026. If the script/prompt used for the Claude second rater still
-      exists, add it to `scripts/`.
+- [x] **Model details** — resolved 29 Sep 2026: the models and versions were not
+      recorded, so the manuscript, S1, and cover letter now say so (screening
+      June–July 2026; Claude second rater July 2026), and the Eighth limitation
+      notes that the AI decisions cannot be regenerated exactly. If the
+      script/prompt used for the Claude second rater turns up, add it to `scripts/`.
 - [ ] **Recompile the PDF on Overleaf** after the edits above (no local TeX).
 - [ ] **New Zenodo version needed.** The v1 deposit (10.5281/zenodo.21282519,
       GitHub release v1.0-submission, 9 Jul 2026) has a generic title, no
@@ -62,11 +59,10 @@ step I cannot complete.
       that plan.
 
 ## Recommended sequence
-1. Fill the [TO CONFIRM] model placeholders.
-2. Human adjudication (126 records) → update reliability numbers in Methods,
+1. Human adjudication (126 records) → update reliability numbers in Methods,
    Limitations, S1, cover letter, PRISMA item 8, and Zenodo README (search for
    "UPDATE AFTER"); if a stratum falls below 0.80, re-screen it per the plan.
-3. Recompile PDF on Overleaf.
-4. Push, then new GitHub release → new Zenodo version (concept DOI already cited).
-5. Fill cover-letter brackets (funding, COI, preprint).
-6. Submit to JMIR MI; request fee waiver if needed.
+2. Recompile PDF on Overleaf.
+3. Push, then new GitHub release → new Zenodo version (concept DOI already cited).
+4. Fill cover-letter brackets (funding, COI, preprint).
+5. Submit to JMIR MI; request fee waiver if needed.

@@ -48,11 +48,10 @@ Availability statement in the manuscript points to this deposit.
 - *Generative AI use.* Generative AI was used in a documented, supervised
   capacity: (1) Anthropic Claude (Claude Opus 4.7) as a supplementary
   second-rater tool for the U-T-I-O case-domain scoring (Supplementary File
-  S4); (2) a large language model ([TO CONFIRM: screening model and version,
-  dates]) to perform the title/abstract screening and full-text eligibility
+  S4); (2) a large language model (specific model and version not recorded; screening conducted June–July 2026) to perform the title/abstract screening and full-text eligibility
   assessment of the search yield under explicit, human-authored eligibility
   rules (Supplementary File S1; full decision log archived); (3) Anthropic
-  Claude ([TO CONFIRM: model and version, date]) as an AI second rater that
+  Claude (model version not recorded; July 2026) as an AI second rater that
   independently re-screened a 449-record stratified sample to check that
   screening; and (4) Anthropic Claude to assist with literature/evidence
   cross-referencing, language refinement, and formatting. All study design,
