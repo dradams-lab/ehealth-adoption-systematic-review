@@ -46,7 +46,7 @@ step I cannot complete.
 
 ## [ACTION] — the substantive blocker (my standing recommendation)
 - [ ] **Run the 126-record human adjudication** — use the blinded sheet
-      `data/screened/human_adjudication_blinded.csv` (instructions in
+      `data/screened/human_adjudication_blinded.xlsx` (instructions in
       `HUMAN_ADJUDICATION_INSTRUCTIONS.md`). Until a person works this list, the
       reliability section rests on machine-vs-machine agreement (κ=0.61), and
       the AI second rater would have excluded 54 of 179 sampled included
