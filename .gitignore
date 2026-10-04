@@ -47,3 +47,8 @@ data/screened/_gemini_partial.json
 
 # Python bytecode
 __pycache__/
+
+# Reviewer packet: generated copies and zip (sources live in data/ and analysis/)
+reviewer_packet/*.zip
+reviewer_packet/human_adjudication_blinded.xlsx
+reviewer_packet/screening_rubric.md

@@ -49,7 +49,11 @@ The sample was drawn by **stratified simple random sampling without replacement*
 4. The worklist presents record metadata and the machine decision + justification. To reduce anchoring, the reviewer is instructed to **form an independent decision first** and record it, then mark AGREE/DISAGREE. (A fully blinded variant — machine decision hidden — is preferable if reviewer time allows; the worklist supports it by ignoring the `machine_decision` column.)
 5. For each record the reviewer completes: `reviewer_decision` (AGREE / DISAGREE), and if DISAGREE, `reviewer_corrected_label` (INCLUDE / EXCLUDE + reason code) and `reviewer_notes`.
 
+> **Deviation note (4 October 2026).** The human check is being applied to a 126-record subset of the 449, at title/abstract level for all strata, using a fully blinded sheet (`data/screened/human_adjudication_blinded.xlsx`) in which the reviewer records an independent decision (INCLUDE / EXCLUDE + code / MAYBE) rather than AGREE/DISAGREE. The reasons and the pre-specified analysis are in Section 10.
+
 ## 7. Analysis and decision rules
+
+> *For the 126-record adjudication this section is applied as specified in Section 10; per-stratum κ is not estimable there (Section 10, rule 6).*
 
 For each stratum compute: percent agreement, Cohen's kappa on the binary include/exclude call (with 95% CI), and the count and direction of disagreements. Pre-specified thresholds:
 
@@ -61,6 +65,8 @@ A single confirmed missed-eligible in the exclusion strata (C/D/E) is treated as
 
 ## 8. Reporting
 
+> *For the 126-record adjudication, reporting follows Section 10, rule 8.*
+
 Report in the manuscript Methods/Limitations: strata, sampled n, per-stratum percent agreement and kappa with CIs, total disagreements by direction, and any stratum escalated to full re-screen with the resulting count changes. Provide the completed worklist as a supplementary data file. This converts the current qualitative limitation ("machine-assisted, unverified") into a quantified reliability statement.
 
 ## 9. Files
@@ -69,3 +75,21 @@ Report in the manuscript Methods/Limitations: strata, sampled n, per-stratum per
 - `scripts/build_verification_sample.py` — reproducible sample-draw script (seed 20260701).
 - `analysis/screening_rubric.md`, Supplementary File S1 — the rubric the reviewer applies.
 - `analysis/verification_results_template.md` — where per-stratum agreement/kappa are tabulated after adjudication.
+- `data/screened/two_rater_comparison.csv` — the AI second rater's title/abstract decisions for 447 rated records of the 449 (added July 2026).
+- `data/screened/human_adjudication_worklist.csv` — the 126-record subset (unblinded; author use only).
+- `data/screened/human_adjudication_blinded.xlsx` — the blinded sheet given to the human reviewer (`reviewer_packet/`).
+
+## 10. Adjudication of the 126-record subset (added 4 October 2026; deviation from Sections 6–7)
+
+**Context.** Before any human reviewed the sample, an AI second rater (Anthropic Claude) re-screened all 449 records at title/abstract level (`two_rater_comparison.csv`; agreement with the primary screen 80.3%, κ = 0.61, n = 447). The human check is therefore applied to a 126-record subset rather than to the full 449: all **88** records on which the primary screen and the AI second rater disagreed, the **2** records the second rater did not rate, and **36** records on which the two agreed (a concordance spot-check). The method used to select the 36 is not recorded in the repository. [Author: state it here if known.]
+
+**Rules fixed before unblinding.**
+
+1. **Evidence basis.** The human decides from title and abstract for all strata, not from full text for stratum A as Section 6.3 specifies, because the 126 were defined by title/abstract disagreement and the comparator is the primary screen's title/abstract decision (`machine_ta`). For strata A and C, "agreement" therefore refers to the title/abstract pass, and the full-text eligibility decisions remain not human-verified; the manuscript states this.
+2. **Decision mapping.** MAYBE counts as PASS, as in the rubric.
+3. **Disputed and unrated records (88 + 2).** The human decision is final for the agreement computation: it determines whether each of these records counts as agreeing with `machine_ta`, and the AI second rater's label is not used as a tie-break. The 2 unrated records are treated as reviewed records. Individual human decisions do not change the included-study count (501) or the PRISMA funnel; counts change only if a stratum is re-screened under Section 7.
+4. **Spot-check (36).** These estimate the residual error rate *e* among the 359 concordant records, pooled across strata (the per-stratum spot-check counts, 4 / 6 / 3 / 13 / 10, are too small to estimate separately) and across decision direction (13 PASS-concordant records in strata A/B/C; 23 EXCLUDE-concordant in D/E), with a two-sided 95% Clopper–Pearson interval. Pooling assumes a common error rate in both directions, which is a stated limitation given that the second rater was stricter than the primary screen; the direction-specific counts are reported beside the pooled estimate. The interval, and the bound built on it, assume the 36 were drawn at random from the 359 concordant records, which cannot be verified because the selection method is not recorded (see Context).
+5. **Reconstructed per-stratum agreement.** Agreement with the primary screen is reconstructed over the stratified sample sizes of Section 3 (91 / 88 / 48 / 116 / 106): point estimate = (unreviewed concordant records × (1 − ê) + reviewed records on which the human agrees with `machine_ta`) / n, where ê is the pooled spot-check error rate from rule 4 and the unreviewed concordant counts are 52 / 63 / 12 / 102 / 94. Lower sensitivity bound = (unreviewed concordant records × (1 − the upper limit of the two-sided 95% Clopper–Pearson interval for *e*) + reviewed agreements) / n. If ê = 0 the point estimate equals the figure obtained by treating all unreviewed concordant records as agreed. The Section 7 thresholds are applied to the point estimate for strata A, B, D, and E, with the bound reported alongside. For stratum C the thresholds are reported descriptively only and do not trigger a re-screen: every C record has `machine_ta` = PASS and was excluded at full text, so a human title/abstract EXCLUDE agrees with the record's final disposition, and a re-screen could not change the included-study count. The Section 7 missed-eligible trigger is operationalised at title/abstract level as any human INCLUDE or MAYBE on a stratum D or E record. This is deliberately wider than Section 7's "confirmed false exclusion of a clearly eligible study": under the rubric MAYBE counts as PASS, so a human MAYBE against a machine EXCLUDE means the record should have reached full text, and because this check does not retrieve full text (rule 1) eligibility cannot be confirmed here. Stratum C exclusions were made at full text and are not assessed by this check.
+6. **Kappa.** Cohen's κ is reported on the whole 126 (human vs primary screen) and on the 124 records the second rater rated (human vs AI second rater; R0552 and R0859, rater2 = PARSE_FAIL, are excluded from that κ), labelled as computed on a disagreement-enriched set. Per-stratum κ is not reported: the primary label is constant within each stratum of the 126, so κ is undefined there, and a reconstructed stratum κ is not estimable.
+7. **Reviewer.** The planned rater is an independent reviewer with health-IT or implementation-science background who did not build the rubric (`reviewer_packet/`); background is recorded on return. If the author adjudicates instead, the paper discloses that as a further deviation.
+8. **Reporting.** Methods, Supplementary File S1, PRISMA item 8, and the cover letter state that the human reviewed 126 of the 449 (enriched for AI disagreement), the reconstruction rule, and the bound. The completed sheet is published with the reproducibility bundle; the free-text notes column is removed from the public copy if the reviewer asks.

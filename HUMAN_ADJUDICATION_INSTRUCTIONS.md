@@ -1,5 +1,12 @@
 # Human Adjudication — How to Work the 126-Record Sheet
 
+> **Update 4 Oct 2026.** The plan is now for an **independent reviewer** to do
+> this step, which is what `analysis/human_verification_plan.md` calls for.
+> Send them `reviewer_packet/` (build the zip with
+> `python3 reviewer_packet/build_packet.py`; invitation draft in
+> `submission/reviewer_invitation_email_draft.md`). The notes below are the
+> fallback if no reviewer is available and Josh does it himself.
+
 **What this is.** Two AI raters screened a 449-record sample and disagreed on
 88 records. You decide those 88, plus 36 records they agreed on (a spot-check)
 and 2 the second rater didn't rate. Your decisions become the human
@@ -36,7 +43,7 @@ or `three_way_comparison.csv` until you've finished. They show the AI answers.
    - `MAYBE` — you can't tell without the full text (counts as passing
      title/abstract, the same as the rubric's MAYBE)
 3. For EXCLUDE, pick one `your_reason_code` from the dropdown:
-   - E1 wrong technology focus · E2 eHealth but not adoption/implementation ·
+   - E1 wrong technology focus · E2 eHealth but not adoption/implementation determinants ·
      E3 out-of-scope setting/population · E4 ineligible publication type ·
      E6 published before 2015
    - X1 patient/consumer acceptance only · X2 single-condition digital-health
@@ -56,11 +63,16 @@ single-condition digital intervention (X2), is out of scope.
 ## When you're done
 Save the file under the same name and tell Claude. It will then:
 - unblind the sheet by rec_id
-- compute your agreement with the primary screen and with the AI second rater,
-  per stratum, with Cohen's κ
-- apply the pre-set rules in `analysis/human_verification_plan.md` §7
-  (≥ 0.90 accept; 0.80–0.90 accept and report a sensitivity bound; < 0.80
-  re-screen that stratum)
+- analyse it by the rules fixed in advance in
+  `analysis/human_verification_plan.md` §10: your decision settles the 88
+  disputed and 2 unrated records for the agreement computation; the 36
+  spot-checks give the error rate and its bound for the records the two AIs
+  agreed on; per-stratum agreement with the primary
+  screen's title/abstract decision is reconstructed over the full 449-record
+  sample; κ is reported on the 126 only, labelled as disagreement-enriched
+- apply the plan's §7 thresholds to those reconstructed figures
+  (≥ 0.90 accept; 0.80–0.90 accept and report a sensitivity bound; < 0.80 or
+  a title/abstract false exclusion in strata D/E → re-screen that stratum)
 - update the paper wherever it says "UPDATE AFTER"
 
 **Reporting note:** the plan specifies an independent reviewer who did not

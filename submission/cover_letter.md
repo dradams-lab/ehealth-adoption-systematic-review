@@ -63,8 +63,8 @@ Availability statement in the manuscript points to this deposit.
   (Cohen's κ = 0.61; n = 447, as two records received no rating), and 86 of
   the 88 disagreements were records the primary screen included that the
   second rater would have excluded. [UPDATE AFTER HUMAN ADJUDICATION: add the
-  result of the author's adjudication of the 126 disputed and spot-check
-  records.]
+  result of the independent reviewer's adjudication of the 126 disputed and
+  spot-check records, per analysis/human_verification_plan.md §10.]
 - *Funding.* [SELECT: This research received no external funding. / Funded
   by …]
 - *Competing interests.* [SELECT: The author declares no competing interests.

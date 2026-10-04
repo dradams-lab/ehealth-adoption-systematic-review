@@ -176,14 +176,14 @@ def write_xlsx(out_rows):
     put(9, "How to fill it in", style=bold)
     steps = [
         "Fill in only the three yellow columns on the Adjudication sheet: your_decision, your_reason_code, your_notes.",
-        "Decide on the title and abstract only. If there is no abstract, use the title, venue, and document type.",
+        "Decide on the title and abstract only (plus year, venue, and document type), not the full paper. If there is no abstract, use the title, venue, and document type.",
         "A long abstract continues in the abstract_continued columns; the first part ends with \"[continues in next column]\". Read all parts.",
         "your_decision: pick INCLUDE, EXCLUDE, or MAYBE from the dropdown. MAYBE means you cannot tell without the full text.",
         "your_reason_code: pick one code, only when your decision is EXCLUDE.",
         "your_notes: optional. A few words when a call is borderline.",
-        "Scope test: is the record about adoption or implementation of interoperable eHealth systems (EHR/EMR/HIE/health-IT infrastructure) at the organizational or national/system level?",
-        "Do not open human_adjudication_worklist.csv, two_rater_comparison.csv, or three_way_comparison.csv until you finish. They show the AI answers.",
-        "To see what is left, filter your_decision for blanks. Do not delete rows or edit the other columns. Save often, under the same file name.",
+        "Scope test: is the record about adoption or implementation of eHealth systems (EHR/EMR/HIE/health-IT infrastructure, including interoperability) at the organizational or national/system level? The level refers to the system being adopted, not to whether the respondents are individual clinicians or staff (README condition 6).",
+        "This workbook contains nothing that shows how the automated screen decided any record. Decide each record yourself, and please do not ask the author about a specific record until you have finished (README section 9).",
+        "To see what is left, filter your_decision for blanks. Do not delete rows or edit the other columns. Save often. When you have finished, save under the same name with your initials added, for example human_adjudication_blinded_JD.xlsx (README section 10).",
     ]
     for i, text in enumerate(steps, 1):
         put(9 + i, f"Step {i}", text)
@@ -203,7 +203,7 @@ def write_xlsx(out_rows):
     for i, (c_, stage, meaning) in enumerate(REASON_CODES, r1 + 2):
         put(i, c_, stage, meaning)
     put(r1 + 2 + len(REASON_CODES) + 1, "Source",
-        c="Definitions: analysis/screening_rubric.md. E5 (duplicate / non-English) is left out because the screen never used it.")
+        c="Definitions: screening_rubric.md (in this folder) and README section 7. E5 (duplicate / non-English) is left out because the screen never used it.")
 
     wb.calculation.fullCalcOnLoad = True
     wb.save(OUT_XLSX)

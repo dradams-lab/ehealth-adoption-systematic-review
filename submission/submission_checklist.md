@@ -45,23 +45,39 @@ step I cannot complete.
 - [ ] Provide 3–4 suggested reviewers (optional but helpful)
 
 ## [ACTION] — the substantive blocker (my standing recommendation)
-- [ ] **Run the 126-record human adjudication** — use the blinded sheet
-      `data/screened/human_adjudication_blinded.xlsx` (instructions in
-      `HUMAN_ADJUDICATION_INSTRUCTIONS.md`). Until a person works this list, the
-      reliability section rests on machine-vs-machine agreement (κ=0.61), and
-      the AI second rater would have excluded 54 of 179 sampled included
-      studies (30%). A preprint or submission puts your name on the claims —
-      finish this first.
-      *Reporting note:* `analysis/human_verification_plan.md` specifies an
-      independent reviewer who did not build the rubric and all 449 records. If
-      you adjudicate the 126 yourself, the paper must say so (author
-      adjudication of AI disagreements plus a spot-check) as a deviation from
-      that plan.
+- [ ] **Independent human adjudication of the 126-record worklist** (decided
+      4 Oct 2026: an outside reviewer, as the verification plan specifies).
+      - [ ] Pick a reviewer with health-IT / implementation-science background
+            who has not worked on this review.
+      - [ ] Build the packet: `python3 reviewer_packet/build_packet.py`
+            → `reviewer_packet/reviewer_packet_<date>.zip`. Send only that zip.
+      - [ ] Send the invitation (`submission/reviewer_invitation_email_draft.md`).
+            Sent: ____  Agreed return date: ____
+      - [ ] On return: save the file to `data/screened/`, then unblind by
+            rec_id and analyse per `analysis/human_verification_plan.md` §10
+            (reviewer's decision settles the 88 + 2 for the agreement
+            computation; the 36 spot-checks give the error rate and bound; per-stratum agreement with the machine's
+            title/abstract decision reconstructed over the 449; §7 thresholds
+            applied to the reconstructed figures; κ on the 126 only).
+            Fill `analysis/verification_results_template.md`, update every
+            "UPDATE AFTER" marker, and add the reviewer to Methods +
+            Acknowledgments (with consent to naming and to publishing their
+            completed sheet; strip the notes column from the public copy if
+            they decline that part).
+      Until this is done, the reliability section rests on machine-vs-machine
+      agreement (κ=0.61), and the AI second rater would have excluded 54 of
+      179 sampled included studies (30%).
+      *Fallback:* if no reviewer is available within ~2 weeks, Josh does the
+      126 himself (`HUMAN_ADJUDICATION_INSTRUCTIONS.md`) and the paper
+      discloses author adjudication as a deviation from the plan.
 
 ## Recommended sequence
-1. Human adjudication (126 records) → update reliability numbers in Methods,
-   Limitations, S1, cover letter, PRISMA item 8, and Zenodo README (search for
-   "UPDATE AFTER"); if a stratum falls below 0.80, re-screen it per the plan.
+1. Independent human adjudication (126 records, via `reviewer_packet/`) →
+   analyse per plan §10 → update reliability numbers in Methods, Limitations,
+   S1, cover letter, PRISMA item 8, and Zenodo README (search for "UPDATE
+   AFTER"); if a reconstructed stratum estimate falls below 0.80, or the
+   reviewer marks any stratum D or E record INCLUDE or MAYBE, re-screen that
+   stratum per the plan (§7, §10.5).
 2. Recompile PDF on Overleaf.
 3. Push, then new GitHub release → new Zenodo version (concept DOI already cited).
 4. Fill cover-letter brackets (funding, COI, preprint).
